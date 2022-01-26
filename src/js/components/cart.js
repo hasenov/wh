@@ -26,11 +26,6 @@ let priceDiscountWrapper = document.querySelector('.totals-checkout__item_discou
 let priceDeliveryWrapper = document.querySelector('.totals-checkout__item_delivery');
 let priceTotalWrapper = document.querySelector('.totals-checkout__item_total');
 
-formPromocode.addEventListener('submit', (e) => {
-    e.preventDefault();
-    onFormPromocodeSubmit();
-});
-
 function onFormPromocodeSubmit() {
     const formData = new FormData(formPromocode);
 
@@ -86,7 +81,14 @@ function inputErrorTemplate(msg) {
     `;
 }
 
-promocodeInput.addEventListener('focus', () => removeInputError(promocodeInput));
+if(formPromocode) {
+    formPromocode.addEventListener('submit', (e) => {
+        e.preventDefault();
+        onFormPromocodeSubmit();
+    });
+
+    promocodeInput.addEventListener('focus', () => removeInputError(promocodeInput));
+}
 
 document.addEventListener('click', (e) => {
     const deleteBtn = e.target.closest('.orders-cart__item .item-order__delete-btn')
@@ -113,8 +115,10 @@ document.addEventListener('click', (e) => {
 
                 fullMinicartPrice.textContent = formatNumber(result.total);
 
+                fullPrice.textContent = formatNumber(result.total);
+
                 fullPrices.forEach((el) => {
-                    el.textContent = formatNumber(result['all_total_promo']);
+                    el.textContent = formatNumber(result['all_total_promo'] !== "" ? result['all_total_promo'] : result.total);
                 });
                 totalPrice.value = result.total;
                 document.getElementById('totalPriceWithPromocode').value = result['all_total_promo'];
@@ -126,7 +130,7 @@ document.addEventListener('click', (e) => {
                     priceDeliveryWrapper.style.display = 'flex';
 
                     fullPrices.forEach((el) => {
-                        el.textContent = formatNumber(+result['all_total_promo'] + +delivery.value)
+                        el.textContent = formatNumber(result['all_total_promo'] !== "" ? +result['all_total_promo'] + +delivery.value : +result.total + +delivery.value)
                     })
                 }
             })
@@ -134,6 +138,10 @@ document.addEventListener('click', (e) => {
             })
     }
 })
+
+if(document.getElementById('hasPromocode') && document.getElementById('hasPromocode').value) {
+    priceTotalWrapper.style.display = 'flex';
+}
 
 document.querySelectorAll('.js-format-number').forEach((el) => {
     if (el.innerText == '') return;

@@ -1,6 +1,6 @@
 import { sendForm } from '../services/api.service'
 import { formatNumber } from '../helpers/formatNumber'
-import { resizeQuantityInputs } from '../app'
+import { resizeQuantityInputs, updateQuantityInputs } from '../app'
 
 const container = document.querySelector('.box-minicart__orders');
 const minicartBtn = document.querySelector('.minicart');
@@ -21,6 +21,7 @@ export default function updateMiniCart() {
                 minicartBtn.classList.add('action-header_status');
                 fullPrice.textContent = formatNumber(response.total);
                 resizeQuantityInputs();
+                updateQuantityInputs();
             } else {
                 minicartBtn.classList.remove('action-header_status');
             }

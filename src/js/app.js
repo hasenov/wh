@@ -133,7 +133,7 @@ document.addEventListener('DOMContentLoaded', function() {
 	initWishlist();
 	updateMiniCart();
 
-	inputNumber.init();
+	updateQuantityInputs();
 	// Click events
 	document.documentElement.addEventListener('click', (e) => {
 		const newsletterLater = e.target.closest('.form-modal__btn_later');
@@ -187,7 +187,7 @@ document.addEventListener('DOMContentLoaded', function() {
 					fullMinicartPrice.textContent = formatNumber(result.total);
 
 					fullPrices.forEach((el) => {
-						el.textContent = formatNumber(result['all_total_promo']);
+						el.textContent = formatNumber(result['all_total_promo'] !== "" ? result['all_total_promo'] : result.total);
 					});
 
 					if(cartForm) {
@@ -206,7 +206,7 @@ document.addEventListener('DOMContentLoaded', function() {
 							pricePlusDelivery.textContent = formatNumber(delivery.value);
 
 							fullPrices.forEach((el) => {
-								el.textContent = formatNumber(+result['all_total_promo'] + +delivery.value)
+								el.textContent = formatNumber(result['all_total_promo'] !== "" ? +result['all_total_promo'] + +delivery.value : +result.total + +delivery.value)
 							})
 						}
 					}
@@ -371,6 +371,30 @@ document.addEventListener('DOMContentLoaded', function() {
 
 window.addEventListener('load', initCookies)
 
+export function updateQuantityInputs() {
+	const quantityControls = document.querySelectorAll('.quantity__control');
+	quantityControls.forEach((control) => {
+		if(control.value <= 1) {
+			inputNumber.disableControl(control.closest('.quantity').querySelector('.quantity__btn_minus'))
+		}
+
+		control.addEventListener('blur', (e) => {
+			const id = control.closest('.item-order').dataset.id
+			
+			changeProductQuantity(id, control.value)
+				.then((res) => {
+					const inputs = document.querySelectorAll(`.item-order[data-id="${id}"] .quantity__control`)
+
+					inputs.forEach((input) => {
+						input.value = res.count;
+					})
+
+					resizeQuantityInputs();
+				})
+		})
+	})
+}
+
 export function resizeQuantityInputs() {
 	const quantityControls = document.querySelectorAll('.quantity__control');
 	quantityControls.forEach((control) => {
@@ -405,22 +429,23 @@ const inputNumber = (() => {
 			const plus = eventTarget.parentElement.querySelector('.quantity__btn_plus')
             const {min = 1, max = 100, step = 1} = this.getProps(input, ['min', 'max', 'step'])
             const val = parseFloat(input.value)
+			
+			const inputs = document.querySelectorAll(`.item-order[data-id="${eventTarget.closest('.item-order').dataset.id}"] .quantity__control`)
 
-            input.value = this[this.getAction(eventTarget)](val, min, max, step)
-
-			resizeInput.call(input)
-
-			if(input.value > min) {
-				this.enableControl(minus);
-			}
-			if(input.value == max) {
-				this.disableControl(plus);
-			}
-			if(input.value == min) {
-				this.disableControl(minus);
-			}
-
-			return input.value;
+			console.log(inputs);
+			inputs.forEach((input) => {
+				input.value = this[this.getAction(eventTarget)](val, min, max, step)
+				resizeInput.call(input)
+				if(input.value > min) {
+					this.enableControl(minus);
+				}
+				if(input.value == max) {
+					this.disableControl(plus);
+				}
+				if(input.value == min) {
+					this.disableControl(minus);
+				}
+			})
         },
         getProps(input, props) {
             const result = {}
@@ -450,11 +475,7 @@ const inputNumber = (() => {
 			control.disabled = true;
 		},
 		init() {
-			document.querySelectorAll('.quantity__control').forEach((el) => {
-				if(el.value <= 1) {
-					this.disableControl(el.closest('.quantity').querySelector('.quantity__btn_minus'))
-				}
-			})
+
 		}
     }
 })()
