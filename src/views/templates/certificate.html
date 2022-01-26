@@ -1,0 +1,129 @@
+{{> header title="Сертификаты"}}
+
+<div class="container">
+    <ul class="breadcrumbs">
+        <li><a href="#">Главная</a></li>
+        <li>Сертификаты</li>
+    </ul>
+</div>
+
+<section class="section-certificate">
+	<div class="container">
+
+		<div class="certificate row">
+			<div class="certificate__col certificate__col_img col-xl-7 col-md-5">
+				<div class="certificate__img-wrap">
+					<img src="assets/img/content/certificates.png" alt="alt" class="certificate__img img-responsive">
+				</div>
+			</div>
+			<div class="certificate__col certificate__col_form col-xl-5 col-md-7">
+				<form class="certificate__form form-certificate" name="formCertificate">
+					<div class="form-certificate__header">
+						<h1 class="form-certificate__title page-title">Электронный подарочный сертификат</h1>
+						<div class="form-certificate__text-wrap">
+							<p>Вы можете создать <b>электронный</b> подарочный сертификат на покупку продукции в нашем интернет-магазине, введите желаемую сумму подарка (от 500 рублей) и укажите данные счастливого получателя</p>
+						</div>
+					</div>
+					<div class="form-certificate__body">
+						<div class="form-certificate__control-field control-field control-field_js">
+							<input type="number" class="control-field__control control control-icon control-icon_ruble" id="certCertificateSumm" name="certificateSumm" min="500" required>
+							<label for="certCertificateSumm" class="control-field__label control-label"><span>Номинал<span class="color-danger">*</span></span></label>
+						</div>
+						<div class="form-certificate__control-field control-field control-field_js">
+							<input type="email" class="control-field__control control" id="certUserEmail" name="userEmail" required>
+							<label for="certUserEmail" class="control-field__label control-label"><span>E-mail для оплаты<span class="color-danger">*</span></span></label>
+						</div>
+						<div class="form-certificate__control-field control-field control-field_js">
+							<input type="email" class="control-field__control control" id="certRecipientEmail" name="recipientEmail" required>
+							<label for="certRecipientEmail" class="control-field__label control-label"><span>E-mail для получения сертификата<span class="color-danger">*</span></span></label>
+						</div>
+						<div class="form-certificate__control-field control-field control-field_js">
+							<input type="tel" class="control-field__control control phone-mask" id="certRecipientTtel" name="recipientTtel" required>
+							<label for="certRecipientTtel" class="control-field__label control-label"><span>Телефон получателя<span class="color-danger">*</span></span></label>
+						</div>
+						<div class="form-certificate__control-field control-field control-field_js">
+							<input type="text" class="control-field__control select control certificate-date" id="certDate" autocomplete="off" data-micromodal-trigger="modal-datepicker" readonly name="date" required>
+							<label for="certDate" class="control-field__label control-label"><span>Дата отправки<span class="color-danger">*</span></span></label>
+						</div>
+						<div class="form-certificate__control-field control-field">
+							<textarea name="compliments" id="certCompliments" class="form-certificate__textarea textarea" placeholder="Введите текст поздравления, которое увидит получатель"></textarea>
+						</div>
+					</div>
+					<div class="form-certificate__footer">
+						<button class="form-certificate__btn btn btn-accent"><span>Перейти к оплате</span></button>
+					</div>
+				</form>
+				<div class="certificate__message message-certificate">
+					<svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<circle cx="40" cy="40" r="39" fill="#fff" stroke="url(#paint0_linear)" stroke-width="2"></circle>
+						<path d="M22.019 38.899l12.477 16.147" stroke="url(#paint1_linear)" stroke-width="2" stroke-linecap="round"></path>
+						<path d="M34.496 55.046l23.486-30.092" stroke="url(#paint2_linear)" stroke-width="2" stroke-linecap="round"></path>
+						<defs>
+							<linearGradient id="paint0_linear" x1="0" y1="40.563" x2="80" y2="40.563" gradientUnits="userSpaceOnUse">
+								<stop stop-color="#2ABCCE"></stop>
+								<stop offset="1" stop-color="#78D4D7"></stop>
+							</linearGradient>
+							<linearGradient id="paint1_linear" x1="34.496" y1="46.972" x2="22.019" y2="46.972" gradientUnits="userSpaceOnUse">
+								<stop stop-color="#21E392"></stop>
+								<stop offset="1" stop-color="#00A3FF"></stop>
+							</linearGradient>
+							<linearGradient id="paint2_linear" x1="34.496" y1="40.212" x2="57.982" y2="40.212" gradientUnits="userSpaceOnUse">
+								<stop stop-color="#2ABCCE"></stop>
+								<stop offset="1" stop-color="#78D4D7"></stop>
+							</linearGradient>
+						</defs>
+					</svg>
+					<div class="message-certificate__text">Спасибо за заказ, наши менеджеры свяжутся с вами в ближайшее время для уточнения деталей</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+</section>
+
+<div class="mm-modal" id="modal-datepicker" aria-hidden="true">
+	<div class="mm-modal__overlay" tabindex="-1" data-micromodal-close>
+
+		<div class="mm-modal__wrapper" role="dialog" aria-modal="true" aria-labelledby="modal-datepicker-title">
+			<div class="mm-modal__content modal modal-datepicker">
+	
+				<header class="modal__header header-modal">
+					<div class="header-modal__container container">
+						<h2 class="header-modal__title modal__title" id="modal-datepicker-title">Выберите дату</h2>
+						<button class="header-modal__close modal__close close" type="button" aria-label="Close modal" data-micromodal-close>
+							<svg>
+								<use href="{{assets}}/img/svg-sprite/sprite.svg#close"></use>
+							</svg>
+						</button>
+					</div>
+				</header>
+	
+				<div class="modal__body body-modal" id="modal-datepicker-content">
+					<div class="body-modal__container container">
+						<div class="datepicker">
+							<div class="datepicker__content">
+								<input type="text" class="datepicker__input hidden">
+							</div>
+							<div class="datepicker__radios">
+								<label class="datepicker__instant datepicker__radio radio">
+									<input type="checkbox" class="radio__input" name="instant">
+									<span class="radio__content">
+										<span class="radio__dot"></span>
+										<span class="radio__label" data-output-text="Сразу после оплаты">Отправить сразу после оплаты</span>
+									</span>
+								</label>
+							</div>
+							<div class="datepicker__btn-wrap">
+								<button class="datepicker__btn modal__btn btn btn-accent" data-micromodal-close><span>Применить</span></button>
+							</div>
+						</div>
+					</div>
+				</div>
+	
+			</div>
+		</div>
+
+	</div>
+</div>
+
+{{> footer }}

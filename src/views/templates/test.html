@@ -1,0 +1,279 @@
+{{> header title="Тестовая страница"}}
+
+<div class="container">
+
+	<nav>
+		<ul style="font-size: 20px;">
+			<li><a style="color: #1FA4B5; padding-bottom: 10px; display: block;" href="index.html">Главная</a></li>
+			<li><a style="color: #1FA4B5; padding-bottom: 10px; display: block;" href="about.html">О бренде</a></li>
+			<li><a style="color: #1FA4B5; padding-bottom: 10px; display: block;" href="certificate.html">Сертификаты</a></li>
+			<li><a style="color: #1FA4B5; padding-bottom: 10px; display: block;" href="sizing.html">Как выбрать размер</a></li>
+			<li><a style="color: #1FA4B5; padding-bottom: 10px; display: block;" href="blog.html">Блог</a></li>
+			<li><a style="color: #1FA4B5; padding-bottom: 10px; display: block;" href="article.html">Статья</a></li>
+			<li><a style="color: #1FA4B5; padding-bottom: 10px; display: block;" href="article-sizing.html">Индивидуальный пошив</a></li>
+			<li><a style="color: #1FA4B5; padding-bottom: 10px; display: block;" href="catalog.html">Каталог</a></li>
+			<li><a style="color: #1FA4B5; padding-bottom: 10px; display: block;" href="product.html">Товар</a></li>
+			<li><a style="color: #1FA4B5; padding-bottom: 10px; display: block;" href="delivery.html">Доставка и оплата</a></li>
+			<li><a style="color: #1FA4B5; padding-bottom: 10px; display: block;" href="contacts.html">Контакты</a></li>
+			<li><a style="color: #1FA4B5; padding-bottom: 10px; display: block;" href="calculator.html">Калькулятор</a></li>
+			<li><a style="color: #1FA4B5; padding-bottom: 10px; display: block;" href="cart.html">Корзина</a></li>
+			<li><a style="color: #1FA4B5; padding-bottom: 10px; display: block;" href="cabinet-orders.html">Кабинет - заказы</a></li>
+			<li><a style="color: #1FA4B5; padding-bottom: 10px; display: block;" href="cabinet-personal.html">Кабинет - личная инф.</a></li>
+			<li><a style="color: #1FA4B5; padding-bottom: 10px; display: block;" href="cabinet-password.html">Кабинет - смена пароля</a></li>
+			<li><a style="color: #1FA4B5; padding-bottom: 10px; display: block;" href="cabinet-password-success.html">Кабинет - смена пароля - успех</a></li>
+			<li><a style="color: #1FA4B5; padding-bottom: 10px; display: block;" href="404.html">404</a></li>
+		</ul>
+	</nav>
+
+    <div style="margin-bottom: 15px;">
+        <button class="btn btn-accent" data-micromodal-trigger="modal-message-success"><span>Всплывающее окно "Заказ создан"</span></button>
+    </div>
+    <div style="margin-bottom: 15px;">
+        <button class="btn btn-accent" data-micromodal-trigger="modal-auth-success"><span>Всплывающее окно "Успешная регистрация"</span></button>
+    </div>
+    <div style="margin-bottom: 15px;">
+        <button class="btn btn-accent" data-micromodal-trigger="modal-feedback"><span>Всплывающее окно "Помогите нам стать лучше"</span></button>
+    </div>
+    <div style="margin-bottom: 15px;">
+        <button class="btn btn-accent" data-micromodal-trigger="modal-rating"><span>Всплывающее окно "Оценка проекта"</span></button>
+    </div>
+    <div style="margin-bottom: 15px;">
+        <button class="btn btn-accent" data-micromodal-trigger="modal-newsletter"><span>Всплывающее окно "Подписка на рассылку"</span></button>
+    </div>
+
+	<link href="https://fonts.cdnfonts.com/css/futura-pt" rel="stylesheet">
+	<div style="margin-top: 50px; display: flex; align-items: flex-end;">
+		<div>
+			Текущие шрифты <br>
+			<button class="btn btn-accent" data-micromodal-trigger="modal-rating" style="font-weight: 400;"><span>Кнопка с жирностью 400</span></button><br>
+			<button class="btn btn-accent" data-micromodal-trigger="modal-rating" style="font-weight: 500;"><span>Кнопка с жирностью 500</span></button><br>
+			<button class="btn btn-accent" data-micromodal-trigger="modal-rating" style="font-weight: 600;"><span>Кнопка с жирностью 600</span></button>
+		</div>
+		<div>
+			Шрифты с сайта https://www.cdnfonts.com/ru/futura-pt.font <br>
+			<button class="btn btn-accent" data-micromodal-trigger="modal-rating" style="font-weight: 400; font-family: 'Futura PT', sans-serif;"><span>Кнопка с жирностью 400</span></button><br>
+			<button class="btn btn-accent" data-micromodal-trigger="modal-rating" style="font-weight: 450; font-family: 'Futura PT', sans-serif;"><span>Кнопка с жирностью 450</span></button><br>
+			<button class="btn btn-accent" data-micromodal-trigger="modal-rating" style="font-weight: 500; font-family: 'Futura PT', sans-serif;"><span>Кнопка с жирностью 500</span></button>
+		</div>
+    </div>
+	<div style="">
+		<div>
+			<div style="display: flex;">
+				<span style="width: 100px;">Текущий 500</span>
+				<p style="font-size: 70px; font-weight: 500;">The quick brown fox jumps over the lazy dog.</p>
+			</div>
+		</div>
+		<div>
+			<div style="display: flex;">
+				<span style="width: 100px;">Новый 450</span>
+				<p style="font-size: 70px; font-weight: 450; font-family: 'Futura PT', sans-serif;">The quick brown fox jumps over the lazy dog.</p>
+			</div>
+		</div>
+		
+	</div>
+</div>
+
+<div class="mm-modal" id="modal-message-success" aria-hidden="true">
+	<div class="mm-modal__overlay" tabindex="-1" data-micromodal-close>
+
+		<div class="mm-modal__wrapper" role="dialog" aria-modal="true" aria-labelledby="modal-message-success-title">
+			<div class="mm-modal__content modal modal-message scrollbar-accent">
+	
+				<div class="modal__body body-modal" id="modal-message-success-content">
+					<div class="body-modal__container container">
+						<div class="message-modal">
+							<h2 class="message-modal__title">Заказ №2650</h2>
+							<div class="message-modal__text-wrap">
+								<p>Спасибо за ваш заказ, наши менеджеры свяжутся с вами в ближайшее время для уточнения деталей</p>
+							</div>
+							<svg class="message-modal__icon">
+								<use href="{{assets}}/img/svg-sprite/sprite.svg#complete"></use>
+							</svg>
+							<a href="#" class="message-modal__btn btn btn-success"><span>Перейти к оплате</span></a>
+						</div>
+					</div>
+				</div>
+	
+			</div>
+		</div>
+
+	</div>
+</div>
+
+<div class="mm-modal" id="modal-auth-success" aria-hidden="true">
+	<div class="mm-modal__overlay" tabindex="-1" data-micromodal-close>
+
+		<div class="mm-modal__wrapper" role="dialog" aria-modal="true" aria-labelledby="modal-auth-success-title">
+			<div class="mm-modal__content modal modal-auth-message scrollbar-accent">
+	
+				<header class="modal__header header-modal">
+					<div class="header-modal__container container">
+						<button class="header-modal__close modal__close close" type="button" aria-label="Close modal" data-micromodal-close>
+							<svg>
+								<use href="{{assets}}/img/svg-sprite/sprite.svg#close"></use>
+							</svg>
+						</button>
+					</div>
+				</header>
+	
+				<div class="modal__body body-modal" id="modal-auth-success-content">
+					<div class="body-modal__container container">
+						<div class="message-auth">
+							<svg class="message-auth__icon">
+								<use href="{{assets}}/img/svg-sprite/sprite.svg#complete"></use>
+							</svg>
+							<h2 class="message-auth__title">Вы успешно зарегистрировались, теперь вам доступно:</h2>
+							<ol class="message-auth__list">
+								<li>Отслеживание доставки</li>
+								<li>Ускоренное оформление заказа</li>
+								<li>История заказов</li>
+								<li>Управление подписками</li>
+							</ol>
+							<div class="message-auth__btn-wrap">
+								<button class="message-auth__btn modal__btn btn btn-accent" type="button" data-micromodal-close aria-label="Close this dialog window"><span>Закрыть окно</span></button>
+							</div>
+						</div>
+					</div>
+				</div>
+	
+			</div>
+		</div>
+
+	</div>
+</div>
+
+<div class="mm-modal" id="modal-feedback" aria-hidden="true">
+	<div class="mm-modal__overlay" tabindex="-1" data-micromodal-close>
+
+		<div class="mm-modal__wrapper" role="dialog" aria-modal="true" aria-labelledby="modal-feedback-title">
+			<div class="mm-modal__content modal modal-blocks modal-blocks_feedback scrollbar-accent">
+
+				<button class="modal-blocks__close modal__close close" type="button" aria-label="Close modal" data-micromodal-close>
+					<svg>
+						<use href="{{assets}}/img/svg-sprite/sprite.svg#close"></use>
+					</svg>
+				</button>
+	
+				<div class="modal__body body-modal" id="modal-feedback-content">
+					<div class="body-modal__container container">
+						<div class="modal-blocks__content-wrap">
+							<div class="modal-blocks__content">
+								<h2 class="modal-blocks__title">Помогите нам стать лучше</h2>
+								<div class="modal-blocks__text-wrap">
+									<p>Опишите что именно вам не понравилось при нахождении на сайте Wave Harmony</p>
+								</div>
+								<form class="form-modal">
+									<div class="form-modal__controls">
+										<div class="form-modal__control-field control-field">
+											<textarea name="message" id="message" class="textarea" placeholder="Ваш комментарий тут..."></textarea>
+										</div>
+									</div>
+									<div class="form-modal__btn-wrap">
+										<button class="form-modal__btn modal__btn btn btn-accent"><span>Отправить</span></button>
+									</div>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+	
+			</div>
+		</div>
+
+	</div>
+</div>
+
+<div class="mm-modal" id="modal-rating" aria-hidden="true">
+	<div class="mm-modal__overlay" tabindex="-1" data-micromodal-close>
+
+		<div class="mm-modal__wrapper" role="dialog" aria-modal="true" aria-labelledby="modal-rating-title">
+			<div class="mm-modal__content modal modal_white modal-project-recommendation">
+
+				<button class="modal-project-recommendation__close modal__close close" type="button" aria-label="Close modal" data-micromodal-close>
+					<svg>
+						<use href="{{assets}}/img/svg-sprite/sprite.svg#close"></use>
+					</svg>
+				</button>
+	
+				<div class="modal__body body-modal" id="modal-rating-content">
+					<div class="body-modal__container container">
+						<form class="project-recommendation">
+							<h2 class="project-recommendation__title">Насколько вероятно, что вы порекомендуете WaveHarmony друзьям?</h2>
+							<div class="project-recommendation__rating-control rating-control rating-control_white">
+								<div class="rating-control__items">
+									<input id="project_rating_10" type="radio" class="rating-control__item" name="project_rating" value="10">
+									<label for="project_rating_10" class="rating-control__label">
+										<svg class="rating-control__star">
+											<use href="assets/img/svg-sprite/sprite.svg#star"></use>
+										</svg>
+									</label>
+									<input id="project_rating_9" type="radio" class="rating-control__item" name="project_rating" value="9">
+									<label for="project_rating_9" class="rating-control__label">
+										<svg class="rating-control__star">
+											<use href="assets/img/svg-sprite/sprite.svg#star"></use>
+										</svg>
+									</label>
+									<input id="project_rating_8" type="radio" class="rating-control__item" name="project_rating" value="8">
+									<label for="project_rating_8" class="rating-control__label">
+										<svg class="rating-control__star">
+											<use href="assets/img/svg-sprite/sprite.svg#star"></use>
+										</svg>
+									</label>
+									<input id="project_rating_7" type="radio" class="rating-control__item" name="project_rating" value="7">
+									<label for="project_rating_7" class="rating-control__label">
+										<svg class="rating-control__star">
+											<use href="assets/img/svg-sprite/sprite.svg#star"></use>
+										</svg>
+									</label>
+									<input id="project_rating_6" type="radio" class="rating-control__item" name="project_rating" value="6">
+									<label for="project_rating_6" class="rating-control__label">
+										<svg class="rating-control__star">
+											<use href="assets/img/svg-sprite/sprite.svg#star"></use>
+										</svg>
+									</label>
+									<input id="project_rating_5" type="radio" class="rating-control__item" name="project_rating" value="5">
+									<label for="project_rating_5" class="rating-control__label">
+										<svg class="rating-control__star">
+											<use href="assets/img/svg-sprite/sprite.svg#star"></use>
+										</svg>
+									</label>
+									<input id="project_rating_4" type="radio" class="rating-control__item" name="project_rating" value="4">
+									<label for="project_rating_4" class="rating-control__label">
+										<svg class="rating-control__star">
+											<use href="assets/img/svg-sprite/sprite.svg#star"></use>
+										</svg>
+									</label>
+									<input id="project_rating_3" type="radio" class="rating-control__item" name="project_rating" value="3">
+									<label for="project_rating_3" class="rating-control__label">
+										<svg class="rating-control__star">
+											<use href="assets/img/svg-sprite/sprite.svg#star"></use>
+										</svg>
+									</label>
+									<input id="project_rating_2" type="radio" class="rating-control__item" name="project_rating" value="2">
+									<label for="project_rating_2" class="rating-control__label">
+										<svg class="rating-control__star">
+											<use href="assets/img/svg-sprite/sprite.svg#star"></use>
+										</svg>
+									</label>
+									<input id="project_rating_1" type="radio" class="rating-control__item" name="project_rating" value="1">
+									<label for="project_rating_1" class="rating-control__label">
+										<svg class="rating-control__star">
+											<use href="assets/img/svg-sprite/sprite.svg#star"></use>
+										</svg>
+									</label>
+								</div>
+							</div>
+							<div class="project-recommendation__btn-wrap">
+								<button class="project-recommendation__btn btn btn-white"><span>Оценить</span></button>
+							</div>
+						</form>
+					</div>
+				</div>
+	
+			</div>
+		</div>
+
+	</div>
+</div>
+
+{{> footer }}

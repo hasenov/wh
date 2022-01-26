@@ -1,0 +1,113 @@
+.newsletter
+	background-color: #f8f8f8
+	padding: 30px 0
+	&__content
+		display: flex
+		align-items: center
+	&__icon
+		flex: 0 0 50px
+		width: 50px
+		margin-right: 30px
+	&__text-wrap
+		font-size: 20px
+		p:last-child
+			margin-bottom: 0
+	&__form
+		display: flex
+		align-items: center
+	&__control-field
+		.control
+			height: 50px
+	&__btn
+		padding: 0
+		flex: 0 0 50px
+		width: 50px
+		height: 50px
+		margin-left: 15px
+	&__arrow
+		flex: 0 0 11px
+		width: 11px
+		height: 11px
+		fill: #fff
+
+.footer
+	padding: 80px 0 70px
+	&__title
+		font-size: 24px
+		font-weight: normal
+		margin-bottom: 20px
+	&__contacts
+		margin-bottom: 29px
+	&__socials
+		margin-bottom: 29px
+	&__info
+		font-size: 16px
+		color: $passive
+		p
+			margin-bottom: 5px
+			&:last-child
+				margin-bottom: 0
+		a
+			color: $passive
+	&__row
+		margin-bottom: -30px
+	&__col
+		margin-bottom: 30px
+
+.menu-footer
+	&__list
+		list-style-type: none
+		margin: 0
+		padding: 0
+	&__item
+		font-size: 16px
+		margin-bottom: 10px
+		a
+			color: $secondary
+	&__icon
+		width: 20px
+		margin-left: 8px
+	&_columns_2
+		columns: 2
+
+.contacts-footer
+	&__item
+		margin-bottom: 10px
+		&_phone
+			font-weight: 500
+	&__value
+		color: $secondary
+		transition: color .3s ease
+		&:hover
+			color: $accent
+
+.socials
+	&__items
+		display: flex
+		flex-wrap: wrap
+		margin: 0 -5px -10px
+	&__item
+		margin: 0 5px 10px
+
+.item-social
+	display: flex
+	justify-content: center
+	align-items: center
+	width: 40px
+	height: 40px
+	border: 1px solid #f1f1f1
+	border-radius: 50%
+	transition: border-color .3s ease
+	&__icon
+		max-width: 20px
+		max-height: 20px
+	&_inst
+		fill: url(#instagramGradient)
+	&_vk
+		fill: $brand-vk
+	&_fb
+		fill: $brand-fb
+		.item-social__icon
+			width: 10px
+	&_what
+		fill: $brand-what

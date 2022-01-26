@@ -1,0 +1,1054 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>О бренде</title>
+  <link rel="stylesheet" href="assets/styles/main.css">
+  <!-- Disable tap highlight on IE -->
+  <meta name="msapplication-tap-highlight" content="no">
+  <!-- for Chrome on Android -->
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="application-name" lang="ru" content="О бренде">
+  <link rel="icon" sizes="192x192" href="assets/img/favicons/android-chrome-192x192.png">
+  <!-- for Safari on iOS -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="О бренде">
+  <meta name="theme-color" content="#FFFFFF">
+  <link rel="shortcut icon" href="assets/img/favicons/favicon.ico">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicons/favicon-16x16.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicons/favicon-32x32.png">
+  <link rel="apple-touch-icon" sizes="57x57" href="assets/img/favicons/apple-touch-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="assets/img/favicons/apple-touch-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="assets/img/favicons/apple-touch-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="assets/img/favicons/apple-touch-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="assets/img/favicons/apple-touch-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="assets/img/favicons/apple-touch-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="assets/img/favicons/apple-touch-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="assets/img/favicons/apple-touch-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="167x167" href="assets/img/favicons/apple-touch-icon-167x167.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/img/favicons/apple-touch-icon-180x180.png">
+  <link rel="apple-touch-icon" sizes="1024x1024" href="assets/img/favicons/apple-touch-icon-1024x1024.png">
+</head>
+
+<body>
+  <svg class="hidden" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+    <defs>
+      <linearGradient id="accentGradient" x1="0" x2="0" y1="0" y2="1">
+        <stop offset="0%" stop-color="#21A5B5" />
+        <stop offset="100%" stop-color="#71B2B4" />
+      </linearGradient>
+      <linearGradient id="instagramGradient" x1="9.59514" y1="24.414" x2="25.3948" y2="10.7396" gradientUnits="userSpaceOnUse">
+        <stop stop-color="#FFDD55"></stop>
+        <stop offset="0.5" stop-color="#FF543E"></stop>
+        <stop offset="1" stop-color="#C837AB"></stop>
+      </linearGradient>
+    </defs>
+  </svg>
+  <input type="hidden" id="lang" value="rus">
+  <input type="hidden" id="currency" value="Руб.">
+  <header class="header">
+    <div class="header__top top-header">
+      <div class="top-header__container container">
+        <div class="top-header__row row">
+          <div class="top-header__col top-header__col_contacts col-4">
+            <div class="top-header__contacts contacts-header">
+              <div class="contacts-header__item">
+                <a href="tel:88005113639" class="contacts-header__value">8 (800) 511 36 39</a>
+                <span class="contacts-header__text">— бесплатно по России</span>
+              </div>
+            </div>
+          </div>
+          <div class="top-header__col col-4">
+            <a href="index.html" class="top-header__logo">
+              <picture>
+                <source srcset="assets/img/content/logo-mobile.svg" media="(max-width: 768px)">
+                <source srcset="assets/img/content/logo.svg">
+                <img src="assets/img/content/logo.svg" alt="logo" class="img-responsive">
+              </picture>
+            </a>
+          </div>
+          <div class="top-header__col top-header__col_actions col-4">
+            <div class="top-header__actions-wrap">
+              <div class="top-header__actions actions-header">
+                <div class="actions-header__item action-header search">
+                  <button class="action-header__btn search__btn" type="button">
+                    <svg class="action-header__icon">
+                      <use href="assets/img/svg-sprite/sprite.svg#search"></use>
+                    </svg>
+                  </button>
+                  <form action="/main/search" class="search__form form-search">
+                    <input type="text" class="form-search__input" name="search" placeholder="Я ищу..." required>
+                    <button class="form-search__btn" type="submit">
+                      <svg>
+                        <use href="assets/img/svg-sprite/sprite.svg#search"></use>
+                      </svg>
+                    </button>
+                  </form>
+                </div>
+                <div class="actions-header__item action-header user">
+                  <button class="action-header__btn user__btn" type="button" data-micromodal-trigger="modal-login">
+                    <svg class="action-header__icon user__icon">
+                      <use href="assets/img/svg-sprite/sprite.svg#user-circle"></use>
+                    </svg>
+                  </button>
+                </div>
+                <div class="actions-header__item action-header wishlist" data-micromodal-trigger="modal-wishlist">
+                  <button class="action-header__btn wishlist__btn" type="button">
+                    <svg class="action-header__icon wishlist__icon">
+                      <use href="assets/img/svg-sprite/sprite.svg#heart"></use>
+                    </svg>
+                  </button>
+                </div>
+                <div class="actions-header__item action-header minicart">
+                  <a href="cart.html" class="action-header__btn minicart__btn">
+                    <svg class="action-header__icon minicart__icon">
+                      <use href="assets/img/svg-sprite/sprite.svg#bag"></use>
+                    </svg>
+                  </a>
+                  <div class="minicart__box box-minicart">
+                    <div class="box-minicart__inner">
+                      <div class="box-minicart__scrollbar scrollbar-accent">
+                        <div class="box-minicart__orders">
+                        </div>
+                      </div>
+                      <div class="box-minicart__totals totals-minicart">
+                        <div class="totals-minicart__items">
+                          <div class="totals-minicart__item">
+                            <h4 class="totals-minicart__title">Итого к оплате:</h4>
+                            <span class="totals-minicart__value"><span>26 400</span> руб.</span>
+                          </div>
+                        </div>
+                        <div class="totals-minicart__footer">
+                          <a href="cart.html" class="totals-minicart__btn btn btn-accent"><span>Перейти к оформлению заказа</span></a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <button class="header__hamburger hamburger hamburger--emphatic" type="button">
+              <span class="hamburger-box">
+                <span class="hamburger-inner"></span>
+              </span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="header__bottom bottom-header">
+      <div class="bottom-header__topline topline-bottom-header">
+        <div class="topline-bottom-header__container container">
+          <div class="topline-bottom-header__title">Меню</div>
+          <button class="header__hamburger hamburger hamburger--emphatic is-active" type="button">
+            <span class="hamburger-box">
+              <span class="hamburger-inner"></span>
+            </span>
+          </button>
+        </div>
+      </div>
+      <div class="bottom-header__container container">
+        <nav class="bottom-header__menu menu">
+          <ul class="menu__list">
+            <li class="menu__item menu__item_has-submenu">
+              <a href="catalog.html">Каталог</a>
+              <div class="mega-menu">
+                <div class="mega-menu__inner">
+                  <div class="mega-menu__container container">
+                    <div class="mega-menu__row row">
+                      <div class="mega-menu__sub-menus col-lg-4 col-md-6">
+                        <ul class="submenu">
+                          <li class="submenu__item">
+                            <span class="submenu__title">Купальники</span>
+                            <ul class="submenu">
+                              <li class="submenu__item"><a href="#" class="submenu__link">Все купальники</a></li>
+                              <li class="submenu__item"><a href="#" class="submenu__link">Для серфинга</a></li>
+                              <li class="submenu__item"><a href="#" class="submenu__link">Слитные</a></li>
+                              <li class="submenu__item"><a href="#" class="submenu__link">Раздельные</a></li>
+                              <li class="submenu__item"><a href="#" class="submenu__link">С рукавами</a></li>
+                              <li class="submenu__item"><a href="#" class="submenu__link">Без рукавов</a></li>
+                              <li class="submenu__item"><a href="#" class="submenu__link">С чашечками</a></li>
+                              <li class="submenu__item"><a href="#" class="submenu__link">С шортиками</a></li>
+                              <li class="submenu__item"><a href="#" class="submenu__link">Для беременных</a></li>
+                              <li class="submenu__item"><a href="#" class="submenu__link">Солнцезащитные</a></li>
+                              <li class="submenu__item"><a href="#" class="submenu__link">Лосины и легинсы</a></li>
+                            </ul>
+                          </li>
+                          <li class="submenu__item">
+                            <span class="submenu__title">Комбинезоны</span>
+                            <ul class="submenu">
+                              <li class="submenu__item"><a href="#" class="submenu__link">Все комбинезоны</a></li>
+                            </ul>
+                          </li>
+                          <li class="submenu__item">
+                            <span class="submenu__title">Гидрокостюмы</span>
+                            <ul class="submenu">
+                              <li class="submenu__item"><a href="#" class="submenu__link">Все гидрокостюмы</a></li>
+                            </ul>
+                          </li>
+                          <li class="submenu__item">
+                            <span class="submenu__title">Косметика</span>
+                            <ul class="submenu">
+                              <li class="submenu__item"><a href="#" class="submenu__link">Вся косметика</a></li>
+                              <li class="submenu__item"><a href="#" class="submenu__link">Серф-цинк</a></li>
+                              <li class="submenu__item"><a href="#" class="submenu__link">Бальзам для губ от солнца</a></li>
+                              <li class="submenu__item"><a href="#" class="submenu__link">Косметические средства</a></li>
+                            </ul>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="mega-menu__promos col-lg-8 col-md-6">
+                        <div class="promos">
+                          <div class="promos__item item-promo">
+                            <a href="#" class="item-promo__inner">
+                              <img src="assets/img/content/banner_1.jpg" alt="alt" class="item-promo__img img-responsive">
+                            </a>
+                          </div>
+                          <div class="promos__item item-promo">
+                            <a href="#" class="item-promo__inner">
+                              <img src="assets/img/content/banner_2.jpg" alt="alt" class="item-promo__img img-responsive">
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="menu__item"><a href="blog.html">Блог</a></li>
+            <li class="menu__item"><a href="about.html">О бренде</a></li>
+            <li class="menu__item"><a href="sizing.html">Размеры</a></li>
+            <li class="menu__item"><a href="delivery.html">Доставка и оплата</a></li>
+            <li class="menu__item"><a href="index.html">Отзывы</a></li>
+            <li class="menu__item"><a href="calculator.html">Создай свой купальник</a></li>
+            <li class="menu__item"><a href="certificate.html">Сертификаты <img src="assets/img/icons/gift.svg" alt="alt" class="menu__icon"></a></li>
+            <li class="menu__item"><a href="contacts.html">Контакты</a></li>
+            <li class="menu__item sale"><a href="#">Распродажа до -40%</a></li>
+            <li class="menu__item menu__item_real-reviews"><a data-micromodal-trigger="modal-reviews">Реальные отзывы</a></li>
+          </ul>
+        </nav>
+        <div class="bottom-header__actions-wrap"></div>
+      </div>
+      <div class="bottom-header__banners">
+        <a href="#" class="bottom-header__banner">
+          <img src="assets/img/content/banner.jpg" alt="alt" class="img-responsive">
+        </a>
+      </div>
+    </div>
+  </header>
+  <div class="mm-modal mm-modal_wishlist" id="modal-wishlist" aria-hidden="true">
+    <div class="mm-modal__overlay" tabindex="-1" data-micromodal-close>
+      <div class="mm-modal__wrapper" role="dialog" aria-modal="true" aria-labelledby="modal-wishlist-title">
+        <div class="mm-modal__content modal modal-wishlist">
+          <header class="modal-wishlist__header header-wishlist">
+            <div class="header-wishlist__container container">
+              <div class="header-wishlist__headline">
+                <h2 class="header-wishlist__title" id="modal-wishlist-title">Мой Wishlist</h2>
+                <div class="header-wishlist__count">(<span>3</span> товара)</div>
+              </div>
+              <button class="header-wishlist__close close" type="button" aria-label="Close modal" data-micromodal-close>
+                <svg>
+                  <use href="assets/img/svg-sprite/sprite.svg#close"></use>
+                </svg>
+              </button>
+            </div>
+          </header>
+          <div class="modal-wishlist__content content-wishlist" id="modal-wishlist-content">
+            <div class="content-wishlist__container container">
+              <div class="content-wishlist__inner">
+                <div class="content-wishlist__actions">
+                  <label class="content-wishlist__all content-wishlist__radio radio">
+                    <input type="checkbox" class="radio__input" name="wishlist_all">
+                    <span class="radio__content">
+                      <span class="radio__dot"></span>
+                      <span class="radio__label" data-uncheck-all="Снять отметки">Отметить все товары</span>
+                    </span>
+                  </label>
+                  <button class="content-wishlist__delete btn btn-outline-danger" type="button">Удалить отмеченные</button>
+                </div>
+                <div class="content-wishlist__items row">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="mm-modal mm-modal_gallery" id="modal-reviews" aria-hidden="true">
+    <div class="mm-modal__overlay" tabindex="-1" data-micromodal-close>
+      <div class="mm-modal__wrapper" role="dialog" aria-modal="true" aria-labelledby="modal-reviews-title">
+        <div class="mm-modal__content modal-gallery modal-gallery_fullheight">
+          <header class="modal-gallery__header header-modal-gallery">
+            <div class="header-modal-gallery__container container">
+              <h2 class="header-modal-gallery__title" id="modal-reviews-title">Реальные отзывы</h2>
+              <button class="header-modal-gallery__close close" type="button" aria-label="Close modal" data-micromodal-close>
+                <svg>
+                  <use href="assets/img/svg-sprite/sprite.svg#close"></use>
+                </svg>
+              </button>
+            </div>
+          </header>
+          <div class="modal-gallery__body body-modal-gallery" id="modal-reviews-content">
+            <div class="body-modal-gallery__container container">
+              <div class="body-modal-gallery__slider slider-modal-gallery swiper">
+                <div class="slider-modal-gallery__pagination pagination-gallery"></div>
+                <div class="slider-modal-gallery__items swiper-wrapper">
+                  <a href="#" class="slider-modal-gallery__item swiper-slide">
+                    <img data-src="assets/img/content/real-review.jpg" alt="alt" class="slider-modal-gallery__img img-responsive swiper-lazy">
+                    <div class="swiper-lazy-preloader"></div>
+                  </a>
+                  <a href="#" class="slider-modal-gallery__item swiper-slide">
+                    <img data-src="assets/img/content/real-review.jpg" alt="alt" class="slider-modal-gallery__img img-responsive swiper-lazy">
+                    <div class="swiper-lazy-preloader"></div>
+                  </a>
+                  <a href="#" class="slider-modal-gallery__item swiper-slide">
+                    <img data-src="assets/img/content/real-review.jpg" alt="alt" class="slider-modal-gallery__img img-responsive swiper-lazy">
+                    <div class="swiper-lazy-preloader"></div>
+                  </a>
+                  <a href="#" class="slider-modal-gallery__item swiper-slide">
+                    <img data-src="assets/img/content/real-review.jpg" alt="alt" class="slider-modal-gallery__img img-responsive swiper-lazy">
+                    <div class="swiper-lazy-preloader"></div>
+                  </a>
+                  <a href="#" class="slider-modal-gallery__item swiper-slide">
+                    <img data-src="assets/img/content/real-review.jpg" alt="alt" class="slider-modal-gallery__img img-responsive swiper-lazy">
+                    <div class="swiper-lazy-preloader"></div>
+                  </a>
+                  <a href="#" class="slider-modal-gallery__item swiper-slide">
+                    <img data-src="assets/img/content/real-review.jpg" alt="alt" class="slider-modal-gallery__img img-responsive swiper-lazy">
+                    <div class="swiper-lazy-preloader"></div>
+                  </a>
+                  <a href="#" class="slider-modal-gallery__item swiper-slide">
+                    <img data-src="assets/img/content/real-review.jpg" alt="alt" class="slider-modal-gallery__img img-responsive swiper-lazy">
+                    <div class="swiper-lazy-preloader"></div>
+                  </a>
+                  <a href="#" class="slider-modal-gallery__item swiper-slide">
+                    <img data-src="assets/img/content/real-review.jpg" alt="alt" class="slider-modal-gallery__img img-responsive swiper-lazy">
+                    <div class="swiper-lazy-preloader"></div>
+                  </a>
+                  <a href="#" class="slider-modal-gallery__item swiper-slide">
+                    <img data-src="assets/img/content/real-review.jpg" alt="alt" class="slider-modal-gallery__img img-responsive swiper-lazy">
+                    <div class="swiper-lazy-preloader"></div>
+                  </a>
+                  <a href="#" class="slider-modal-gallery__item swiper-slide">
+                    <img data-src="assets/img/content/real-review.jpg" alt="alt" class="slider-modal-gallery__img img-responsive swiper-lazy">
+                    <div class="swiper-lazy-preloader"></div>
+                  </a>
+                  <a href="#" class="slider-modal-gallery__item swiper-slide">
+                    <img data-src="assets/img/content/real-review.jpg" alt="alt" class="slider-modal-gallery__img img-responsive swiper-lazy">
+                    <div class="swiper-lazy-preloader"></div>
+                  </a>
+                  <a href="#" class="slider-modal-gallery__item swiper-slide">
+                    <img data-src="assets/img/content/real-review.jpg" alt="alt" class="slider-modal-gallery__img img-responsive swiper-lazy">
+                    <div class="swiper-lazy-preloader"></div>
+                  </a>
+                  <a href="#" class="slider-modal-gallery__item swiper-slide">
+                    <img data-src="assets/img/content/real-review.jpg" alt="alt" class="slider-modal-gallery__img img-responsive swiper-lazy">
+                    <div class="swiper-lazy-preloader"></div>
+                  </a>
+                  <a href="#" class="slider-modal-gallery__item swiper-slide">
+                    <img data-src="assets/img/content/real-review.jpg" alt="alt" class="slider-modal-gallery__img img-responsive swiper-lazy">
+                    <div class="swiper-lazy-preloader"></div>
+                  </a>
+                  <a href="#" class="slider-modal-gallery__item swiper-slide">
+                    <img data-src="assets/img/content/real-review.jpg" alt="alt" class="slider-modal-gallery__img img-responsive swiper-lazy">
+                    <div class="swiper-lazy-preloader"></div>
+                  </a>
+                  <a href="#" class="slider-modal-gallery__item swiper-slide">
+                    <img data-src="assets/img/content/real-review.jpg" alt="alt" class="slider-modal-gallery__img img-responsive swiper-lazy">
+                    <div class="swiper-lazy-preloader"></div>
+                  </a>
+                </div>
+              </div>
+              <a href="catalog.html" class="body-modal-gallery__btn btn btn-outline-white">Перейти в каталог</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <ul class="breadcrumbs">
+      <li><a href="#">Главная</a></li>
+      <li>О бренде</li>
+    </ul>
+  </div>
+  <section class="section-about">
+    <div class="container">
+      <div class="page-headline row">
+        <div class="page-headline__captions col-md-4">
+          <h2 class="page-headline__title page-title">О бренде</h2>
+          <img src="assets/img/icons/wave-about.svg" alt="alt" class="page-headline__wave img-responsive">
+        </div>
+        <div class="page-headline__content col-md-8">
+          <div class="page-headline__text-wrap">
+            <p>WAVE HARMONY международная компания созданная в 2014 году. На сегодняшний день наша основная<br> специализация — производство одежды для серфинга и других видов водного спорта. Мы сами занимаемся серфингом и не понаслышке знаем, как важна комфортная и практичная одежда, поэтому мы предлагаем вам:</p>
+          </div>
+        </div>
+      </div>
+      <div class="about-cards row">
+        <div class="about-cards__card card-about col-xl-4 col-md-6">
+          <div class="card-about__inner">
+            <div class="card-about__title">Европейское качество</div>
+            <div class="card-about__text-wrap">
+              <p>Для вашего комфорта и максимальной безопасности, мы используем ткани европейского образца с плотностью<br> 1,1 — 1,3 г/см</p>
+            </div>
+          </div>
+        </div>
+        <div class="about-cards__card card-about col-xl-4 col-md-6">
+          <div class="card-about__inner">
+            <div class="card-about__title">Фурнитура от SBS</div>
+            <div class="card-about__text-wrap">
+              <p>SBS является лидером на мировом рынке инновационных соединительных технологий и гарантирует более 20 тыс. циклов открытия и закрытия молнии</p>
+            </div>
+          </div>
+        </div>
+        <div class="about-cards__card card-about col-xl-4 col-md-6">
+          <div class="card-about__inner">
+            <div class="card-about__title">Идеальны во всем</div>
+            <div class="card-about__text-wrap">
+              <p>Купальники не бояться соли и хлорки, эластичны, устойчивы к повреждениям, отлично садятся по фигуре и не теряют своей изначальной красоты</p>
+            </div>
+          </div>
+        </div>
+        <div class="about-cards__card card-about col-xl-4 col-md-6">
+          <div class="card-about__inner">
+            <div class="card-about__title">Европейское качество</div>
+            <div class="card-about__text-wrap">
+              <p>Для вашего комфорта и максимальной безопасности, мы используем ткани европейского образца с плотностью 1,1 — 1,3 г/см</p>
+            </div>
+          </div>
+        </div>
+        <div class="about-cards__card card-about col-xl-4 col-md-6">
+          <div class="card-about__inner">
+            <div class="card-about__title">Фурнитура от SBS</div>
+            <div class="card-about__text-wrap">
+              <p>SBS является лидером на мировом рынке инновационных соединительных технологий и гарантирует более 20 тыс. циклов открытия и закрытия молнии</p>
+            </div>
+          </div>
+        </div>
+        <div class="about-cards__card card-about col-xl-4 col-md-6">
+          <div class="card-about__inner">
+            <div class="card-about__title">Идеальны во всем</div>
+            <div class="card-about__text-wrap">
+              <p>Купальники не бояться соли и хлорки, эластичны, устойчивы к повреждениям, отлично садятся по фигуре и не теряют своей изначальной красоты</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="section-reviews">
+    <div class="container">
+      <div class="page-headline row">
+        <div class="page-headline__captions col-md-12">
+          <h2 class="page-headline__title page-title">Нам доверяют</h2>
+          <img src="assets/img/icons/wave-reviews.svg" alt="alt" class="page-headline__wave img-responsive">
+        </div>
+      </div>
+      <div class="reviews-slider">
+        <div class="reviews-slider__thumbs thumbs-reviews swiper slider">
+          <div class="thumbs-reviews__items swiper-wrapper">
+            <div class="thumbs-reviews__item thumb-review swiper-slide">
+              <img src="assets/img/content/review_1_thumb.jpg" alt="alt" class="thumb-review__img img-responsive">
+            </div>
+            <div class="thumbs-reviews__item thumb-review swiper-slide">
+              <img src="assets/img/content/review_2_thumb.jpg" alt="alt" class="thumb-review__img img-responsive">
+            </div>
+            <div class="thumbs-reviews__item thumb-review swiper-slide">
+              <img src="assets/img/content/review_3_thumb.jpg" alt="alt" class="thumb-review__img img-responsive">
+            </div>
+            <div class="thumbs-reviews__item thumb-review swiper-slide">
+              <img src="assets/img/content/review_4_thumb.jpg" alt="alt" class="thumb-review__img img-responsive">
+            </div>
+            <div class="thumbs-reviews__item thumb-review swiper-slide">
+              <img src="assets/img/content/review_1_thumb.jpg" alt="alt" class="thumb-review__img img-responsive">
+            </div>
+            <div class="thumbs-reviews__item thumb-review swiper-slide">
+              <img src="assets/img/content/review_2_thumb.jpg" alt="alt" class="thumb-review__img img-responsive">
+            </div>
+          </div>
+          <div class="thumbs-reviews__scrollbar swiper-scrollbar"></div>
+        </div>
+        <div class="reviews-slider__main main-reviews swiper slider">
+          <div class="main-reviews__items swiper-wrapper">
+            <div class="main-reviews__item item-review swiper-slide">
+              <div class="item-review__row row">
+                <div class="item-review__col col-md-6">
+                  <div class="item-review__img-wrap">
+                    <img src="assets/img/content/review_1_full.jpg" alt="alt" class="item-review__img img-responsive">
+                  </div>
+                </div>
+                <div class="item-review__col col-md-6">
+                  <div class="item-review__content-wrap">
+                    <div class="item-review__content">
+                      <div class="item-review__author">Регина Тодоренко 1</div>
+                      <div class="item-review__info info-review">
+                        <div class="info-review__item">
+                          <a href="#" class="info-review__link color-gradient-accent">@reginatodorenko</a>
+                        </div>
+                        <div class="info-review__item">
+                          <span class="info-review__text">8,5млн. подписчиков</span>
+                        </div>
+                      </div>
+                      <div class="item-review__text-wrap">
+                        <p>Блогер, телеведущая, певица, завезда передачи «Орел и Решка», молодая мама и просто суперхаризматичная персона, ловит волну вместе с Wave Harmony</p>
+                      </div>
+                      <div class="item-review__actions">
+                        <a href="#" class="item-review__btn color-gradient-accent underline-gradient-accent">Читать отзыв</a>
+                        <a href="#" class="item-review__btn color-gradient-accent underline-gradient-accent">Видео Регины</a>
+                      </div>
+                    </div>
+                    <img src="assets/img/content/light_1.png" alt="alt" class="item-review__light">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="main-reviews__item item-review swiper-slide">
+              <div class="item-review__row row">
+                <div class="item-review__col col-md-6">
+                  <div class="item-review__img-wrap">
+                    <img src="assets/img/content/review_1_full.jpg" alt="alt" class="item-review__img img-responsive">
+                  </div>
+                </div>
+                <div class="item-review__col col-md-6">
+                  <div class="item-review__content-wrap">
+                    <div class="item-review__content">
+                      <div class="item-review__author">Регина Тодоренко 2</div>
+                      <div class="item-review__info info-review">
+                        <div class="info-review__item">
+                          <a href="#" class="info-review__link color-gradient-accent">@reginatodorenko</a>
+                        </div>
+                        <div class="info-review__item">
+                          <span class="info-review__text">8,5млн. подписчиков</span>
+                        </div>
+                      </div>
+                      <div class="item-review__text-wrap">
+                        <p>Блогер, телеведущая, певица, завезда передачи «Орел и Решка», молодая мама и просто суперхаризматичная персона, ловит волну вместе с Wave Harmony</p>
+                      </div>
+                      <div class="item-review__actions">
+                        <a href="#" class="item-review__btn color-gradient-accent underline-gradient-accent">Читать отзыв</a>
+                        <a href="#" class="item-review__btn color-gradient-accent underline-gradient-accent">Видео Регины</a>
+                      </div>
+                    </div>
+                    <img src="assets/img/content/light_1.png" alt="alt" class="item-review__light">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="main-reviews__item item-review swiper-slide">
+              <div class="item-review__row row">
+                <div class="item-review__col col-md-6">
+                  <div class="item-review__img-wrap">
+                    <img src="assets/img/content/review_1_full.jpg" alt="alt" class="item-review__img img-responsive">
+                  </div>
+                </div>
+                <div class="item-review__col col-md-6">
+                  <div class="item-review__content-wrap">
+                    <div class="item-review__content">
+                      <div class="item-review__author">Регина Тодоренко 3</div>
+                      <div class="item-review__info info-review">
+                        <div class="info-review__item">
+                          <a href="#" class="info-review__link color-gradient-accent">@reginatodorenko</a>
+                        </div>
+                        <div class="info-review__item">
+                          <span class="info-review__text">8,5млн. подписчиков</span>
+                        </div>
+                      </div>
+                      <div class="item-review__text-wrap">
+                        <p>Блогер, телеведущая, певица, завезда передачи «Орел и Решка», молодая мама и просто суперхаризматичная персона, ловит волну вместе с Wave Harmony</p>
+                      </div>
+                      <div class="item-review__actions">
+                        <a href="#" class="item-review__btn color-gradient-accent underline-gradient-accent">Читать отзыв</a>
+                        <a href="#" class="item-review__btn color-gradient-accent underline-gradient-accent">Видео Регины</a>
+                      </div>
+                    </div>
+                    <img src="assets/img/content/light_1.png" alt="alt" class="item-review__light">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="main-reviews__item item-review swiper-slide">
+              <div class="item-review__row row">
+                <div class="item-review__col col-md-6">
+                  <div class="item-review__img-wrap">
+                    <img src="assets/img/content/review_1_full.jpg" alt="alt" class="item-review__img img-responsive">
+                  </div>
+                </div>
+                <div class="item-review__col col-md-6">
+                  <div class="item-review__content-wrap">
+                    <div class="item-review__content">
+                      <div class="item-review__author">Регина Тодоренко 4</div>
+                      <div class="item-review__info info-review">
+                        <div class="info-review__item">
+                          <a href="#" class="info-review__link color-gradient-accent">@reginatodorenko</a>
+                        </div>
+                        <div class="info-review__item">
+                          <span class="info-review__text">8,5млн. подписчиков</span>
+                        </div>
+                      </div>
+                      <div class="item-review__text-wrap">
+                        <p>Блогер, телеведущая, певица, завезда передачи «Орел и Решка», молодая мама и просто суперхаризматичная персона, ловит волну вместе с Wave Harmony</p>
+                      </div>
+                      <div class="item-review__actions">
+                        <a href="#" class="item-review__btn color-gradient-accent underline-gradient-accent">Читать отзыв</a>
+                        <a href="#" class="item-review__btn color-gradient-accent underline-gradient-accent">Видео Регины</a>
+                      </div>
+                    </div>
+                    <img src="assets/img/content/light_1.png" alt="alt" class="item-review__light">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="main-reviews__item item-review swiper-slide">
+              <div class="item-review__row row">
+                <div class="item-review__col col-md-6">
+                  <div class="item-review__img-wrap">
+                    <img src="assets/img/content/review_1_full.jpg" alt="alt" class="item-review__img img-responsive">
+                  </div>
+                </div>
+                <div class="item-review__col col-md-6">
+                  <div class="item-review__content-wrap">
+                    <div class="item-review__content">
+                      <div class="item-review__author">Регина Тодоренко 5</div>
+                      <div class="item-review__info info-review">
+                        <div class="info-review__item">
+                          <a href="#" class="info-review__link color-gradient-accent">@reginatodorenko</a>
+                        </div>
+                        <div class="info-review__item">
+                          <span class="info-review__text">8,5млн. подписчиков</span>
+                        </div>
+                      </div>
+                      <div class="item-review__text-wrap">
+                        <p>Блогер, телеведущая, певица, завезда передачи «Орел и Решка», молодая мама и просто суперхаризматичная персона, ловит волну вместе с Wave Harmony</p>
+                      </div>
+                      <div class="item-review__actions">
+                        <a href="#" class="item-review__btn color-gradient-accent underline-gradient-accent">Читать отзыв</a>
+                        <a href="#" class="item-review__btn color-gradient-accent underline-gradient-accent">Видео Регины</a>
+                      </div>
+                    </div>
+                    <img src="assets/img/content/light_1.png" alt="alt" class="item-review__light">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="main-reviews__item item-review swiper-slide">
+              <div class="item-review__row row">
+                <div class="item-review__col col-md-6">
+                  <div class="item-review__img-wrap">
+                    <img src="assets/img/content/review_1_full.jpg" alt="alt" class="item-review__img img-responsive">
+                  </div>
+                </div>
+                <div class="item-review__col col-md-6">
+                  <div class="item-review__content-wrap">
+                    <div class="item-review__content">
+                      <div class="item-review__author">Регина Тодоренко 6</div>
+                      <div class="item-review__info info-review">
+                        <div class="info-review__item">
+                          <a href="#" class="info-review__link color-gradient-accent">@reginatodorenko</a>
+                        </div>
+                        <div class="info-review__item">
+                          <span class="info-review__text">8,5млн. подписчиков</span>
+                        </div>
+                      </div>
+                      <div class="item-review__text-wrap">
+                        <p>Блогер, телеведущая, певица, завезда передачи «Орел и Решка», молодая мама и просто суперхаризматичная персона, ловит волну вместе с Wave Harmony</p>
+                      </div>
+                      <div class="item-review__actions">
+                        <a href="#" class="item-review__btn color-gradient-accent underline-gradient-accent">Читать отзыв</a>
+                        <a href="#" class="item-review__btn color-gradient-accent underline-gradient-accent">Видео Регины</a>
+                      </div>
+                    </div>
+                    <img src="assets/img/content/light_1.png" alt="alt" class="item-review__light">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <div class="newsletter">
+    <div class="container">
+      <div class="newsletter__row row">
+        <div class="newsletter__content col-lg-8 col-md-7">
+          <img src="assets/img/icons/letter.svg" alt="alt" class="newsletter__icon">
+          <div class="newsletter__text-wrap">
+            <p>Получайте актуальную информацию о всех скидках, распродажах и новых, трендовых коллекциях</p>
+          </div>
+        </div>
+        <form class="newsletter__form form-newsletter col-lg-4 col-md-5" action="/main/subscription">
+          <div class="newsletter__control-field control-field control-field_js">
+            <input type="email" class="control-field__control control" id="footerEmail" name="email" required>
+            <label for="footerEmail" class="control-field__label control-label"><span>Введите ваш E-mail</span></label>
+          </div>
+          <button class="newsletter__btn btn btn-accent" type="submit">
+            <span>
+              <svg class="newsletter__arrow">
+                <use href="assets/img/svg-sprite/sprite.svg#arrow-right"></use>
+              </svg>
+            </span>
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+  <footer class="footer">
+    <div class="footer__container container">
+      <div class="footer__row row">
+        <div class="footer__col col-xl-3 col-md-4">
+          <h3 class="footer__title">Полезные ссылки</h3>
+          <nav class="footer__menu menu-footer">
+            <ul class="menu-footer__list">
+              <li class="menu-footer__item"><a href="#">Каталог</a></li>
+              <li class="menu-footer__item"><a href="blog.html">Блог</a></li>
+              <li class="menu-footer__item"><a href="about.html">О бренде</a></li>
+              <li class="menu-footer__item"><a href="#">Калькулятор</a></li>
+              <li class="menu-footer__item"><a href="sizing.html">Размеры</a></li>
+              <li class="menu-footer__item"><a href="delivery.html">Доставка и оплата<img src="assets/img/icons/delivery.svg" alt="alt" class="menu-footer__icon"></a></li>
+              <li class="menu-footer__item"><a href="contacts.html">Контакты</a></li>
+              <li class="menu-footer__item"><a href="certificate.html">Подарочные сертификаты<img src="assets/img/icons/gift-card.svg" alt="alt" class="menu-footer__icon"></a></li>
+              <li class="menu-footer__item sale"><a href="#">Распродажа до -40%</a></li>
+            </ul>
+          </nav>
+        </div>
+        <div class="footer__col footer__col_accordion col-xl-4 col-md-8">
+          <h3 class="footer__title">Категории товаров</h3>
+          <nav class="footer__menu menu-footer menu-footer_columns_2">
+            <ul class="menu-footer__list">
+              <li class="menu-footer__item"><a href="#">Новая коллекция 2021</a></li>
+              <li class="menu-footer__item"><a href="#">Распродажа купальников</a></li>
+              <li class="menu-footer__item"><a href="#">Купальники для серфинга</a></li>
+              <li class="menu-footer__item"><a href="#">Лайкра для серфинга</a></li>
+              <li class="menu-footer__item"><a href="#">Слитные купальники</a></li>
+              <li class="menu-footer__item"><a href="#">Раздельные купальники</a></li>
+              <li class="menu-footer__item"><a href="#">Купальники с рукавами</a></li>
+              <li class="menu-footer__item"><a href="#">Купальники без рукавов</a></li>
+              <li class="menu-footer__item"><a href="#">Купальники с чашечками</a></li>
+              <li class="menu-footer__item"><a href="#">Новая коллекция 2021</a></li>
+              <li class="menu-footer__item"><a href="#">Распродажа купальников</a></li>
+              <li class="menu-footer__item"><a href="#">Купальники для серфинга</a></li>
+              <li class="menu-footer__item"><a href="#">Лайкра для серфинга</a></li>
+              <li class="menu-footer__item"><a href="#">Слитные купальники</a></li>
+              <li class="menu-footer__item"><a href="#">Раздельные купальники</a></li>
+              <li class="menu-footer__item"><a href="#">Купальники с рукавами</a></li>
+              <li class="menu-footer__item"><a href="#">Купальники без рукавов</a></li>
+              <li class="menu-footer__item"><a href="#">Купальники с чашечками</a></li>
+            </ul>
+          </nav>
+        </div>
+        <div class="footer__col footer__col_accordion col-xl-3 col-lg-4 col-md-5">
+          <h3 class="footer__title">Часто ищут</h3>
+          <nav class="footer__menu menu-footer">
+            <ul class="menu-footer__list">
+              <li class="menu-footer__item"><a href="#">Черные купальники с рукавами</a></li>
+              <li class="menu-footer__item"><a href="#">Закрытые купальники с рукавами</a></li>
+              <li class="menu-footer__item"><a href="#">Купальники с сеткой</a></li>
+              <li class="menu-footer__item"><a href="#">Спортивные купальники для бассейна</a></li>
+              <li class="menu-footer__item"><a href="#">Купальники с принтом</a></li>
+              <li class="menu-footer__item"><a href="#">Купальники с закрытыми плечами</a></li>
+            </ul>
+          </nav>
+        </div>
+        <div class="footer__col footer__col_contacts col-xl-2 col-lg-8 col-md-6">
+          <h3 class="footer__title">Контактные данные</h3>
+          <div class="footer__contacts contacts-footer">
+            <div class="contacts-footer__item contacts-footer__item_email">
+              <a href="mailto:zakaz@waveharmony.com" class="contacts-footer__value">zakaz@waveharmony.com</a>
+            </div>
+            <div class="contacts-footer__item contacts-footer__item_phone">
+              <a href="tel:88005113639" class="contacts-footer__value color-gradient-accent">8 (800) 511-36-39</a>
+            </div>
+          </div>
+          <div class="footer__socials socials">
+            <div class="socials__items">
+              <a href="#" class="socials__item item-social item-social_vk">
+                <svg class="item-social__icon">
+                  <use href="assets/img/svg-sprite/sprite.svg#vk"></use>
+                </svg>
+              </a>
+              <a href="#" class="socials__item item-social item-social_what">
+                <svg class="item-social__icon">
+                  <use href="assets/img/svg-sprite/sprite.svg#what"></use>
+                </svg>
+              </a>
+              <a href="#" class="socials__item item-social item-social_fb">
+                <svg class="item-social__icon">
+                  <use href="assets/img/svg-sprite/sprite.svg#fb"></use>
+                </svg>
+              </a>
+              <a href="#" class="socials__item item-social item-social_inst">
+                <svg class="item-social__icon">
+                  <use href="assets/img/svg-sprite/sprite.svg#inst"></use>
+                </svg>
+              </a>
+            </div>
+          </div>
+          <div class="footer__info">
+            <p><a href="#">Информация для покупателей</a></p>
+            <p>Wave Harmony - женская одежда для серфинга и любых других, водных видов спорта.</p>
+            <p>Все права защищены. 2021</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <div class="cookie">
+    <img src="assets/img/icons/cookie.svg" alt="alt" class="cookie__icon">
+    <p class="cookie__text">Находясь на этом сайте, вы соглашаетесь с нашей — <a href="#">Политикой конфиденциальности</a></p>
+    <button class="cookie__btn btn btn-white" id="cookie-btn-yes"><span>Принять</span></button>
+  </div>
+  <div class="mm-modal" id="modal-subscribe-success" aria-hidden="true">
+    <div class="mm-modal__overlay" tabindex="-1" data-micromodal-close>
+      <div class="mm-modal__wrapper" role="dialog" aria-modal="true" aria-labelledby="modal-subscribe-success-title">
+        <div class="mm-modal__content modal modal-blocks modal-blocks_message">
+          <button class="modal-blocks__close modal__close close" type="button" aria-label="Close modal" data-micromodal-close>
+            <svg>
+              <use href="assets/img/svg-sprite/sprite.svg#close"></use>
+            </svg>
+          </button>
+          <div class="modal__body body-modal" id="modal-subscribe-success-content">
+            <div class="body-modal__container container">
+              <div class="modal-blocks__img-wrap">
+                <img src="assets/img/content/hand.png" alt="alt" class="modal-blocks__img img-responsive">
+              </div>
+              <div class="modal-blocks__content-wrap">
+                <div class="modal-blocks__content">
+                  <h2 class="modal-blocks__title" id="modal-subscribe-success-title">Благодарим вас за подписку</h2>
+                  <div class="modal-blocks__text-wrap">
+                    <p>все самое актуальное и интересное будет приходить вам на почту</p>
+                  </div>
+                  <div class="modal-blocks__btn-wrap">
+                    <button class="modal-blocks__btn modal__btn btn btn-accent" type="button" data-micromodal-close aria-label="Close this dialog window"><span>Вернуться к покупкам</span></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="mm-modal mm-modal_let-grow" id="modal-newsletter" aria-hidden="true">
+    <div class="mm-modal__overlay" tabindex="-1" data-micromodal-close>
+      <div class="mm-modal__wrapper" role="dialog" aria-modal="true" aria-labelledby="modal-newsletter-title">
+        <div class="mm-modal__content modal modal-blocks modal-blocks_subscribe scrollbar-accent">
+          <button class="modal-blocks__close modal__close close" type="button" aria-label="Close modal" data-micromodal-close>
+            <svg>
+              <use href="assets/img/svg-sprite/sprite.svg#close"></use>
+            </svg>
+          </button>
+          <div class="modal__body body-modal" id="modal-newsletter-content">
+            <div class="body-modal__container container">
+              <div class="modal-blocks__row">
+                <div class="modal-blocks__content-wrap">
+                  <div class="modal-blocks__content">
+                    <h2 class="modal-blocks__title" id="modal-newsletter-title">Для получения самой актуальной информации о всех скидках, распродажах и новых коллекциях</h2>
+                    <div class="modal-blocks__text-wrap">
+                      <p>просто укажите E-mail в форме ниже</p>
+                    </div>
+                    <form class="form-modal form-newsletter">
+                      <div class="form-modal__controls">
+                        <div class="form-modal__control-field control-field control-field_js">
+                          <input type="email" class="control-field__control control" id="email" name="email" required>
+                          <label for="email" class="control-field__label control-label"><span>Введите ваш E-mail</span></label>
+                        </div>
+                      </div>
+                      <div class="form-modal__btn-wrap form-newsletter__btn-wrap">
+                        <button class="form-modal__btn form-newsletter__btn modal__btn btn btn-accent"><span>Подписаться</span></button>
+                        <button class="form-modal__btn form-newsletter__btn_later modal__btn btn btn-gray" type="button"><span>Позже</span></button>
+                      </div>
+                      <div class="form-modal__radios">
+                        <label class="form-modal__radio radio">
+                          <input type="checkbox" class="radio__input" name="remember" checked>
+                          <span class="radio__content">
+                            <span class="radio__dot"></span>
+                            <span class="radio__label">Нажимая кнопку «Подписаться», вы даете согласие на <a href="#">обработку персональных данных</a></span>
+                          </span>
+                        </label>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+                <div class="modal-blocks__img-wrap">
+                  <img src="assets/img/content/bell.png" alt="alt" class="modal-blocks__img img-responsive">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="mm-modal mm-modal_let-grow" id="modal-login" aria-hidden="true">
+    <div class="mm-modal__overlay" tabindex="-1" data-micromodal-close>
+      <div class="mm-modal__wrapper" role="dialog" aria-modal="true" aria-labelledby="modal-login-title">
+        <div class="mm-modal__content modal modal-auth scrollbar-accent">
+          <header class="modal__header header-modal">
+            <div class="header-modal__container container">
+              <h2 class="header-modal__title modal__title d-lg-none d-xl-block" id="modal-login-title">Войдите в аккаунт</h2>
+              <button class="header-modal__close modal__close close" type="button" aria-label="Close modal" data-micromodal-close>
+                <svg>
+                  <use href="assets/img/svg-sprite/sprite.svg#close"></use>
+                </svg>
+              </button>
+            </div>
+          </header>
+          <div class="modal__body body-modal" id="modal-login-content">
+            <div class="body-modal__container container">
+              <form class="form-modal" action="/auth/login_pop" method="post" name="formLogin">
+                <div class="form-modal__header d-none d-lg-block d-xl-none">
+                  <h2 class="form-modal__title">Войти</h2>
+                  <p class="form-modal__text">или <span class="form-modal__link color-gradient-accent trigger-modal-register">создать аккаунт</span></p>
+                </div>
+                <div class="form-modal__controls">
+                  <div class="form-modal__control-field control-field control-field_js">
+                    <input type="tel" class="control-field__control control phone-mask" id="login_phone" name="phone" required>
+                    <label for="login_phone" class="control-field__label control-label"><span>Телефон<span class="color-danger">*</span></span></label>
+                  </div>
+                  <div class="form-modal__control-field control-field control-field_js">
+                    <input type="password" class="control-field__control control" id="login_password" name="password" required>
+                    <label for="login_password" class="control-field__label control-label"><span>Пароль<span class="color-danger">*</span></span></label>
+                  </div>
+                </div>
+                <div class="form-modal__actions">
+                  <label class="form-modal__radio radio">
+                    <input type="checkbox" class="radio__input" name="remember" checked>
+                    <span class="radio__content">
+                      <span class="radio__dot"></span>
+                      <span class="radio__label">Запомнить меня</span>
+                    </span>
+                  </label>
+                  <span class="form-modal__reset color-gradient-accent trigger-modal-reset" data-micromodal-trigger="modal-reset">Напомнить пароль</span>
+                </div>
+                <div class="form-modal__btn-wrap">
+                  <button class="form-modal__btn modal__btn btn btn-accent" type="submit"><span>Войти</span></button>
+                  <button class="form-modal__btn modal__btn btn btn-outline-accent d-lg-none d-xl-block trigger-modal-register" type="button"><span>У меня пока нет аккаунта</span></button>
+                </div>
+                <div class="form-modal__feedback color-danger"></div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="mm-modal mm-modal_let-grow" id="modal-register" aria-hidden="true">
+    <div class="mm-modal__overlay" tabindex="-1" data-micromodal-close>
+      <div class="mm-modal__wrapper" role="dialog" aria-modal="true" aria-labelledby="modal-register-title">
+        <div class="mm-modal__content modal modal-auth scrollbar-accent">
+          <header class="modal__header header-modal">
+            <div class="header-modal__container container">
+              <h2 class="header-modal__title modal__title d-lg-none d-xl-block" id="modal-register-title">Создайте аккаунт</h2>
+              <button class="header-modal__close modal__close close" type="button" aria-label="Close modal" data-micromodal-close>
+                <svg>
+                  <use href="assets/img/svg-sprite/sprite.svg#close"></use>
+                </svg>
+              </button>
+            </div>
+          </header>
+          <div class="modal__body body-modal" id="modal-register-content">
+            <div class="body-modal__container container">
+              <form class="form-modal" action="/auth/registration_pop" method="post" name="formRegister">
+                <div class="form-modal__header d-none d-lg-block d-xl-none">
+                  <h2 class="form-modal__title">Создать аккаунт</h2>
+                  <p class="form-modal__text">или <span class="form-modal__link color-gradient-accent trigger-modal-login">войти в существующий</span></p>
+                </div>
+                <div class="form-modal__controls">
+                  <div class="form-modal__control-field control-field control-field_js">
+                    <input type="text" class="control-field__control control" id="register_name" name="first_name" required>
+                    <label for="register_name" class="control-field__label control-label"><span>Имя<span class="color-danger">*</span></span></label>
+                  </div>
+                  <div class="form-modal__control-field control-field control-field_js">
+                    <input type="text" class="control-field__control control" id="register_last_name" name="last_name" required>
+                    <label for="register_last_name" class="control-field__label control-label"><span>Фамилия<span class="color-danger">*</span></span></label>
+                  </div>
+                  <div class="form-modal__control-field control-field control-field_js">
+                    <input type="email" class="control-field__control control" id="register_email" name="email" required>
+                    <label for="register_email" class="control-field__label control-label"><span>E-mail<span class="color-danger">*</span></span></label>
+                  </div>
+                  <div class="form-modal__control-field control-field control-field_js">
+                    <input type="tel" class="control-field__control control phone-mask" id="register_phone" name="phone" required>
+                    <label for="register_phone" class="control-field__label control-label"><span>Телефон<span class="color-danger">*</span></span></label>
+                  </div>
+                  <div class="form-modal__control-field control-field control-field_js">
+                    <input type="password" class="control-field__control control" id="register_password" name="password" required>
+                    <label for="register_password" class="control-field__label control-label"><span>Пароль<span class="color-danger">*</span></span></label>
+                  </div>
+                  <div class="form-modal__control-field control-field control-field_js">
+                    <input type="password" class="control-field__control control" id="register_repeat_password" name="repeat_password" required>
+                    <label for="register_repeat_password" class="control-field__label control-label"><span>Пароль ещё раз<span class="color-danger">*</span></span></label>
+                  </div>
+                </div>
+                <div class="form-modal__actions">
+                  <label class="form-modal__radio radio">
+                    <input type="checkbox" class="radio__input" name="subscribe" checked>
+                    <span class="radio__content">
+                      <span class="radio__dot"></span>
+                      <span class="radio__label">Подписаться на новинки и акции</span>
+                    </span>
+                  </label>
+                </div>
+                <div class="form-modal__btn-wrap">
+                  <button class="form-modal__btn modal__btn btn btn-accent" type="submit"><span>Создать аккаунт</span></button>
+                  <button class="form-modal__btn modal__btn btn btn-outline-accent d-lg-none d-xl-block trigger-modal-login" type="button"><span>У меня уже есть аккаунт</span></button>
+                </div>
+                <div class="form-modal__feedback color-danger"></div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="mm-modal" id="modal-reset" aria-hidden="true">
+    <div class="mm-modal__overlay" tabindex="-1" data-micromodal-close>
+      <div class="mm-modal__wrapper" role="dialog" aria-modal="true" aria-labelledby="modal-reset-title">
+        <div class="mm-modal__content modal modal-auth scrollbar-accent">
+          <header class="modal__header header-modal">
+            <div class="header-modal__container container">
+              <h2 class="header-modal__title modal__title d-lg-none d-xl-block" id="modal-reset-title">Восстановление пароля</h2>
+              <button class="header-modal__close modal__close close" type="button" aria-label="Close modal" data-micromodal-close>
+                <svg>
+                  <use href="assets/img/svg-sprite/sprite.svg#close"></use>
+                </svg>
+              </button>
+            </div>
+          </header>
+          <div class="modal__body body-modal" id="modal-reset-content">
+            <div class="body-modal__container container">
+              <form class="form-modal" action="/auth/forgot_password" method="post" name="formReset">
+                <div class="form-modal__header d-none d-lg-block d-xl-none">
+                  <h2 class="form-modal__title">Восстановление пароля</h2>
+                  <p class="form-modal__text">Пожалуйста введите ваш логин и мы сможем отправить вам письмо с новым паролем.</p>
+                </div>
+                <div class="form-modal__controls">
+                  <div class="form-modal__control-field control-field control-field_js">
+                    <input type="tel" class="control-field__control control phone-mask" id="reset_phone" name="phone" required>
+                    <label for="reset_phone" class="control-field__label control-label"><span>Телефон<span class="color-danger">*</span></span></label>
+                  </div>
+                </div>
+                <div class="form-modal__btn-wrap">
+                  <button class="form-modal__btn modal__btn btn btn-accent" type="submit"><span>Отправить</span></button>
+                </div>
+                <div class="form-modal__feedback color-danger"></div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+    var SessionValue = "1";
+  </script>
+  <script src="assets/js/main.js"></script>
+</body>
+
+</html>

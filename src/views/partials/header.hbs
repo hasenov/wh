@@ -1,0 +1,469 @@
+<!doctype html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>{{title}}</title>
+	<link rel="stylesheet" href="{{assets}}/styles/main.css">
+
+	<!-- Disable tap highlight on IE -->
+	<meta name="msapplication-tap-highlight" content="no">
+
+	<!-- for Chrome on Android -->
+	<meta name="mobile-web-app-capable" content="yes">
+	<meta name="application-name" lang="ru" content="{{title}}">
+	<link rel="icon" sizes="192x192" href="{{assets}}/img/favicons/android-chrome-192x192.png">
+
+	<!-- for Safari on iOS -->
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+	<meta name="apple-mobile-web-app-title" content="{{title}}">
+
+	<meta name="theme-color" content="#FFFFFF">
+
+	<link rel="shortcut icon" href="{{assets}}/img/favicons/favicon.ico">
+	<link rel="icon" type="image/png" sizes="16x16" href="{{assets}}/img/favicons/favicon-16x16.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="{{assets}}/img/favicons/favicon-32x32.png">
+	<link rel="apple-touch-icon" sizes="57x57" href="{{assets}}/img/favicons/apple-touch-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="{{assets}}/img/favicons/apple-touch-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="{{assets}}/img/favicons/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="{{assets}}/img/favicons/apple-touch-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="{{assets}}/img/favicons/apple-touch-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="{{assets}}/img/favicons/apple-touch-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="{{assets}}/img/favicons/apple-touch-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="{{assets}}/img/favicons/apple-touch-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="167x167" href="{{assets}}/img/favicons/apple-touch-icon-167x167.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="{{assets}}/img/favicons/apple-touch-icon-180x180.png">
+	<link rel="apple-touch-icon" sizes="1024x1024" href="{{assets}}/img/favicons/apple-touch-icon-1024x1024.png">
+</head>
+<body>
+
+<svg class="hidden" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+	<defs>
+		<linearGradient id="accentGradient" x1="0" x2="0" y1="0" y2="1">
+			<stop offset="0%" stop-color="#21A5B5" />
+			<stop offset="100%" stop-color="#71B2B4" />
+		</linearGradient>
+		<linearGradient id="instagramGradient" x1="9.59514" y1="24.414" x2="25.3948" y2="10.7396" gradientUnits="userSpaceOnUse">
+			<stop stop-color="#FFDD55"></stop>
+			<stop offset="0.5" stop-color="#FF543E"></stop>
+			<stop offset="1" stop-color="#C837AB"></stop>
+		</linearGradient>
+	</defs>
+</svg>
+
+<input type="hidden" id="lang" value="rus">
+<input type="hidden" id="currency" value="Руб.">
+
+<header class="header">
+	<div class="header__top top-header">
+		<div class="top-header__container container">
+			<div class="top-header__row row">
+				<div class="top-header__col top-header__col_contacts col-4">
+					<div class="top-header__contacts contacts-header">
+						<div class="contacts-header__item">
+							<a href="tel:88005113639" class="contacts-header__value">8 (800) 511 36 39</a>
+							<span class="contacts-header__text">— бесплатно по России</span>
+						</div>
+					</div>
+				</div>
+				<div class="top-header__col col-4">
+					<a href="index.html" class="top-header__logo">
+						<picture>
+							<source srcset="assets/img/content/logo-mobile.svg" media="(max-width: 768px)">
+							<source srcset="assets/img/content/logo.svg">
+							<img src="assets/img/content/logo.svg" alt="logo" class="img-responsive">
+						</picture>
+					</a>
+				</div>
+				<div class="top-header__col top-header__col_actions col-4">
+					<div class="top-header__actions-wrap">
+						<div class="top-header__actions actions-header">
+							<div class="actions-header__item action-header search">
+								<button class="action-header__btn search__btn" type="button">
+									<svg class="action-header__icon">
+										<use href="{{assets}}/img/svg-sprite/sprite.svg#search"></use>
+									</svg>
+								</button>
+								<form action="/main/search" class="search__form form-search">
+									<input type="text" class="form-search__input" name="search" placeholder="Я ищу..." required>
+									<button class="form-search__btn" type="submit">
+										<svg>
+											<use href="{{assets}}/img/svg-sprite/sprite.svg#search"></use>
+										</svg>
+									</button>
+								</form>
+							</div>
+							<div class="actions-header__item action-header user">
+								<button class="action-header__btn user__btn" type="button" data-micromodal-trigger="modal-login">
+									<svg class="action-header__icon user__icon">
+										<use href="{{assets}}/img/svg-sprite/sprite.svg#user-circle"></use>
+									</svg>
+								</button>
+							</div>
+							<div class="actions-header__item action-header wishlist" data-micromodal-trigger="modal-wishlist">
+								<button class="action-header__btn wishlist__btn" type="button">
+									<svg class="action-header__icon wishlist__icon">
+										<use href="{{assets}}/img/svg-sprite/sprite.svg#heart"></use>
+									</svg>
+								</button>
+							</div>
+							<div class="actions-header__item action-header minicart">
+								<a href="cart.html" class="action-header__btn minicart__btn">
+									<svg class="action-header__icon minicart__icon">
+										<use href="{{assets}}/img/svg-sprite/sprite.svg#bag"></use>
+									</svg>
+								</a>
+								<div class="minicart__box box-minicart">
+									<div class="box-minicart__inner">
+										<div class="box-minicart__scrollbar scrollbar-accent">
+											<div class="box-minicart__orders">
+												{{!-- <div class="box-minicart__order item-order">
+													<a href="#" class="item-order__img-wrap dummy-bg">
+														<img src="assets/img/content/order.png" alt="alt" class="item-order__img img-responsive">
+													</a>
+													<div class="item-order__content">
+														<h4 class="item-order__title color-gradient-accent"><a href="#">Moana Neon</a></h4>
+														<div class="item-order__info-wrap">
+															<span class="item-order__info">Размер: S - 42/44</span>
+														</div>
+														<div class="item-order__price-wrap">
+															<div class="item-order__price item-order__price_new">4 500 руб.</div>
+															<div class="item-order__old-price crossed">5 000 руб.</div>
+														</div>
+														<div class="item-order__actions">
+															<div class="item-order__quantity quantity">
+																<button class="quantity__btn quantity__btn_minus" type="button" disabled>
+																	<span class="quantity__plus plus active"></span>
+																</button>
+																<div class="quantity__count">
+																	<input type="number" class="quantity__control" min="1" value="1">
+																	<span class="quantity__text">шт</span>
+																</div>
+																<button class="quantity__btn quantity__btn_plus" type="button">
+																	<span class="quantity__plus plus"></span>
+																</button>
+															</div>
+															<button class="item-order__delete-btn delete-btn" type="button">
+																<svg class="delete-btn__icon">
+																	<use href="assets/img/svg-sprite/sprite.svg#trash"></use>
+																</svg>
+															</button>
+														</div>
+													</div>
+												</div> --}}
+											</div>
+										</div>
+										<div class="box-minicart__totals totals-minicart">
+											<div class="totals-minicart__items">
+												<div class="totals-minicart__item">
+													<h4 class="totals-minicart__title">Итого к оплате:</h4>
+													<span class="totals-minicart__value"><span>26 400</span> руб.</span>
+												</div>
+											</div>
+											<div class="totals-minicart__footer">
+												<a href="cart.html" class="totals-minicart__btn btn btn-accent"><span>Перейти к оформлению заказа</span></a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<button class="header__hamburger hamburger hamburger--emphatic" type="button">
+						<span class="hamburger-box">
+							<span class="hamburger-inner"></span>
+						</span>
+					</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="header__bottom bottom-header">
+		<div class="bottom-header__topline topline-bottom-header">
+			<div class="topline-bottom-header__container container">
+				<div class="topline-bottom-header__title">Меню</div>
+				<button class="header__hamburger hamburger hamburger--emphatic is-active" type="button">
+					<span class="hamburger-box">
+						<span class="hamburger-inner"></span>
+					</span>
+				</button>
+			</div>
+		</div>
+		<div class="bottom-header__container container">
+			<nav class="bottom-header__menu menu">
+				<ul class="menu__list">
+					<li class="menu__item menu__item_has-submenu">
+						<a href="catalog.html">Каталог</a>
+						<div class="mega-menu">
+							<div class="mega-menu__inner">
+								<div class="mega-menu__container container">
+									<div class="mega-menu__row row">
+										<div class="mega-menu__sub-menus col-lg-4 col-md-6">
+											<ul class="submenu">
+												<li class="submenu__item">
+													<span class="submenu__title">Купальники</span>
+													<ul class="submenu">
+														<li class="submenu__item"><a href="#" class="submenu__link">Все купальники</a></li>
+														<li class="submenu__item"><a href="#" class="submenu__link">Для серфинга</a></li>
+														<li class="submenu__item"><a href="#" class="submenu__link">Слитные</a></li>
+														<li class="submenu__item"><a href="#" class="submenu__link">Раздельные</a></li>
+														<li class="submenu__item"><a href="#" class="submenu__link">С рукавами</a></li>
+														<li class="submenu__item"><a href="#" class="submenu__link">Без рукавов</a></li>
+														<li class="submenu__item"><a href="#" class="submenu__link">С чашечками</a></li>
+														<li class="submenu__item"><a href="#" class="submenu__link">С шортиками</a></li>
+														<li class="submenu__item"><a href="#" class="submenu__link">Для беременных</a></li>
+														<li class="submenu__item"><a href="#" class="submenu__link">Солнцезащитные</a></li>
+														<li class="submenu__item"><a href="#" class="submenu__link">Лосины и легинсы</a></li>
+													</ul>
+												</li>
+												<li class="submenu__item">
+													<span class="submenu__title">Комбинезоны</span>
+													<ul class="submenu">
+														<li class="submenu__item"><a href="#" class="submenu__link">Все комбинезоны</a></li>
+													</ul>
+												</li>
+												<li class="submenu__item">
+													<span class="submenu__title">Гидрокостюмы</span>
+													<ul class="submenu">
+														<li class="submenu__item"><a href="#" class="submenu__link">Все гидрокостюмы</a></li>
+													</ul>
+												</li>
+												<li class="submenu__item">
+													<span class="submenu__title">Косметика</span>
+													<ul class="submenu">
+														<li class="submenu__item"><a href="#" class="submenu__link">Вся косметика</a></li>
+														<li class="submenu__item"><a href="#" class="submenu__link">Серф-цинк</a></li>
+														<li class="submenu__item"><a href="#" class="submenu__link">Бальзам для губ от солнца</a></li>
+														<li class="submenu__item"><a href="#" class="submenu__link">Косметические средства</a></li>
+													</ul>
+												</li>
+											</ul>
+										</div>
+										<div class="mega-menu__promos col-lg-8 col-md-6">
+											<div class="promos">
+												<div class="promos__item item-promo">
+													<a href="#" class="item-promo__inner">
+														<img src="assets/img/content/banner_1.jpg" alt="alt" class="item-promo__img img-responsive">
+													</a>
+												</div>
+												<div class="promos__item item-promo">
+													<a href="#" class="item-promo__inner">
+														<img src="assets/img/content/banner_2.jpg" alt="alt" class="item-promo__img img-responsive">
+													</a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</li>
+					<li class="menu__item"><a href="blog.html">Блог</a></li>
+					<li class="menu__item"><a href="about.html">О бренде</a></li>
+					<li class="menu__item"><a href="sizing.html">Размеры</a></li>
+					<li class="menu__item"><a href="delivery.html">Доставка и оплата</a></li>
+					<li class="menu__item"><a href="index.html">Отзывы</a></li>
+					<li class="menu__item"><a href="calculator.html">Создай свой купальник</a></li>
+					<li class="menu__item"><a href="certificate.html">Сертификаты <img src="assets/img/icons/gift.svg" alt="alt" class="menu__icon"></a></li>
+					<li class="menu__item"><a href="contacts.html">Контакты</a></li>
+					<li class="menu__item sale"><a href="#">Распродажа до -40%</a></li>
+					<li class="menu__item menu__item_real-reviews"><a data-micromodal-trigger="modal-reviews">Реальные отзывы</a></li>
+				</ul>
+			</nav>
+			<div class="bottom-header__actions-wrap"></div>
+		</div>
+		<div class="bottom-header__banners">
+			<a href="#" class="bottom-header__banner">
+				<img src="assets/img/content/banner.jpg" alt="alt" class="img-responsive">
+			</a>
+		</div>
+	</div>
+</header>
+
+<div class="mm-modal mm-modal_wishlist" id="modal-wishlist" aria-hidden="true">
+	<div class="mm-modal__overlay" tabindex="-1" data-micromodal-close>
+
+		<div class="mm-modal__wrapper" role="dialog" aria-modal="true" aria-labelledby="modal-wishlist-title">
+			<div class="mm-modal__content modal modal-wishlist">
+	
+				<header class="modal-wishlist__header header-wishlist">
+					<div class="header-wishlist__container container">
+						<div class="header-wishlist__headline">
+							<h2 class="header-wishlist__title" id="modal-wishlist-title">Мой Wishlist</h2>
+							<div class="header-wishlist__count">(<span>3</span> товара)</div>
+						</div>
+						<button class="header-wishlist__close close" type="button" aria-label="Close modal" data-micromodal-close>
+							<svg>
+								<use href="{{assets}}/img/svg-sprite/sprite.svg#close"></use>
+							</svg>
+						</button>
+					</div>
+				</header>
+	
+				<div class="modal-wishlist__content content-wishlist" id="modal-wishlist-content">
+					<div class="content-wishlist__container container">
+						<div class="content-wishlist__inner">
+							<div class="content-wishlist__actions">
+								<label class="content-wishlist__all content-wishlist__radio radio">
+									<input type="checkbox" class="radio__input" name="wishlist_all">
+									<span class="radio__content">
+										<span class="radio__dot"></span>
+										<span class="radio__label" data-uncheck-all="Снять отметки">Отметить все товары</span>
+									</span>
+								</label>
+								<button class="content-wishlist__delete btn btn-outline-danger" type="button">Удалить отмеченные</button>
+							</div>
+							<div class="content-wishlist__items row">
+								{{!-- <div class="content-wishlist__item card-product col-xl-3 col-md-4 col-6">
+									<div class="card-product__inner">
+										<label class="card-product__radio radio">
+											<input type="checkbox" class="radio__input" name="product_selected" value="pr155">
+											<span class="radio__content">
+												<span class="radio__dot"></span>
+											</span>
+										</label>
+										<label class="card-product__wishlist-label wishlist-label">
+											<span class="screen-reader-text">Geometry</span>
+											<input type="checkbox" class="wishlist-label__input hidden" name="product_wishlist" value="pr155">
+											<span class="wishlist-label__delete-btn delete-btn">
+												<svg class="delete-btn__icon">
+													<use href="assets/img/svg-sprite/sprite.svg#trash"></use>
+												</svg>
+											</span>
+										</label>
+										<a href="#" class="card-product__img-wrap dummy-bg">
+											<img src="assets/img/content/product_1.png" alt="alt" class="card-product__img img-responsive">
+										</a>
+										<div class="card-product__body">
+											<div class="card-product__content">
+												<div class="card-product__price">6 000 руб.</div>
+												<div class="card-product__title">Geometry</div>
+												<div class="card-product__attributes attributes">
+													<ul class="attributes__list">
+														<li>XS</li>
+														<li>S</li>
+														<li>M</li>
+														<li>L</li>
+														<li>По меркам</li>
+													</ul>
+												</div>
+											</div>
+											<div class="card-product__reveal">
+												<span class="card-product__btn btn btn-accent"><span>Купить</span></span>
+											</div>
+										</div>
+									</div>
+								</div> --}}
+							</div>
+						</div>
+					</div>
+				</div>
+	
+			</div>
+		</div>
+
+	</div>
+</div>
+
+<div class="mm-modal mm-modal_gallery" id="modal-reviews" aria-hidden="true">
+	<div class="mm-modal__overlay" tabindex="-1" data-micromodal-close>
+
+		<div class="mm-modal__wrapper" role="dialog" aria-modal="true" aria-labelledby="modal-reviews-title">
+			<div class="mm-modal__content modal-gallery modal-gallery_fullheight">
+	
+				<header class="modal-gallery__header header-modal-gallery">
+					<div class="header-modal-gallery__container container">
+						<h2 class="header-modal-gallery__title" id="modal-reviews-title">Реальные отзывы</h2>
+						<button class="header-modal-gallery__close close" type="button" aria-label="Close modal" data-micromodal-close>
+							<svg>
+								<use href="assets/img/svg-sprite/sprite.svg#close"></use>
+							</svg>
+						</button>
+					</div>
+				</header>
+	
+				<div class="modal-gallery__body body-modal-gallery" id="modal-reviews-content">
+					<div class="body-modal-gallery__container container">
+						
+						<div class="body-modal-gallery__slider slider-modal-gallery swiper">
+							<div class="slider-modal-gallery__pagination pagination-gallery"></div>
+							<div class="slider-modal-gallery__items swiper-wrapper">
+								<a href="#" class="slider-modal-gallery__item swiper-slide">
+									<img data-src="assets/img/content/real-review.jpg" alt="alt" class="slider-modal-gallery__img img-responsive swiper-lazy">
+									<div class="swiper-lazy-preloader"></div>
+								</a>
+								<a href="#" class="slider-modal-gallery__item swiper-slide">
+									<img data-src="assets/img/content/real-review.jpg" alt="alt" class="slider-modal-gallery__img img-responsive swiper-lazy">
+									<div class="swiper-lazy-preloader"></div>
+								</a>
+								<a href="#" class="slider-modal-gallery__item swiper-slide">
+									<img data-src="assets/img/content/real-review.jpg" alt="alt" class="slider-modal-gallery__img img-responsive swiper-lazy">
+									<div class="swiper-lazy-preloader"></div>
+								</a>
+								<a href="#" class="slider-modal-gallery__item swiper-slide">
+									<img data-src="assets/img/content/real-review.jpg" alt="alt" class="slider-modal-gallery__img img-responsive swiper-lazy">
+									<div class="swiper-lazy-preloader"></div>
+								</a>
+								<a href="#" class="slider-modal-gallery__item swiper-slide">
+									<img data-src="assets/img/content/real-review.jpg" alt="alt" class="slider-modal-gallery__img img-responsive swiper-lazy">
+									<div class="swiper-lazy-preloader"></div>
+								</a>
+								<a href="#" class="slider-modal-gallery__item swiper-slide">
+									<img data-src="assets/img/content/real-review.jpg" alt="alt" class="slider-modal-gallery__img img-responsive swiper-lazy">
+									<div class="swiper-lazy-preloader"></div>
+								</a>
+								<a href="#" class="slider-modal-gallery__item swiper-slide">
+									<img data-src="assets/img/content/real-review.jpg" alt="alt" class="slider-modal-gallery__img img-responsive swiper-lazy">
+									<div class="swiper-lazy-preloader"></div>
+								</a>
+								<a href="#" class="slider-modal-gallery__item swiper-slide">
+									<img data-src="assets/img/content/real-review.jpg" alt="alt" class="slider-modal-gallery__img img-responsive swiper-lazy">
+									<div class="swiper-lazy-preloader"></div>
+								</a>
+								<a href="#" class="slider-modal-gallery__item swiper-slide">
+									<img data-src="assets/img/content/real-review.jpg" alt="alt" class="slider-modal-gallery__img img-responsive swiper-lazy">
+									<div class="swiper-lazy-preloader"></div>
+								</a>
+								<a href="#" class="slider-modal-gallery__item swiper-slide">
+									<img data-src="assets/img/content/real-review.jpg" alt="alt" class="slider-modal-gallery__img img-responsive swiper-lazy">
+									<div class="swiper-lazy-preloader"></div>
+								</a>
+								<a href="#" class="slider-modal-gallery__item swiper-slide">
+									<img data-src="assets/img/content/real-review.jpg" alt="alt" class="slider-modal-gallery__img img-responsive swiper-lazy">
+									<div class="swiper-lazy-preloader"></div>
+								</a>
+								<a href="#" class="slider-modal-gallery__item swiper-slide">
+									<img data-src="assets/img/content/real-review.jpg" alt="alt" class="slider-modal-gallery__img img-responsive swiper-lazy">
+									<div class="swiper-lazy-preloader"></div>
+								</a>
+								<a href="#" class="slider-modal-gallery__item swiper-slide">
+									<img data-src="assets/img/content/real-review.jpg" alt="alt" class="slider-modal-gallery__img img-responsive swiper-lazy">
+									<div class="swiper-lazy-preloader"></div>
+								</a>
+								<a href="#" class="slider-modal-gallery__item swiper-slide">
+									<img data-src="assets/img/content/real-review.jpg" alt="alt" class="slider-modal-gallery__img img-responsive swiper-lazy">
+									<div class="swiper-lazy-preloader"></div>
+								</a>
+								<a href="#" class="slider-modal-gallery__item swiper-slide">
+									<img data-src="assets/img/content/real-review.jpg" alt="alt" class="slider-modal-gallery__img img-responsive swiper-lazy">
+									<div class="swiper-lazy-preloader"></div>
+								</a>
+								<a href="#" class="slider-modal-gallery__item swiper-slide">
+									<img data-src="assets/img/content/real-review.jpg" alt="alt" class="slider-modal-gallery__img img-responsive swiper-lazy">
+									<div class="swiper-lazy-preloader"></div>
+								</a>
+							</div>
+						</div>
+
+						<a href="catalog.html" class="body-modal-gallery__btn btn btn-outline-white">Перейти в каталог</a>
+
+					</div>
+				</div>
+	
+			</div>
+		</div>
+
+	</div>
+</div>

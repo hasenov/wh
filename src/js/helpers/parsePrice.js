@@ -1,0 +1,1 @@
+export const parsePrice = price => parseFloat(price.toString().replace(/\s+/g, ''), 10)

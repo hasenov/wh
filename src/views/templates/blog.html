@@ -1,0 +1,259 @@
+{{> header title="Page"}}
+
+<div class="container">
+    <ul class="breadcrumbs">
+        <li><a href="#">Главная</a></li>
+        <li>О бренде</li>
+    </ul>
+</div>
+
+<section class="section-blog">
+	<div class="container">
+
+		<div class="headline">
+			<div class="headline__captions">
+				<h2 class="headline__title section-title">Блог о серфинге</h2>
+			</div>
+			<div class="headline__filter-blog filter-blog">
+				<button class="filter-blog__toggle toggle-filter" type="button" data-micromodal-trigger="modal-blog-filter">
+					<svg class="toggle-filter__icon">
+						<use href="assets/img/svg-sprite/sprite.svg#filter"></use>
+					</svg>
+					Фильтры
+				</button>
+
+				<div class="mm-modal mm-modal_disable-on-pc" id="modal-blog-filter" aria-hidden="false">
+					<div class="mm-modal__overlay" tabindex="-1" data-micromodal-close>
+				
+						<div class="mm-modal__wrapper" role="dialog" aria-modal="true" aria-labelledby="modal-blog-filter-title">
+							<div class="mm-modal__content modal modal-blog-filter">
+					
+								<header class="modal__header header-modal">
+									<div class="header-modal__container container">
+										<h2 class="header-modal__title modal__title" id="modal-blog-filter-title">Фильтры</h2>
+										<button class="header-modal__close modal__close close" type="button" aria-label="Close modal" data-micromodal-close>
+											<svg>
+												<use href="{{assets}}/img/svg-sprite/sprite.svg#close"></use>
+											</svg>
+										</button>
+									</div>
+								</header>
+					
+								<div class="modal__body body-modal" id="modal-menu-content">
+									<div class="body-modal__container container">
+										<div class="filter-blog__items">
+											<a href="#" class="filter-blog__item filter-blog-btn active">Все</a>
+											<a href="#" class="filter-blog__item filter-blog-btn">Споты</a>
+											<a href="#" class="filter-blog__item filter-blog-btn">Доски</a>
+											<a href="#" class="filter-blog__item filter-blog-btn">Люди</a>
+										</div>
+									</div>
+								</div>
+					
+							</div>
+						</div>
+				
+					</div>
+				</div>
+
+			</div>
+		</div>
+
+		<div class="blog">
+			<div class="blog__items" data-columns>
+				<div class="blog__item card-blog">
+					<a href="#" class="card-blog__inner">
+						<span class="card-blog__date date">02 март</span>
+						<div class="card-blog__img-wrap dummy-bg">
+							<img src="assets/img/content/blog_1.jpg" alt="alt" class="card-blog__img img-responsive">
+						</div>
+						<div class="card-blog__body">
+							<div class="card-blog__title">Модели занялись серфингом в нарисованных купальниках</div>
+							<div class="card-blog__text-wrap">
+								<p>Американские модели Йован Гонсалес, Тауйма Холл, Кристин Ли и Морган Слиф занялись серфингом на одном из пля...</p>
+							</div>
+							<div class="card-blog__tags tags">
+								<span class="card-blog__tag tags__tag tag">#Споты</span>
+								<span class="card-blog__tag tags__tag tag">#2021</span>
+							</div>
+							<span class="card-blog__btn btn btn-accent"><span>Читать</span></span>
+						</div>
+					</a>
+				</div>
+				<div class="blog__item card-blog">
+					<a href="#" class="card-blog__inner">
+						<span class="card-blog__date date">30 февраль</span>
+						<div class="card-blog__img-wrap dummy-bg">
+							<img src="assets/img/content/blog_2.jpg" alt="alt" class="card-blog__img img-responsive">
+						</div>
+						<div class="card-blog__body">
+							<div class="card-blog__title">Серфинг в России: Где ловить волну?</div>
+							<div class="card-blog__text-wrap">
+								<p>Ловить волну по-русски – как это? Серфинг в России – это калька с заокеанской экстремальной забавы или же увл...</p>
+							</div>
+							<div class="card-blog__tags tags">
+								<span class="card-blog__tag tags__tag tag">#Люди</span>
+								<span class="card-blog__tag tags__tag tag">#2021</span>
+							</div>
+							<span class="card-blog__btn btn btn-accent"><span>Читать</span></span>
+						</div>
+					</a>
+				</div>
+				<div class="blog__item card-blog">
+					<a href="#" class="card-blog__inner">
+						<span class="card-blog__date date">09 апрель</span>
+						<div class="card-blog__img-wrap dummy-bg">
+							<img src="assets/img/content/blog_3.jpg" alt="alt" class="card-blog__img img-responsive">
+						</div>
+						<div class="card-blog__body">
+							<div class="card-blog__title">Разновидности досок для серфинга</div>
+							<div class="card-blog__text-wrap">
+								<p>Серфинг является новым видом спорта для России, мест для занятий немного, но экстремальные спортсмены не унывают, пытаясь организовывать отды...</p>
+							</div>
+							<div class="card-blog__tags tags">
+								<span class="card-blog__tag tags__tag tag">#Люди</span>
+								<span class="card-blog__tag tags__tag tag">#2021</span>
+							</div>
+							<span class="card-blog__btn btn btn-accent"><span>Читать</span></span>
+						</div>
+					</a>
+				</div>
+				<div class="blog__item card-blog">
+					<a href="#" class="card-blog__inner">
+						<span class="card-blog__date date">21 март</span>
+						<div class="card-blog__img-wrap dummy-bg">
+							<img src="assets/img/content/blog_4.jpg" alt="alt" class="card-blog__img img-responsive">
+						</div>
+						<div class="card-blog__body">
+							<div class="card-blog__title">13 главных правил серфинга</div>
+							<div class="card-blog__text-wrap">
+								<p>Правила серфинга, о которых стоит помнить каждому, от новичка до профи</p>
+							</div>
+							<div class="card-blog__tags tags">
+								<span class="card-blog__tag tags__tag tag">#Люди</span>
+								<span class="card-blog__tag tags__tag tag">#2021</span>
+							</div>
+							<span class="card-blog__btn btn btn-accent"><span>Читать</span></span>
+						</div>
+					</a>
+				</div>
+				<div class="blog__item card-blog">
+					<a href="#" class="card-blog__inner">
+						<span class="card-blog__date date">21 март</span>
+						<div class="card-blog__img-wrap dummy-bg">
+							<img src="assets/img/content/blog_5.jpg" alt="alt" class="card-blog__img img-responsive">
+						</div>
+						<div class="card-blog__body">
+							<div class="card-blog__title">Серфер онлайн: 7 полезных сайтов для серферов</div>
+							<div class="card-blog__text-wrap">
+								<p>Предлагаем вашему вниманию несколько полезных порталов, которые пригодятся каждому серферу</p>
+							</div>
+							<div class="card-blog__tags tags">
+								<span class="card-blog__tag tags__tag tag">#Люди</span>
+								<span class="card-blog__tag tags__tag tag">#2021</span>
+							</div>
+							<span class="card-blog__btn btn btn-accent"><span>Читать</span></span>
+						</div>
+					</a>
+				</div>
+				<div class="blog__item card-blog">
+					<a href="#" class="card-blog__inner">
+						<span class="card-blog__date date">02 март</span>
+						<div class="card-blog__img-wrap dummy-bg">
+							<img src="assets/img/content/blog_6.jpg" alt="alt" class="card-blog__img img-responsive">
+						</div>
+						<div class="card-blog__body">
+							<div class="card-blog__title">Пошив купальников по вашим меркам</div>
+							<div class="card-blog__text-wrap">
+								<p>Мы знаем, что каждая девушка хочет быть неотразимой на пляже, на волне или просто на отдыхe. Но, выбрать купаль...</p>
+							</div>
+							<div class="card-blog__tags tags">
+								<span class="card-blog__tag tags__tag tag">#Люди</span>
+								<span class="card-blog__tag tags__tag tag">#2021</span>
+							</div>
+							<span class="card-blog__btn btn btn-accent"><span>Читать</span></span>
+						</div>
+					</a>
+				</div>
+				<div class="blog__item card-blog">
+					<a href="#" class="card-blog__inner">
+						<span class="card-blog__date date">30 февраль</span>
+						<div class="card-blog__img-wrap dummy-bg">
+							<img src="assets/img/content/blog_7.jpg" alt="alt" class="card-blog__img img-responsive">
+						</div>
+						<div class="card-blog__body">
+							<div class="card-blog__title">5 интересных фактов о серфинге, про которые вы не знали</div>
+							<div class="card-blog__text-wrap">
+								<p>В 2011 году 13-кратным чемпионом по серфингу Гари Саафедром был установлен мировой рекорд: самое длительное официальн...</p>
+							</div>
+							<div class="card-blog__tags tags">
+								<span class="card-blog__tag tags__tag tag">#Люди</span>
+								<span class="card-blog__tag tags__tag tag">#2021</span>
+							</div>
+							<span class="card-blog__btn btn btn-accent"><span>Читать</span></span>
+						</div>
+					</a>
+				</div>
+				<div class="blog__item card-blog">
+					<a href="#" class="card-blog__inner">
+						<span class="card-blog__date date">04 январь</span>
+						<div class="card-blog__img-wrap dummy-bg">
+							<img src="assets/img/content/blog_8.jpg" alt="alt" class="card-blog__img img-responsive">
+						</div>
+						<div class="card-blog__body">
+							<div class="card-blog__title">Лайфхак: как защищать себя от солнца</div>
+							<div class="card-blog__text-wrap">
+								<p>Солнце и серфинг - мы научим вас совмещать приятное с полезным без вреда для вашего здоровья</p>
+							</div>
+							<div class="card-blog__tags tags">
+								<span class="card-blog__tag tags__tag tag">#Люди</span>
+								<span class="card-blog__tag tags__tag tag">#2021</span>
+							</div>
+							<span class="card-blog__btn btn btn-accent"><span>Читать</span></span>
+						</div>
+					</a>
+				</div>
+			</div>
+			<nav class="blog__pagination pagination">
+				<ul class="pagination__list">
+					<li class="pagination__item">
+						<a href="#" class="pagination__btn btn btn-accent">
+							<span>
+								<svg class="pagination__arrow">
+									<use href="assets/img/svg-sprite/sprite.svg#arrow-left"></use>
+								</svg>
+							</span>
+						</a>
+					</li>
+					<li class="pagination__item active">
+						<a href="#" class="pagination__link">1</a>
+					</li>
+					<li class="pagination__item">
+						<a href="#" class="pagination__link">2</a>
+					</li>
+					<li class="pagination__item">
+						<a href="#" class="pagination__link">3</a>
+					</li>
+					<li class="pagination__item">
+						<span class="pagination__dots">...</span>
+					</li>
+					<li class="pagination__item">
+						<a href="#" class="pagination__link">6</a>
+					</li>
+					<li class="pagination__item">
+						<a href="#" class="pagination__btn btn btn-accent">
+							<span>
+								<svg class="pagination__arrow">
+									<use href="assets/img/svg-sprite/sprite.svg#arrow-right"></use>
+								</svg>
+							</span>
+						</a>
+					</li>
+				</ul>
+			</nav>
+		</div>
+
+	</div>
+</section>
+
+{{> footer }}

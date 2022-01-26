@@ -1,0 +1,1963 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Каталог</title>
+  <link rel="stylesheet" href="assets/styles/main.css">
+  <!-- Disable tap highlight on IE -->
+  <meta name="msapplication-tap-highlight" content="no">
+  <!-- for Chrome on Android -->
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="application-name" lang="ru" content="Каталог">
+  <link rel="icon" sizes="192x192" href="assets/img/favicons/android-chrome-192x192.png">
+  <!-- for Safari on iOS -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Каталог">
+  <meta name="theme-color" content="#FFFFFF">
+  <link rel="shortcut icon" href="assets/img/favicons/favicon.ico">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicons/favicon-16x16.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicons/favicon-32x32.png">
+  <link rel="apple-touch-icon" sizes="57x57" href="assets/img/favicons/apple-touch-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="assets/img/favicons/apple-touch-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="assets/img/favicons/apple-touch-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="assets/img/favicons/apple-touch-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="assets/img/favicons/apple-touch-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="assets/img/favicons/apple-touch-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="assets/img/favicons/apple-touch-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="assets/img/favicons/apple-touch-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="167x167" href="assets/img/favicons/apple-touch-icon-167x167.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/img/favicons/apple-touch-icon-180x180.png">
+  <link rel="apple-touch-icon" sizes="1024x1024" href="assets/img/favicons/apple-touch-icon-1024x1024.png">
+</head>
+
+<body>
+  <svg class="hidden" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+    <defs>
+      <linearGradient id="accentGradient" x1="0" x2="0" y1="0" y2="1">
+        <stop offset="0%" stop-color="#21A5B5" />
+        <stop offset="100%" stop-color="#71B2B4" />
+      </linearGradient>
+      <linearGradient id="instagramGradient" x1="9.59514" y1="24.414" x2="25.3948" y2="10.7396" gradientUnits="userSpaceOnUse">
+        <stop stop-color="#FFDD55"></stop>
+        <stop offset="0.5" stop-color="#FF543E"></stop>
+        <stop offset="1" stop-color="#C837AB"></stop>
+      </linearGradient>
+    </defs>
+  </svg>
+  <input type="hidden" id="lang" value="rus">
+  <input type="hidden" id="currency" value="Руб.">
+  <header class="header">
+    <div class="header__top top-header">
+      <div class="top-header__container container">
+        <div class="top-header__row row">
+          <div class="top-header__col top-header__col_contacts col-4">
+            <div class="top-header__contacts contacts-header">
+              <div class="contacts-header__item">
+                <a href="tel:88005113639" class="contacts-header__value">8 (800) 511 36 39</a>
+                <span class="contacts-header__text">— бесплатно по России</span>
+              </div>
+            </div>
+          </div>
+          <div class="top-header__col col-4">
+            <a href="index.html" class="top-header__logo">
+              <picture>
+                <source srcset="assets/img/content/logo-mobile.svg" media="(max-width: 768px)">
+                <source srcset="assets/img/content/logo.svg">
+                <img src="assets/img/content/logo.svg" alt="logo" class="img-responsive">
+              </picture>
+            </a>
+          </div>
+          <div class="top-header__col top-header__col_actions col-4">
+            <div class="top-header__actions-wrap">
+              <div class="top-header__actions actions-header">
+                <div class="actions-header__item action-header search">
+                  <button class="action-header__btn search__btn" type="button">
+                    <svg class="action-header__icon">
+                      <use href="assets/img/svg-sprite/sprite.svg#search"></use>
+                    </svg>
+                  </button>
+                  <form action="/main/search" class="search__form form-search">
+                    <input type="text" class="form-search__input" name="search" placeholder="Я ищу..." required>
+                    <button class="form-search__btn" type="submit">
+                      <svg>
+                        <use href="assets/img/svg-sprite/sprite.svg#search"></use>
+                      </svg>
+                    </button>
+                  </form>
+                </div>
+                <div class="actions-header__item action-header user">
+                  <button class="action-header__btn user__btn" type="button" data-micromodal-trigger="modal-login">
+                    <svg class="action-header__icon user__icon">
+                      <use href="assets/img/svg-sprite/sprite.svg#user-circle"></use>
+                    </svg>
+                  </button>
+                </div>
+                <div class="actions-header__item action-header wishlist" data-micromodal-trigger="modal-wishlist">
+                  <button class="action-header__btn wishlist__btn" type="button">
+                    <svg class="action-header__icon wishlist__icon">
+                      <use href="assets/img/svg-sprite/sprite.svg#heart"></use>
+                    </svg>
+                  </button>
+                </div>
+                <div class="actions-header__item action-header minicart">
+                  <a href="cart.html" class="action-header__btn minicart__btn">
+                    <svg class="action-header__icon minicart__icon">
+                      <use href="assets/img/svg-sprite/sprite.svg#bag"></use>
+                    </svg>
+                  </a>
+                  <div class="minicart__box box-minicart">
+                    <div class="box-minicart__inner">
+                      <div class="box-minicart__scrollbar scrollbar-accent">
+                        <div class="box-minicart__orders">
+                        </div>
+                      </div>
+                      <div class="box-minicart__totals totals-minicart">
+                        <div class="totals-minicart__items">
+                          <div class="totals-minicart__item">
+                            <h4 class="totals-minicart__title">Итого к оплате:</h4>
+                            <span class="totals-minicart__value"><span>26 400</span> руб.</span>
+                          </div>
+                        </div>
+                        <div class="totals-minicart__footer">
+                          <a href="cart.html" class="totals-minicart__btn btn btn-accent"><span>Перейти к оформлению заказа</span></a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <button class="header__hamburger hamburger hamburger--emphatic" type="button">
+              <span class="hamburger-box">
+                <span class="hamburger-inner"></span>
+              </span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="header__bottom bottom-header">
+      <div class="bottom-header__topline topline-bottom-header">
+        <div class="topline-bottom-header__container container">
+          <div class="topline-bottom-header__title">Меню</div>
+          <button class="header__hamburger hamburger hamburger--emphatic is-active" type="button">
+            <span class="hamburger-box">
+              <span class="hamburger-inner"></span>
+            </span>
+          </button>
+        </div>
+      </div>
+      <div class="bottom-header__container container">
+        <nav class="bottom-header__menu menu">
+          <ul class="menu__list">
+            <li class="menu__item menu__item_has-submenu">
+              <a href="catalog.html">Каталог</a>
+              <div class="mega-menu">
+                <div class="mega-menu__inner">
+                  <div class="mega-menu__container container">
+                    <div class="mega-menu__row row">
+                      <div class="mega-menu__sub-menus col-lg-4 col-md-6">
+                        <ul class="submenu">
+                          <li class="submenu__item">
+                            <span class="submenu__title">Купальники</span>
+                            <ul class="submenu">
+                              <li class="submenu__item"><a href="#" class="submenu__link">Все купальники</a></li>
+                              <li class="submenu__item"><a href="#" class="submenu__link">Для серфинга</a></li>
+                              <li class="submenu__item"><a href="#" class="submenu__link">Слитные</a></li>
+                              <li class="submenu__item"><a href="#" class="submenu__link">Раздельные</a></li>
+                              <li class="submenu__item"><a href="#" class="submenu__link">С рукавами</a></li>
+                              <li class="submenu__item"><a href="#" class="submenu__link">Без рукавов</a></li>
+                              <li class="submenu__item"><a href="#" class="submenu__link">С чашечками</a></li>
+                              <li class="submenu__item"><a href="#" class="submenu__link">С шортиками</a></li>
+                              <li class="submenu__item"><a href="#" class="submenu__link">Для беременных</a></li>
+                              <li class="submenu__item"><a href="#" class="submenu__link">Солнцезащитные</a></li>
+                              <li class="submenu__item"><a href="#" class="submenu__link">Лосины и легинсы</a></li>
+                            </ul>
+                          </li>
+                          <li class="submenu__item">
+                            <span class="submenu__title">Комбинезоны</span>
+                            <ul class="submenu">
+                              <li class="submenu__item"><a href="#" class="submenu__link">Все комбинезоны</a></li>
+                            </ul>
+                          </li>
+                          <li class="submenu__item">
+                            <span class="submenu__title">Гидрокостюмы</span>
+                            <ul class="submenu">
+                              <li class="submenu__item"><a href="#" class="submenu__link">Все гидрокостюмы</a></li>
+                            </ul>
+                          </li>
+                          <li class="submenu__item">
+                            <span class="submenu__title">Косметика</span>
+                            <ul class="submenu">
+                              <li class="submenu__item"><a href="#" class="submenu__link">Вся косметика</a></li>
+                              <li class="submenu__item"><a href="#" class="submenu__link">Серф-цинк</a></li>
+                              <li class="submenu__item"><a href="#" class="submenu__link">Бальзам для губ от солнца</a></li>
+                              <li class="submenu__item"><a href="#" class="submenu__link">Косметические средства</a></li>
+                            </ul>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="mega-menu__promos col-lg-8 col-md-6">
+                        <div class="promos">
+                          <div class="promos__item item-promo">
+                            <a href="#" class="item-promo__inner">
+                              <img src="assets/img/content/banner_1.jpg" alt="alt" class="item-promo__img img-responsive">
+                            </a>
+                          </div>
+                          <div class="promos__item item-promo">
+                            <a href="#" class="item-promo__inner">
+                              <img src="assets/img/content/banner_2.jpg" alt="alt" class="item-promo__img img-responsive">
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="menu__item"><a href="blog.html">Блог</a></li>
+            <li class="menu__item"><a href="about.html">О бренде</a></li>
+            <li class="menu__item"><a href="sizing.html">Размеры</a></li>
+            <li class="menu__item"><a href="delivery.html">Доставка и оплата</a></li>
+            <li class="menu__item"><a href="index.html">Отзывы</a></li>
+            <li class="menu__item"><a href="calculator.html">Создай свой купальник</a></li>
+            <li class="menu__item"><a href="certificate.html">Сертификаты <img src="assets/img/icons/gift.svg" alt="alt" class="menu__icon"></a></li>
+            <li class="menu__item"><a href="contacts.html">Контакты</a></li>
+            <li class="menu__item sale"><a href="#">Распродажа до -40%</a></li>
+            <li class="menu__item menu__item_real-reviews"><a data-micromodal-trigger="modal-reviews">Реальные отзывы</a></li>
+          </ul>
+        </nav>
+        <div class="bottom-header__actions-wrap"></div>
+      </div>
+      <div class="bottom-header__banners">
+        <a href="#" class="bottom-header__banner">
+          <img src="assets/img/content/banner.jpg" alt="alt" class="img-responsive">
+        </a>
+      </div>
+    </div>
+  </header>
+  <div class="mm-modal mm-modal_wishlist" id="modal-wishlist" aria-hidden="true">
+    <div class="mm-modal__overlay" tabindex="-1" data-micromodal-close>
+      <div class="mm-modal__wrapper" role="dialog" aria-modal="true" aria-labelledby="modal-wishlist-title">
+        <div class="mm-modal__content modal modal-wishlist">
+          <header class="modal-wishlist__header header-wishlist">
+            <div class="header-wishlist__container container">
+              <div class="header-wishlist__headline">
+                <h2 class="header-wishlist__title" id="modal-wishlist-title">Мой Wishlist</h2>
+                <div class="header-wishlist__count">(<span>3</span> товара)</div>
+              </div>
+              <button class="header-wishlist__close close" type="button" aria-label="Close modal" data-micromodal-close>
+                <svg>
+                  <use href="assets/img/svg-sprite/sprite.svg#close"></use>
+                </svg>
+              </button>
+            </div>
+          </header>
+          <div class="modal-wishlist__content content-wishlist" id="modal-wishlist-content">
+            <div class="content-wishlist__container container">
+              <div class="content-wishlist__inner">
+                <div class="content-wishlist__actions">
+                  <label class="content-wishlist__all content-wishlist__radio radio">
+                    <input type="checkbox" class="radio__input" name="wishlist_all">
+                    <span class="radio__content">
+                      <span class="radio__dot"></span>
+                      <span class="radio__label" data-uncheck-all="Снять отметки">Отметить все товары</span>
+                    </span>
+                  </label>
+                  <button class="content-wishlist__delete btn btn-outline-danger" type="button">Удалить отмеченные</button>
+                </div>
+                <div class="content-wishlist__items row">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="mm-modal mm-modal_gallery" id="modal-reviews" aria-hidden="true">
+    <div class="mm-modal__overlay" tabindex="-1" data-micromodal-close>
+      <div class="mm-modal__wrapper" role="dialog" aria-modal="true" aria-labelledby="modal-reviews-title">
+        <div class="mm-modal__content modal-gallery modal-gallery_fullheight">
+          <header class="modal-gallery__header header-modal-gallery">
+            <div class="header-modal-gallery__container container">
+              <h2 class="header-modal-gallery__title" id="modal-reviews-title">Реальные отзывы</h2>
+              <button class="header-modal-gallery__close close" type="button" aria-label="Close modal" data-micromodal-close>
+                <svg>
+                  <use href="assets/img/svg-sprite/sprite.svg#close"></use>
+                </svg>
+              </button>
+            </div>
+          </header>
+          <div class="modal-gallery__body body-modal-gallery" id="modal-reviews-content">
+            <div class="body-modal-gallery__container container">
+              <div class="body-modal-gallery__slider slider-modal-gallery swiper">
+                <div class="slider-modal-gallery__pagination pagination-gallery"></div>
+                <div class="slider-modal-gallery__items swiper-wrapper">
+                  <a href="#" class="slider-modal-gallery__item swiper-slide">
+                    <img data-src="assets/img/content/real-review.jpg" alt="alt" class="slider-modal-gallery__img img-responsive swiper-lazy">
+                    <div class="swiper-lazy-preloader"></div>
+                  </a>
+                  <a href="#" class="slider-modal-gallery__item swiper-slide">
+                    <img data-src="assets/img/content/real-review.jpg" alt="alt" class="slider-modal-gallery__img img-responsive swiper-lazy">
+                    <div class="swiper-lazy-preloader"></div>
+                  </a>
+                  <a href="#" class="slider-modal-gallery__item swiper-slide">
+                    <img data-src="assets/img/content/real-review.jpg" alt="alt" class="slider-modal-gallery__img img-responsive swiper-lazy">
+                    <div class="swiper-lazy-preloader"></div>
+                  </a>
+                  <a href="#" class="slider-modal-gallery__item swiper-slide">
+                    <img data-src="assets/img/content/real-review.jpg" alt="alt" class="slider-modal-gallery__img img-responsive swiper-lazy">
+                    <div class="swiper-lazy-preloader"></div>
+                  </a>
+                  <a href="#" class="slider-modal-gallery__item swiper-slide">
+                    <img data-src="assets/img/content/real-review.jpg" alt="alt" class="slider-modal-gallery__img img-responsive swiper-lazy">
+                    <div class="swiper-lazy-preloader"></div>
+                  </a>
+                  <a href="#" class="slider-modal-gallery__item swiper-slide">
+                    <img data-src="assets/img/content/real-review.jpg" alt="alt" class="slider-modal-gallery__img img-responsive swiper-lazy">
+                    <div class="swiper-lazy-preloader"></div>
+                  </a>
+                  <a href="#" class="slider-modal-gallery__item swiper-slide">
+                    <img data-src="assets/img/content/real-review.jpg" alt="alt" class="slider-modal-gallery__img img-responsive swiper-lazy">
+                    <div class="swiper-lazy-preloader"></div>
+                  </a>
+                  <a href="#" class="slider-modal-gallery__item swiper-slide">
+                    <img data-src="assets/img/content/real-review.jpg" alt="alt" class="slider-modal-gallery__img img-responsive swiper-lazy">
+                    <div class="swiper-lazy-preloader"></div>
+                  </a>
+                  <a href="#" class="slider-modal-gallery__item swiper-slide">
+                    <img data-src="assets/img/content/real-review.jpg" alt="alt" class="slider-modal-gallery__img img-responsive swiper-lazy">
+                    <div class="swiper-lazy-preloader"></div>
+                  </a>
+                  <a href="#" class="slider-modal-gallery__item swiper-slide">
+                    <img data-src="assets/img/content/real-review.jpg" alt="alt" class="slider-modal-gallery__img img-responsive swiper-lazy">
+                    <div class="swiper-lazy-preloader"></div>
+                  </a>
+                  <a href="#" class="slider-modal-gallery__item swiper-slide">
+                    <img data-src="assets/img/content/real-review.jpg" alt="alt" class="slider-modal-gallery__img img-responsive swiper-lazy">
+                    <div class="swiper-lazy-preloader"></div>
+                  </a>
+                  <a href="#" class="slider-modal-gallery__item swiper-slide">
+                    <img data-src="assets/img/content/real-review.jpg" alt="alt" class="slider-modal-gallery__img img-responsive swiper-lazy">
+                    <div class="swiper-lazy-preloader"></div>
+                  </a>
+                  <a href="#" class="slider-modal-gallery__item swiper-slide">
+                    <img data-src="assets/img/content/real-review.jpg" alt="alt" class="slider-modal-gallery__img img-responsive swiper-lazy">
+                    <div class="swiper-lazy-preloader"></div>
+                  </a>
+                  <a href="#" class="slider-modal-gallery__item swiper-slide">
+                    <img data-src="assets/img/content/real-review.jpg" alt="alt" class="slider-modal-gallery__img img-responsive swiper-lazy">
+                    <div class="swiper-lazy-preloader"></div>
+                  </a>
+                  <a href="#" class="slider-modal-gallery__item swiper-slide">
+                    <img data-src="assets/img/content/real-review.jpg" alt="alt" class="slider-modal-gallery__img img-responsive swiper-lazy">
+                    <div class="swiper-lazy-preloader"></div>
+                  </a>
+                  <a href="#" class="slider-modal-gallery__item swiper-slide">
+                    <img data-src="assets/img/content/real-review.jpg" alt="alt" class="slider-modal-gallery__img img-responsive swiper-lazy">
+                    <div class="swiper-lazy-preloader"></div>
+                  </a>
+                </div>
+              </div>
+              <a href="catalog.html" class="body-modal-gallery__btn btn btn-outline-white">Перейти в каталог</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <ul class="breadcrumbs">
+      <li><a href="#">Главная</a></li>
+      <li>Каталог</li>
+    </ul>
+  </div>
+  <section class="section-product">
+    <div class="container">
+      <div class="product">
+        <div class="product__row row">
+          <div class="product__col product__content content-product">
+            <div class="content-product__slider slider-product swiper slider">
+              <div class="slider-product__items swiper-wrapper">
+                <div class="slider-product__item item-slider-product swiper-slide">
+                  <a href="assets/img/content/product_slider_1.jpg" class="item-slider-product__link item-slider-product__img-wrap dummy-bg">
+                    <img src="assets/img/content/product_slider_1.jpg" alt="alt" class="item-slider-product__img img-responsive">
+                  </a>
+                </div>
+                <div class="slider-product__item item-slider-product swiper-slide">
+                  <a href="assets/img/content/product_slider_2.jpg" class="item-slider-product__link item-slider-product__img-wrap dummy-bg">
+                    <img src="assets/img/content/product_slider_2.jpg" alt="alt" class="item-slider-product__img img-responsive">
+                  </a>
+                </div>
+                <div class="slider-product__item item-slider-product swiper-slide">
+                  <a href="https://www.youtube.com/embed/3xazxNNYTBE?autoplay=true" class="item-slider-product__link item-slider-product__video-wrap dummy-bg">
+                    <div class="item-slider-product__play play">
+                      <svg class="play__icon">
+                        <use href="assets/img/svg-sprite/sprite.svg#play"></use>
+                      </svg>
+                      <span class="play__text">Смотреть видео</span>
+                    </div>
+                  </a>
+                </div>
+              </div>
+              <div class="slider-product__arrows">
+                <button class="slider-product__nav slider-product__nav_prev" type="button">
+                  <svg class="slider-product__arrow">
+                    <use href="assets/img/svg-sprite/sprite.svg#arrow-left"></use>
+                  </svg>
+                </button>
+                <button class="slider-product__nav slider-product__nav_next" type="button">
+                  <svg class="slider-product__arrow">
+                    <use href="assets/img/svg-sprite/sprite.svg#arrow-right"></use>
+                  </svg>
+                </button>
+              </div>
+              <div class="slider-product__pagination slider__pagination swiper-pagination"></div>
+              <span class="slider-product__label label-product">-40%</span>
+              <label class="slider-product__wishlist-label wishlist-label">
+                <span class="screen-reader-text">Geometry</span>
+                <input type="checkbox" class="wishlist-label__input hidden" name="product_wishlist" value="pr155">
+                <svg class="wishlist-label__icon">
+                  <use href="assets/img/svg-sprite/sprite.svg#heart"></use>
+                </svg>
+              </label>
+            </div>
+            <div class="content-product__sections">
+              <div class="content-product__section">
+                <div class="content-product__accordions">
+                  <div class="content-product__accordion accordion-product active">
+                    <div class="accordion-product__header">
+                      <h2 class="accordion-product__title">Преимущества</h2>
+                      <span class="accordion-product__arrow">
+                        <svg>
+                          <use href="assets/img/svg-sprite/sprite.svg#arrow-down"></use>
+                        </svg>
+                      </span>
+                    </div>
+                    <div class="accordion-product__body">
+                      <div class="accordion-product__row row">
+                        <div class="accordion-product__content col-md-5">
+                          <ul class="list-unstyled">
+                            <li>
+                              <p>- Легко стирается, быстро сохнет</p>
+                            </li>
+                            <li>
+                              <p>- Не выгорает, не линяет,не теряет цвет</p>
+                            </li>
+                            <li>
+                              <p>- Позволяет коже дышать</p>
+                            </li>
+                            <li>
+                              <p>- Устойчив к износу, не мнется</p>
+                            </li>
+                          </ul>
+                        </div>
+                        <div class="accordion-product__content col-md-7">
+                          <ul class="list-unstyled">
+                            <li>
+                              <img src="assets/img/icons/verified.svg" alt="alt" class="accordion-product__icon">
+                              <p>Все купальники сертифицированы</p>
+                            </li>
+                            <li>
+                              <img src="assets/img/icons/hanger.svg" alt="alt" class="accordion-product__icon">
+                              <p>Примерка по Москве в пределах МКАД</p>
+                            </li>
+                            <li>
+                              <img src="assets/img/icons/truck.svg" alt="alt" class="accordion-product__icon">
+                              <p>Доставка по России и миру</p>
+                            </li>
+                            <li>
+                              <img src="assets/img/icons/ruler.svg" alt="alt" class="accordion-product__icon">
+                              <p>Пошив купальника по вашим меркам</p>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="content-product__accordion accordion-product">
+                    <div class="accordion-product__header">
+                      <h2 class="accordion-product__title">Описание</h2>
+                      <span class="accordion-product__arrow">
+                        <svg>
+                          <use href="assets/img/svg-sprite/sprite.svg#arrow-down"></use>
+                        </svg>
+                      </span>
+                    </div>
+                    <div class="accordion-product__body">
+                      <div class="accordion-product__row row">
+                        <div class="accordion-product__content col-md-12">
+                          <ul class="list-unstyled">
+                            <li>
+                              <p><b>Фасон</b> — слитный с рукавами</p>
+                            </li>
+                            <li>
+                              <p><b>Молния</b> — спереди</p>
+                            </li>
+                            <li>
+                              <p><b>Цвет</b> — синий, фиолетовый</p>
+                            </li>
+                            <li>
+                              <p><b>Габариты</b> — 20см*20см*15см (Д*Ш*В)</p>
+                            </li>
+                            <li>
+                              <p><b>Вес в упаковке</b> — 250 грамм</p>
+                            </li>
+                          </ul>
+                          <p>Раздельный купальник Isabel Neon - идеальный вариант для уверенных в себе девушек, которые давно освоили серфинг. Плотно прилегающий к телу материал, трусики с высокой талией и верх в виде топа позволяют легко и свободно двигаться. Купальник имеет цвета: яркий розовый, небесно-голубой и яркую салатовую окантовку. В такой экипировке вы будете чувствовать себя на высоте.</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="content-product__accordion accordion-product">
+                    <div class="accordion-product__header">
+                      <h2 class="accordion-product__title">Состав и уход</h2>
+                      <span class="accordion-product__arrow">
+                        <svg>
+                          <use href="assets/img/svg-sprite/sprite.svg#arrow-down"></use>
+                        </svg>
+                      </span>
+                    </div>
+                    <div class="accordion-product__body">
+                      <div class="accordion-product__row row">
+                        <div class="accordion-product__content col-md-7">
+                          <ul class="list-unstyled">
+                            <li>
+                              <img src="assets/img/icons/swimsuit.svg" alt="alt" class="accordion-product__icon">
+                              <p>Лайкра - 60% | Полиэстр - 40%</p>
+                            </li>
+                            <li>
+                              <img src="assets/img/icons/washing.svg" alt="alt" class="accordion-product__icon">
+                              <p>Обязательная стирка после использования</p>
+                            </li>
+                            <li>
+                              <img src="assets/img/icons/hand-washing.svg" alt="alt" class="accordion-product__icon">
+                              <p>Ручная стирка в холодной воде</p>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="content-product__section">
+                <div class="content-product__reviews reviews-product" id="reviewsProduct">
+                  <h2 class="reviews-product__title">Отзывы покупателей про Fancy</h2>
+                  <div class="reviews-product__leave-review leave-review">
+                    <span class="leave-review__text">Поделитесь вашим отзывом о данном товаре</span>
+                    <button class="leave-review__btn btn btn-accent" type="button" data-micromodal-trigger="modal-review">
+                      <span>Оставить отзыв</span>
+                    </button>
+                  </div>
+                  <div class="reviews-product__items">
+                    <article class="reviews-product__item item-review-product">
+                      <header class="item-review-product__header">
+                        <div class="item-review-product__info">
+                          <span class="item-review-product__author">Мария</span>
+                          <a href="#" class="item-review-product__link color-gradient-accent">@maevamasha</a>
+                        </div>
+                        <div class="item-review-product__rating rating rating_5">
+                          <div class="rating__stars">
+                            <svg class="rating__star">
+                              <use href="assets/img/svg-sprite/sprite.svg#star"></use>
+                            </svg>
+                            <svg class="rating__star">
+                              <use href="assets/img/svg-sprite/sprite.svg#star"></use>
+                            </svg>
+                            <svg class="rating__star">
+                              <use href="assets/img/svg-sprite/sprite.svg#star"></use>
+                            </svg>
+                            <svg class="rating__star">
+                              <use href="assets/img/svg-sprite/sprite.svg#star"></use>
+                            </svg>
+                            <svg class="rating__star">
+                              <use href="assets/img/svg-sprite/sprite.svg#star"></use>
+                            </svg>
+                          </div>
+                        </div>
+                      </header>
+                      <div class="item-review-product__body">
+                        <div class="item-review-product__text-wrap">
+                          <p>Заказала лайкру, осталась довольна не только качеством, но и крутым дизайном! Всем, кто зашёл на сайт, советую выбрать себе что-нибудь!)</p>
+                        </div>
+                        <div class="item-review-product__images">
+                          <a href="assets/img/content/product_review_1.jpg" class="item-review-product__image-link">
+                            <img src="assets/img/content/product_review_1.jpg" alt="alt" class="item-review-product__img img-responsive">
+                          </a>
+                          <a href="assets/img/content/product_review_2.jpg" class="item-review-product__image-link">
+                            <img src="assets/img/content/product_review_2.jpg" alt="alt" class="item-review-product__img img-responsive">
+                          </a>
+                        </div>
+                      </div>
+                    </article>
+                    <article class="reviews-product__item item-review-product">
+                      <header class="item-review-product__header">
+                        <div class="item-review-product__info">
+                          <span class="item-review-product__author">Елена</span>
+                          <a href="#" class="item-review-product__link color-gradient-accent">@</a>
+                        </div>
+                        <div class="item-review-product__rating rating rating_5">
+                          <div class="rating__stars">
+                            <svg class="rating__star">
+                              <use href="assets/img/svg-sprite/sprite.svg#star"></use>
+                            </svg>
+                            <svg class="rating__star">
+                              <use href="assets/img/svg-sprite/sprite.svg#star"></use>
+                            </svg>
+                            <svg class="rating__star">
+                              <use href="assets/img/svg-sprite/sprite.svg#star"></use>
+                            </svg>
+                            <svg class="rating__star">
+                              <use href="assets/img/svg-sprite/sprite.svg#star"></use>
+                            </svg>
+                            <svg class="rating__star">
+                              <use href="assets/img/svg-sprite/sprite.svg#star"></use>
+                            </svg>
+                          </div>
+                        </div>
+                      </header>
+                      <div class="item-review-product__body">
+                        <div class="item-review-product__text-wrap">
+                          <p>Получила купальник, понравился.<br> Цвет насыщенный, яркий. Ткань мягкая. Купальник удобный, приятный к телу. Заказала по своим параметрам и с короткими рукавами. Организация на 5+.</p>
+                        </div>
+                      </div>
+                    </article>
+                    <article class="reviews-product__item item-review-product">
+                      <header class="item-review-product__header">
+                        <div class="item-review-product__info">
+                          <span class="item-review-product__author">Дарья</span>
+                          <a href="#" class="item-review-product__link color-gradient-accent">@</a>
+                        </div>
+                        <div class="item-review-product__rating rating rating_5">
+                          <div class="rating__stars">
+                            <svg class="rating__star">
+                              <use href="assets/img/svg-sprite/sprite.svg#star"></use>
+                            </svg>
+                            <svg class="rating__star">
+                              <use href="assets/img/svg-sprite/sprite.svg#star"></use>
+                            </svg>
+                            <svg class="rating__star">
+                              <use href="assets/img/svg-sprite/sprite.svg#star"></use>
+                            </svg>
+                            <svg class="rating__star">
+                              <use href="assets/img/svg-sprite/sprite.svg#star"></use>
+                            </svg>
+                            <svg class="rating__star">
+                              <use href="assets/img/svg-sprite/sprite.svg#star"></use>
+                            </svg>
+                          </div>
+                        </div>
+                      </header>
+                      <div class="item-review-product__body">
+                        <div class="item-review-product__text-wrap">
+                          <p>Заказывала пошив по индивидуальным меркам. Отличное качество!!! Довольно плотный материал. Швы обработаны аккуратно. Купальник отправили в сумочке, также в качестве "комплимента от шефа" полодили резинку для волос в тон молнии;) была приятно удивлена, что у нас появилась такая фирма, в которой можно заказать купальник с учётом особенностей фигуры. Рекомендую!!!!</p>
+                        </div>
+                      </div>
+                    </article>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <form class="product__col product__info info-product sticky-bar" name="formProduct" action="/cart/add_to_cart">
+            <div class="info-product__header">
+              <div class="info-product__group">
+                <h1 class="info-product__title">Fancy</h1>
+                <div class="info-product__share share">
+                  <div class="share__items">
+                    <button class="share__item btn-share btn-share_link copy-to-clipboard" type="button">
+                      <svg class="btn-share__icon">
+                        <use href="assets/img/svg-sprite/sprite.svg#link-alt"></use>
+                      </svg>
+                    </button>
+                    <a href="https://www.facebook.com/sharer/sharer.php?url=https://www.facebook.com/whsurfing" class="share__item btn-share btn-share_fb" target="_blank" rel="noreferrer">
+                      <svg class="btn-share__icon">
+                        <use href="assets/img/svg-sprite/sprite.svg#fb"></use>
+                      </svg>
+                    </a>
+                    <a href="whatsapp://send?text=+7%20926%20722-47-41" class="share__item btn-share btn-share_what" target="_blank" rel="noreferrer">
+                      <svg class="btn-share__icon">
+                        <use href="assets/img/svg-sprite/sprite.svg#what"></use>
+                      </svg>
+                    </a>
+                    <a href="http://vk.com/share.php?url=https://vk.com/club92259041" class="share__item btn-share btn-share_vk" target="_blank" rel="noreferrer">
+                      <svg class="btn-share__icon">
+                        <use href="assets/img/svg-sprite/sprite.svg#vk"></use>
+                      </svg>
+                    </a>
+                  </div>
+                  <button class="share__btn btn-share" type="button">
+                    <svg class="btn-share__icon">
+                      <use href="assets/img/svg-sprite/sprite.svg#share"></use>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+              <div class="info-product__group">
+                <div class="info-product__description">
+                  <p>Купальник с рукавами</p>
+                </div>
+                <span class="info-product__status status status_success">В наличии</span>
+              </div>
+              <div class="info-product__group">
+                <div class="info-product__price-wrap">
+                  <!-- <p class="info-product__price"><span id="productPrice">5 400</span> руб.</p> -->
+                  <p class="info-product__price info-product__price_new"><span id="productPrice">5 400</span> руб.</p>
+                  <span class="info-product__old-price crossed" id="oldPriceContainer"><span id="oldPrice">6 200</span> руб.</span>
+                </div>
+                <a href="#reviewsProduct" class="info-product__rating rating rating_5">
+                  <div class="rating__stars">
+                    <svg class="rating__star">
+                      <use href="assets/img/svg-sprite/sprite.svg#star"></use>
+                    </svg>
+                    <svg class="rating__star">
+                      <use href="assets/img/svg-sprite/sprite.svg#star"></use>
+                    </svg>
+                    <svg class="rating__star">
+                      <use href="assets/img/svg-sprite/sprite.svg#star"></use>
+                    </svg>
+                    <svg class="rating__star">
+                      <use href="assets/img/svg-sprite/sprite.svg#star"></use>
+                    </svg>
+                    <svg class="rating__star">
+                      <use href="assets/img/svg-sprite/sprite.svg#star"></use>
+                    </svg>
+                  </div>
+                  <span class="rating__count">(7)</span>
+                </a>
+              </div>
+            </div>
+            <div class="info-product__sizing sizing-product">
+              <div class="sizing-product__header">
+                <span class="sizing-product__title">Размеры:</span>
+                <span class="sizing-product__link color-gradient-accent" data-micromodal-trigger="modal-table">Размерная таблица</span>
+              </div>
+              <div class="sizing-product__select sizing-select custom-select">
+                <input type="hidden" class="custom-select__input" name="size">
+                <button type="button" class="custom-select__toggle select" name="numbers" value="" data-select="toggle" data-index="-1">Выбрать размер</button>
+                <div class="custom-select__dropdown">
+                  <ul class="custom-select__options">
+                    <li class="custom-select__option" data-select="option" data-value="4" data-index="0" data-balance="0">
+                      <div class="sizing-select__values">
+                        <span class="sizing-select__value">XS</span>
+                        <span class="sizing-select__value">42 RU</span>
+                      </div>
+                    </li>
+                    <li class="custom-select__option" data-select="option" data-value="3" data-index="1" data-balance="1">
+                      <div class="sizing-select__values">
+                        <span class="sizing-select__value">S</span>
+                        <span class="sizing-select__value">44 RU</span>
+                      </div>
+                    </li>
+                    <li class="custom-select__option" data-select="option" data-value="5" data-index="2" data-balance="0">
+                      <div class="sizing-select__values">
+                        <span class="sizing-select__value">M</span>
+                        <span class="sizing-select__value">46 RU</span>
+                      </div>
+                    </li>
+                    <li class="custom-select__option custom-select__option_disabled" data-select="option" data-value="6" data-index="3" data-balance="0">
+                      <div class="sizing-select__values">
+                        <span class="sizing-select__value">L</span>
+                        <span class="sizing-select__value">48 RU</span>
+                      </div>
+                      <button class="sizing-select__link" type="button" data-micromodal-trigger="modal-sizes-l">Уведомить о наличии</button>
+                    </li>
+                    <li class="custom-select__option" data-select="option" data-value="9" data-index="4" id="sizeIndividual" data-price-increment="1500.00">
+                      <div class="sizing-select__values">
+                        <span class="sizing-select__value">Пошив по меркам</span>
+                      </div>
+                      <a href="https://whsurfing.tmweb.ru/blog/poshiv-kupalnika-po-vashim-merkam" class="sizing-select__link" target="_blank">Подробнее</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="sizing-product__outputs">
+                <ul class="sizing-product__output output-sizing-product" id="tip4">
+                  <li class="output-sizing-product__item">
+                    <span class="output-sizing-product__title">Грудь:</span>
+                    <span class="output-sizing-product__value">80-84</span>
+                  </li>
+                  <li class="output-sizing-product__item">
+                    <span class="output-sizing-product__title">Талия:</span>
+                    <span class="output-sizing-product__value">60-65</span>
+                  </li>
+                  <li class="output-sizing-product__item">
+                    <span class="output-sizing-product__title">Бедра:</span>
+                    <span class="output-sizing-product__value">85-90</span>
+                  </li>
+                </ul>
+                <ul class="sizing-product__output output-sizing-product" id="tip3">
+                  <li class="output-sizing-product__item">
+                    <span class="output-sizing-product__title">Грудь:</span>
+                    <span class="output-sizing-product__value">84-86</span>
+                  </li>
+                  <li class="output-sizing-product__item">
+                    <span class="output-sizing-product__title">Талия:</span>
+                    <span class="output-sizing-product__value">65-68</span>
+                  </li>
+                  <li class="output-sizing-product__item">
+                    <span class="output-sizing-product__title">Бедра:</span>
+                    <span class="output-sizing-product__value">91-95</span>
+                  </li>
+                </ul>
+                <ul class="sizing-product__output output-sizing-product" id="tip5">
+                  <li class="output-sizing-product__item">
+                    <span class="output-sizing-product__title">Грудь:</span>
+                    <span class="output-sizing-product__value">89-91</span>
+                  </li>
+                  <li class="output-sizing-product__item">
+                    <span class="output-sizing-product__title">Талия:</span>
+                    <span class="output-sizing-product__value">68-74</span>
+                  </li>
+                  <li class="output-sizing-product__item">
+                    <span class="output-sizing-product__title">Бедра:</span>
+                    <span class="output-sizing-product__value">95-100</span>
+                  </li>
+                </ul>
+                <ul class="sizing-product__output output-sizing-product" id="tip6">
+                  <li class="output-sizing-product__item">
+                    <span class="output-sizing-product__title">Грудь:</span>
+                    <span class="output-sizing-product__value">94-100</span>
+                  </li>
+                  <li class="output-sizing-product__item">
+                    <span class="output-sizing-product__title">Талия:</span>
+                    <span class="output-sizing-product__value">74-80</span>
+                  </li>
+                  <li class="output-sizing-product__item">
+                    <span class="output-sizing-product__title">Бедра:</span>
+                    <span class="output-sizing-product__value">100-110</span>
+                  </li>
+                </ul>
+                <ul class="sizing-product__output output-sizing-product" id="tip9">
+                  <li class="output-sizing-product__item">
+                    <span class="output-sizing-product__title"> Вы можете заказать пошив этого купальника по вашим меркам <br>
+                      <span class="output-sizing-product__message"></span>
+                    </span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="info-product__actions">
+              <button class="info-product__action info-product__add-to-cart btn btn-accent" type="submit" data-id="69">
+                <span>Добавить в корзину</span>
+              </button>
+              <button class="info-product__action info-product__promo-btn promo-btn promo-btn_discount" data-micromodal-trigger="modal-discount" type="button">
+                <span class="promo-btn__text">Скидка<br> 500 руб.</span>
+                <span class="promo-btn__btn">Забрать</span>
+              </button>
+            </div>
+            <div class="info-product__accordion accordion-product active">
+              <div class="accordion-product__header">
+                <h2 class="accordion-product__title">О товаре</h2>
+                <span class="accordion-product__arrow">
+                  <svg>
+                    <use href="assets/img/svg-sprite/sprite.svg#arrow-down"></use>
+                  </svg>
+                </span>
+              </div>
+              <div class="accordion-product__body">
+                <div class="accordion-product__row row">
+                  <div class="accordion-product__content col-6">
+                    <div class="accordion-product__spec spec-product">
+                      <p class="spec-product__title">Цвет:</p>
+                      <p class="spec-product__value">Синий, фиолетовый</p>
+                    </div>
+                  </div>
+                  <div class="accordion-product__content col-6">
+                    <div class="accordion-product__spec spec-product">
+                      <p class="spec-product__title">Защиты от солнца:</p>
+                      <p class="spec-product__value">SPF 50</p>
+                    </div>
+                  </div>
+                  <div class="accordion-product__content col-6">
+                    <div class="accordion-product__spec spec-product">
+                      <p class="spec-product__title">Размер на модели:</p>
+                      <p class="spec-product__value">S - 42/44</p>
+                    </div>
+                  </div>
+                  <div class="accordion-product__content col-6">
+                    <div class="accordion-product__spec spec-product">
+                      <p class="spec-product__title">Параметры модели:</p>
+                      <p class="spec-product__value">164см, 86-63-90</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <a href="#" class="info-product__to-top to-top">
+              <span class="to-top__text color-gradient-accent">Наверх</span>
+              <svg class="to-top__arrow">
+                <use href="assets/img/svg-sprite/sprite.svg#arrow-down"></use>
+              </svg>
+            </a>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="section-similar-products">
+    <div class="container">
+      <div class="page-headline row">
+        <div class="page-headline__captions col-md-12">
+          <h2 class="page-headline__title page-title">Вас может заинтересовать</h2>
+        </div>
+      </div>
+      <div class="slider-products swiper slider">
+        <div class="slider-products__items swiper-wrapper">
+          <div class="slider-products__item swiper-slide">
+            <div class="card-product">
+              <div class="card-product__inner">
+                <label class="card-product__wishlist-label wishlist-label">
+                  <span class="screen-reader-text">Geometry</span>
+                  <input type="checkbox" class="wishlist-label__input hidden" name="product_wishlist" value="pr155">
+                  <svg class="wishlist-label__icon">
+                    <use href="assets/img/svg-sprite/sprite.svg#heart"></use>
+                  </svg>
+                </label>
+                <a href="#" class="card-product__img-wrap dummy-bg">
+                  <img data-src="assets/img/content/unity.jpg" alt="alt" class="card-product__img img-responsive swiper-lazy">
+                  <div class="swiper-lazy-preloader"></div>
+                </a>
+                <div class="card-product__body">
+                  <div class="card-product__content">
+                    <div class="card-product__price-wrap">
+                      <div class="card-product__price">6 000 руб.</div>
+                    </div>
+                    <a href="#" class="card-product__title">Geometry</a>
+                    <div class="card-product__attributes attributes">
+                      <ul class="attributes__list">
+                        <li>XS</li>
+                        <li>S</li>
+                        <li>M</li>
+                        <li>L</li>
+                        <li>По меркам</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="card-product__reveal">
+                    <a href="#" class="card-product__btn btn btn-accent"><span>Купить</span></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="slider-products__item swiper-slide">
+            <div class="card-product">
+              <div class="card-product__inner">
+                <span class="card-product__label label-product">-40%</span>
+                <label class="card-product__wishlist-label wishlist-label">
+                  <span class="screen-reader-text">Geometry</span>
+                  <input type="checkbox" class="wishlist-label__input hidden" name="product_wishlist" value="pr155">
+                  <svg class="wishlist-label__icon">
+                    <use href="assets/img/svg-sprite/sprite.svg#heart"></use>
+                  </svg>
+                </label>
+                <a href="#" class="card-product__img-wrap dummy-bg">
+                  <img data-src="assets/img/content/dakota-black.jpg" alt="alt" class="card-product__img img-responsive swiper-lazy">
+                  <div class="swiper-lazy-preloader"></div>
+                </a>
+                <div class="card-product__body">
+                  <div class="card-product__content">
+                    <div class="card-product__price-wrap">
+                      <div class="card-product__price card-product__price_new">6 000 руб.</div>
+                      <div class="card-product__old-price crossed">7 000 руб.</div>
+                    </div>
+                    <a href="#" class="card-product__title">Geometry</a>
+                    <div class="card-product__attributes attributes">
+                      <ul class="attributes__list">
+                        <li>XS</li>
+                        <li>S</li>
+                        <li>M</li>
+                        <li>L</li>
+                        <li>По меркам</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="card-product__reveal">
+                    <a href="#" class="card-product__btn btn btn-accent"><span>Купить</span></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="slider-products__item swiper-slide">
+            <div class="card-product">
+              <div class="card-product__inner">
+                <label class="card-product__wishlist-label wishlist-label">
+                  <span class="screen-reader-text">Geometry</span>
+                  <input type="checkbox" class="wishlist-label__input hidden" name="product_wishlist" value="pr155">
+                  <svg class="wishlist-label__icon">
+                    <use href="assets/img/svg-sprite/sprite.svg#heart"></use>
+                  </svg>
+                </label>
+                <a href="#" class="card-product__img-wrap dummy-bg">
+                  <img data-src="assets/img/content/victoria.jpg" alt="alt" class="card-product__img img-responsive swiper-lazy">
+                  <div class="swiper-lazy-preloader"></div>
+                </a>
+                <div class="card-product__body">
+                  <div class="card-product__content">
+                    <div class="card-product__price-wrap">
+                      <div class="card-product__price">6 000 руб.</div>
+                    </div>
+                    <a href="#" class="card-product__title">Geometry</a>
+                    <div class="card-product__attributes attributes">
+                      <ul class="attributes__list">
+                        <li>XS</li>
+                        <li>S</li>
+                        <li>M</li>
+                        <li>L</li>
+                        <li>По меркам</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="card-product__reveal">
+                    <a href="#" class="card-product__btn btn btn-accent"><span>Купить</span></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="slider-products__item swiper-slide">
+            <div class="card-product">
+              <div class="card-product__inner">
+                <label class="card-product__wishlist-label wishlist-label">
+                  <span class="screen-reader-text">Geometry</span>
+                  <input type="checkbox" class="wishlist-label__input hidden" name="product_wishlist" value="pr155">
+                  <svg class="wishlist-label__icon">
+                    <use href="assets/img/svg-sprite/sprite.svg#heart"></use>
+                  </svg>
+                </label>
+                <a href="#" class="card-product__img-wrap dummy-bg">
+                  <img data-src="assets/img/content/kupalnik-c-rukavami-skate.jpg" alt="alt" class="card-product__img img-responsive swiper-lazy">
+                  <div class="swiper-lazy-preloader"></div>
+                </a>
+                <div class="card-product__body">
+                  <div class="card-product__content">
+                    <div class="card-product__price-wrap">
+                      <div class="card-product__price">6 000 руб.</div>
+                    </div>
+                    <a href="#" class="card-product__title">Geometry</a>
+                    <div class="card-product__attributes attributes">
+                      <ul class="attributes__list">
+                        <li>XS</li>
+                        <li>S</li>
+                        <li>M</li>
+                        <li>L</li>
+                        <li>По меркам</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="card-product__reveal">
+                    <a href="#" class="card-product__btn btn btn-accent"><span>Купить</span></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="slider-products__item swiper-slide">
+            <div class="card-product">
+              <div class="card-product__inner">
+                <label class="card-product__wishlist-label wishlist-label">
+                  <span class="screen-reader-text">Geometry</span>
+                  <input type="checkbox" class="wishlist-label__input hidden" name="product_wishlist" value="pr155">
+                  <svg class="wishlist-label__icon">
+                    <use href="assets/img/svg-sprite/sprite.svg#heart"></use>
+                  </svg>
+                </label>
+                <a href="#" class="card-product__img-wrap dummy-bg">
+                  <img data-src="assets/img/content/kupalnik-dlya-serfinga-banny_200124222600.jpg" alt="alt" class="card-product__img img-responsive swiper-lazy">
+                  <div class="swiper-lazy-preloader"></div>
+                </a>
+                <div class="card-product__body">
+                  <div class="card-product__content">
+                    <div class="card-product__price-wrap">
+                      <div class="card-product__price">6 000 руб.</div>
+                    </div>
+                    <a href="#" class="card-product__title">Geometry</a>
+                    <div class="card-product__attributes attributes">
+                      <ul class="attributes__list">
+                        <li>XS</li>
+                        <li>S</li>
+                        <li>M</li>
+                        <li>L</li>
+                        <li>По меркам</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="card-product__reveal">
+                    <a href="#" class="card-product__btn btn btn-accent"><span>Купить</span></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <div class="mm-modal" id="modal-table" aria-hidden="true">
+    <div class="mm-modal__overlay" tabindex="-1" data-micromodal-close>
+      <div class="mm-modal__wrapper" role="dialog" aria-modal="true" aria-labelledby="modal-table-title">
+        <div class="mm-modal__content modal modal-content scrollbar-accent">
+          <header class="modal__header header-modal">
+            <div class="header-modal__container container">
+              <h2 class="header-modal__title modal__title" id="modal-table-title">Размерная таблица</h2>
+              <button class="header-modal__close modal__close close" type="button" aria-label="Close modal" data-micromodal-close>
+                <svg>
+                  <use href="assets/img/svg-sprite/sprite.svg#close"></use>
+                </svg>
+              </button>
+            </div>
+          </header>
+          <div class="modal__body body-modal" id="modal-table-content">
+            <div class="body-modal__container container">
+              <div class="modal__content">
+                <div class="modal__group">
+                  <div class="sizing-table-wrap">
+                    <table class="sizing-table">
+                      <thead>
+                        <tr>
+                          <th>Россий­ский</th>
+                          <th>Между­народный</th>
+                          <th>Грудь (см)</th>
+                          <th>Талия (см)</th>
+                          <th>Бедра (см)</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>40/42</td>
+                          <td>XS</td>
+                          <td>80-84</td>
+                          <td>60-65</td>
+                          <td>85-90</td>
+                        </tr>
+                        <tr>
+                          <td>42/44</td>
+                          <td>S</td>
+                          <td>84-86</td>
+                          <td>65-68</td>
+                          <td>91-95</td>
+                        </tr>
+                        <tr>
+                          <td>44/46</td>
+                          <td>M</td>
+                          <td>89-91</td>
+                          <td>68-74</td>
+                          <td>95-100</td>
+                        </tr>
+                        <tr>
+                          <td>46/48</td>
+                          <td>L</td>
+                          <td>94-100</td>
+                          <td>74-80</td>
+                          <td>100-110</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+                <div class="modal__group">
+                  <p class="color-highlighted text-center">Если ваш рост выше 175 см, выбирайте + 1 размер.</p>
+                </div>
+                <div class="modal__group modal__group_spacing-lg">
+                  <div class="sizing-instructions">
+                    <div class="sizing-instructions__img-wrap">
+                      <img src="assets/img/content/sizing-instructions.png" alt="alt" class="sizing-instructions__img img-responsive">
+                    </div>
+                    <div class="sizing-instructions__content">
+                      <ul class="sizing-instructions__list">
+                        <li class="sizing-instructions__item">
+                          <span class="sizing-instructions__title">Грудь</span>
+                          <p>Спереди лента должна проходить по наиболее выступающим точкам, сбоку через подмышечные впадины, а сзади обхватывать лопатки.</p>
+                        </li>
+                        <li class="sizing-instructions__item">
+                          <span class="sizing-instructions__title">Грудь</span>
+                          <p>Спереди лента должна проходить по наиболее выступающим точкам, сбоку через подмышечные впадины, а сзади обхватывать лопатки.</p>
+                        </li>
+                        <li class="sizing-instructions__item">
+                          <span class="sizing-instructions__title">Грудь</span>
+                          <p>Спереди лента должна проходить по наиболее выступающим точкам, сбоку через подмышечные впадины, а сзади обхватывать лопатки.</p>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="modal__group modal__group_spacing-md">
+                  <h2 class="modal__title">Возникли сложности с выбором?</h2>
+                  <p>Наши менеджеры с радостью помогут вам определиться с размером по телефону:</p>
+                  <a href="#" class="modal__link color-gradient-accent">8 (800) 511-36-39</a>
+                </div>
+                <div class="modal__group">
+                  <h2 class="modal__title">Пошив по вашим меркам</h2>
+                  <p>Если вы боитесь ошибиться размером, можете заказать индивидуальный пошив понравившегося купальника. Этот процесс обычно занимает 5 рабочих дня.</p>
+                  <a href="#" class="modal__link color-gradient-accent">Узнать подробнее</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="mm-modal" id="modal-sizes-l" aria-hidden="true">
+    <div class="mm-modal__overlay" tabindex="-1" data-micromodal-close>
+      <div class="mm-modal__wrapper" role="dialog" aria-modal="true" aria-labelledby="modal-sizes-l-title">
+        <div class="mm-modal__content modal modal-blocks modal-blocks_subscribe scrollbar-accent">
+          <button class="modal-blocks__close modal__close close" type="button" aria-label="Close modal" data-micromodal-close>
+            <svg>
+              <use href="assets/img/svg-sprite/sprite.svg#close"></use>
+            </svg>
+          </button>
+          <div class="modal__body body-modal" id="modal-sizes-l-content">
+            <div class="body-modal__container container">
+              <div class="modal-blocks__row">
+                <div class="modal-blocks__content-wrap">
+                  <div class="modal-blocks__content">
+                    <h2 class="modal-blocks__title" id="modal-sizes-l-title">Подпишитесь на отсутствующий размер: L - 48</h2>
+                    <div class="modal-blocks__text-wrap">
+                      <p>Как только товар в этом размере снова появится в продаже, мы уведомим вас</p>
+                    </div>
+                    <form class="form-modal" name="formSizesL">
+                      <div class="form-modal__controls">
+                        <input type="hidden" name="type" value="product">
+                        <input class="hidden" type="radio" name="size[]" value="401" checked>
+                        <div class="form-modal__control-field control-field control-field_js">
+                          <input type="email" class="control-field__control control" id="email_input_sizes" name="email" required>
+                          <label for="email_input_sizes" class="control-field__label control-label"><span>Введите ваш E-mail</span></label>
+                        </div>
+                      </div>
+                      <div class="form-modal__btn-wrap">
+                        <button class="form-modal__btn modal__btn btn btn-accent" type="submit"><span>Подписаться</span></button>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+                <div class="modal-blocks__img-wrap">
+                  <img src="assets/img/content/ic_comment.png" alt="alt" class="modal-blocks__img img-responsive">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="mm-modal" id="modal-sizes-success" aria-hidden="true">
+    <div class="mm-modal__overlay" tabindex="-1" data-micromodal-close>
+      <div class="mm-modal__wrapper" role="dialog" aria-modal="true" aria-labelledby="modal-sizes-success-title">
+        <div class="mm-modal__content modal modal-blocks modal-blocks_message">
+          <button class="modal-blocks__close modal__close close" type="button" aria-label="Close modal" data-micromodal-close>
+            <svg>
+              <use href="assets/img/svg-sprite/sprite.svg#close"></use>
+            </svg>
+          </button>
+          <div class="modal__body body-modal" id="modal-sizes-success-content">
+            <div class="body-modal__container container">
+              <div class="modal-blocks__img-wrap">
+                <img src="assets/img/content/hand.png" alt="alt" class="modal-blocks__img img-responsive">
+              </div>
+              <div class="modal-blocks__content-wrap">
+                <div class="modal-blocks__content">
+                  <h2 class="modal-blocks__title" id="modal-sizes-success-title">Готово!</h2>
+                  <div class="modal-blocks__text-wrap">
+                    <p>когда размер снова будет в наличии, мы отправим письмо на ваш E-mail</p>
+                  </div>
+                  <div class="modal-blocks__btn-wrap">
+                    <button class="modal-blocks__btn modal__btn btn btn-accent" type="button" data-micromodal-close aria-label="Close this dialog window"><span>Вернуться к покупкам</span></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="mm-modal mm-modal_let-grow" id="modal-review" aria-hidden="true">
+    <div class="mm-modal__overlay" tabindex="-1" data-micromodal-close>
+      <div class="mm-modal__wrapper" role="dialog" aria-modal="true" aria-labelledby="modal-review-title">
+        <div class="mm-modal__content modal modal-review scrollbar-accent">
+          <header class="modal__header header-modal">
+            <div class="header-modal__container container">
+              <h2 class="header-modal__title modal__title" id="modal-review-title">Оставить отзыв</h2>
+              <button class="header-modal__close modal__close close" type="button" aria-label="Close modal" data-micromodal-close>
+                <svg>
+                  <use href="assets/img/svg-sprite/sprite.svg#close"></use>
+                </svg>
+              </button>
+            </div>
+          </header>
+          <div class="modal__body body-modal" id="modal-review-content">
+            <div class="body-modal__container container">
+              <form class="form-review" method="post" action="/setcomment" enctype="multipart/form-data" name="formReview">
+                <div class="form-review__files-input files-input">
+                  <label for="commentPhotos" class="files-input__selector files-selector">
+                    <span class="files-selector__item item-file">
+                      <img src="assets/img/icons/photo.svg" alt="alt" class="item-file__icon">
+                    </span>
+                    <input class="files-selector__input hidden" type="file" name="comment_photo" id="commentPhotos" multiple accept="image/*">
+                    <span class="files-selector__text color-gradient-accent">+ Фото</span>
+                  </label>
+                  <div class="files-input__items">
+                    <!-- <div class="files-input__item item-file">
+										<img src="assets/img/content/review-thumb-1.jpg" alt="alt" class="item-file__img img-responsive">
+										<button class="item-file__delete" type="button">
+											<svg class="item-file__delete-icon">
+												<use href="assets/img/svg-sprite/sprite.svg#close"></use>
+											</svg>
+										</button>
+									</div> -->
+                  </div>
+                </div>
+                <div class="form-review__body">
+                  <div class="form-review__control-field control-field control-field_js">
+                    <input type="text" class="control-field__control control" id="comment_name" name="comment_name" required>
+                    <label for="comment_name" class="control-field__label control-label"><span>Имя<span class="color-danger">*</span></span></label>
+                  </div>
+                  <div class="form-review__control-field control-field control-field_js">
+                    <input type="email" class="control-field__control control" id="comment_mail" name="comment_mail">
+                    <label for="comment_mail" class="control-field__label control-label"><span>E-mail</span></label>
+                  </div>
+                  <div class="form-review__control-field control-field control-field_js">
+                    <input type="text" class="control-field__control control" id="comment_insta" name="comment_insta">
+                    <label for="comment_insta" class="control-field__label control-label"><span>Instagram</span></label>
+                  </div>
+                  <div class="form-review__control-field control-field">
+                    <textarea name="comment_question" class="form-review__textarea textarea" placeholder="Ваш комментарий тут..."></textarea>
+                  </div>
+                  <input type="hidden" name="product_id" value="118">
+                </div>
+                <div class="form-review__rating-control rating-control">
+                  <span class="rating-control__title">Ваша оценка</span>
+                  <div class="rating-control__items">
+                    <input id="comment_rating_5" type="radio" class="rating-control__item" name="comment_rating" value="5">
+                    <label for="comment_rating_5" class="rating-control__label">
+                      <svg class="rating-control__star">
+                        <use href="assets/img/svg-sprite/sprite.svg#star"></use>
+                      </svg>
+                    </label>
+                    <input id="comment_rating_4" type="radio" class="rating-control__item" name="comment_rating" value="4">
+                    <label for="comment_rating_4" class="rating-control__label">
+                      <svg class="rating-control__star">
+                        <use href="assets/img/svg-sprite/sprite.svg#star"></use>
+                      </svg>
+                    </label>
+                    <input id="comment_rating_3" type="radio" class="rating-control__item" name="comment_rating" value="3">
+                    <label for="comment_rating_3" class="rating-control__label">
+                      <svg class="rating-control__star">
+                        <use href="assets/img/svg-sprite/sprite.svg#star"></use>
+                      </svg>
+                    </label>
+                    <input id="comment_rating_2" type="radio" class="rating-control__item" name="comment_rating" value="2">
+                    <label for="comment_rating_2" class="rating-control__label">
+                      <svg class="rating-control__star">
+                        <use href="assets/img/svg-sprite/sprite.svg#star"></use>
+                      </svg>
+                    </label>
+                    <input id="comment_rating_1" type="radio" class="rating-control__item" name="comment_rating" value="1">
+                    <label for="comment_rating_1" class="rating-control__label">
+                      <svg class="rating-control__star">
+                        <use href="assets/img/svg-sprite/sprite.svg#star"></use>
+                      </svg>
+                    </label>
+                  </div>
+                </div>
+                <div class="form-review__btn-wrap">
+                  <button class="form-review__btn modal__btn btn btn-accent" type="submit"><span>Оставить отзыв</span></button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="mm-modal mm-modal_let-grow mm-modal_added-to-cart" id="modal-added-to-cart" aria-hidden="true">
+    <div class="mm-modal__overlay" tabindex="-1" data-micromodal-close>
+      <div class="mm-modal__wrapper" role="dialog" aria-modal="true" aria-labelledby="modal-added-to-cart-title">
+        <div class="mm-modal__content modal modal-added-to-cart scrollbar-accent">
+          <header class="modal__header header-modal">
+            <div class="header-modal__container container">
+              <button class="header-modal__close modal__close close" type="button" aria-label="Close modal" data-micromodal-close>
+                <svg>
+                  <use href="assets/img/svg-sprite/sprite.svg#close"></use>
+                </svg>
+              </button>
+            </div>
+          </header>
+          <div class="modal__body body-modal" id="modal-added-to-cart-content">
+            <div class="body-modal__container container">
+              <div class="added-to-cart">
+                <h2 class="added-to-cart__title modal__title" id="modal-added-to-cart-title">
+                  <svg class="added-to-cart__icon">
+                    <use href="assets/img/svg-sprite/sprite.svg#check-circle"></use>
+                  </svg> Товар был добавлен в корзину
+                </h2>
+                <div class="added-to-cart__card card-product">
+                  <div class="card-product__inner">
+                    <span class="card-product__label label-product">-40%</span>
+                    <a href="#" class="card-product__img-wrap dummy-bg">
+                      <img src="assets/img/content/unity.jpg" alt="alt" class="card-product__img img-responsive">
+                    </a>
+                    <div class="card-product__body">
+                      <div class="card-product__content">
+                        <a href="#" class="card-product__title">Geometry</a>
+                        <div class="card-product__attributes attributes">
+                          <ul class="attributes__list" id="addedToCartSizes">
+                            <!-- <li>XS</li>
+													<li>42 RU</li> -->
+                          </ul>
+                        </div>
+                        <div class="card-product__price-wrap">
+                          <div class="card-product__price card-product__price_new">6 000 руб.</div>
+                          <div class="card-product__old-price crossed">6 000 руб.</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="added-to-cart__footer">
+                  <a href="cart.html" class="added-to-cart__btn modal__btn btn btn-accent"><span>Перейти в корзину</span></a>
+                  <span class="added-to-cart__continue color-gradient-accent underline-gradient-accent" aria-label="Close modal" data-micromodal-close>Продолжить покупки</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="mm-modal" id="modal-discount-success" aria-hidden="true">
+    <div class="mm-modal__overlay" tabindex="-1" data-micromodal-close>
+      <div class="mm-modal__wrapper" role="dialog" aria-modal="true" aria-labelledby="modal-discount-success-title">
+        <div class="mm-modal__content modal modal-blocks modal-blocks_taller">
+          <button class="modal-blocks__close modal__close close" type="button" aria-label="Close modal" data-micromodal-close>
+            <svg>
+              <use href="assets/img/svg-sprite/sprite.svg#close"></use>
+            </svg>
+          </button>
+          <div class="modal__body body-modal" id="modal-discount-success-content">
+            <div class="body-modal__container container">
+              <div class="modal-blocks__row">
+                <div class="modal-blocks__content-wrap">
+                  <div class="modal-blocks__content">
+                    <h2 class="modal-blocks__title" id="modal-discount-success-title">Скидка уже в пути!</h2>
+                    <div class="modal-blocks__text-wrap">
+                      <p>Промокод со скидкой отправлена на ваш E-mail, его можно применить при оформлении заказа</p>
+                    </div>
+                    <div class="modal-blocks__btn-wrap">
+                      <button class="modal-blocks__btn modal__btn btn btn-accent" type="button" data-micromodal-close aria-label="Close this dialog window"><span>Вернуться к покупкам</span></button>
+                    </div>
+                  </div>
+                </div>
+                <div class="modal-blocks__img-wrap">
+                  <img src="assets/img/content/discount.png" alt="alt" class="modal-blocks__img img-responsive">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="mm-modal mm-modal_let-grow" id="modal-discount" aria-hidden="true">
+    <div class="mm-modal__overlay" tabindex="-1" data-micromodal-close>
+      <div class="mm-modal__wrapper" role="dialog" aria-modal="true" aria-labelledby="modal-discount-title">
+        <div class="mm-modal__content modal modal-blocks modal-blocks_subscribe scrollbar-accent">
+          <button class="modal-blocks__close modal__close close" type="button" aria-label="Close modal" data-micromodal-close>
+            <svg>
+              <use href="assets/img/svg-sprite/sprite.svg#close"></use>
+            </svg>
+          </button>
+          <div class="modal__body body-modal" id="modal-discount-content">
+            <div class="body-modal__container container">
+              <div class="modal-blocks__row">
+                <div class="modal-blocks__content-wrap">
+                  <div class="modal-blocks__content">
+                    <h2 class="modal-blocks__title" id="modal-discount-title">Скидка на первый заказ</h2>
+                    <div class="modal-blocks__text-wrap">
+                      <p>Получите скидку 30% на вашу первую покупку (от 5000 рублей)</p>
+                    </div>
+                    <form class="form-modal" name="formDiscount">
+                      <div class="form-modal__controls">
+                        <div class="form-modal__control-field control-field control-field_js">
+                          <input type="email" class="control-field__control control" id="email" name="email" required>
+                          <label for="email" class="control-field__label control-label"><span>Введите ваш E-mail</span></label>
+                        </div>
+                      </div>
+                      <div class="form-modal__btn-wrap">
+                        <button class="form-modal__btn modal__btn btn btn-accent"><span>Получить скидку</span></button>
+                      </div>
+                      <div class="form-modal__radios">
+                        <label class="form-modal__radio radio">
+                          <input type="checkbox" class="radio__input" name="remember" checked>
+                          <span class="radio__content">
+                            <span class="radio__dot"></span>
+                            <span class="radio__label">Нажимая кнопку «Подписаться», вы даете согласие на <a href="#">обработку персональных данных</a></span>
+                          </span>
+                        </label>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+                <div class="modal-blocks__img-wrap">
+                  <img src="assets/img/content/discount.png" alt="alt" class="modal-blocks__img img-responsive">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="mm-modal" id="modal-preloader" aria-hidden="true">
+    <div class="mm-modal__overlay" tabindex="-1" data-micromodal-close>
+      <div class="mm-modal__wrapper" role="dialog" aria-modal="true">
+        <div class="mm-modal__content modal-preloader">
+          <div class="swiper-lazy-preloader"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="mm-modal" id="modal-error-size" aria-hidden="true">
+    <div class="mm-modal__overlay" tabindex="-1" data-micromodal-close>
+      <div class="mm-modal__wrapper" role="dialog" aria-modal="true" aria-labelledby="modal-error-size-title">
+        <div class="mm-modal__content modal modal-message scrollbar-accent">
+          <button class="modal-blocks__close modal__close close" type="button" aria-label="Close modal" data-micromodal-close>
+            <svg>
+              <use href="assets/img/svg-sprite/sprite.svg#close"></use>
+            </svg>
+          </button>
+          <div class="modal__body body-modal" id="modal-error-size-content">
+            <div class="body-modal__container container">
+              <div class="message-modal">
+                <h2 class="message-modal__title" id="modal-error-size-title">Произошла ошибка</h2>
+                <div class="message-modal__text-wrap">
+                  <p>Не выбран размер</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="mm-modal" id="modal-review-success" aria-hidden="true">
+    <div class="mm-modal__overlay" tabindex="-1" data-micromodal-close>
+      <div class="mm-modal__wrapper" role="dialog" aria-modal="true" aria-labelledby="modal-review-success-title">
+        <div class="mm-modal__content modal modal-blocks modal-blocks_taller scrollbar-accent">
+          <button class="modal-blocks__close modal__close close" type="button" aria-label="Close modal" data-micromodal-close>
+            <svg>
+              <use href="assets/img/svg-sprite/sprite.svg#close"></use>
+            </svg>
+          </button>
+          <div class="modal__body body-modal" id="modal-review-success-content">
+            <div class="body-modal__container container">
+              <div class="modal-blocks__row">
+                <div class="modal-blocks__content-wrap">
+                  <div class="modal-blocks__content">
+                    <h2 class="modal-blocks__title" id="modal-review-success-title">Спасибо за ваш отзыв!</h2>
+                    <div class="modal-blocks__text-wrap">
+                      <p>В ближайшее время он будет опубликован</p>
+                    </div>
+                    <div class="modal-blocks__btn-wrap">
+                      <button class="modal-blocks__btn modal__btn btn btn-accent" type="button" data-micromodal-close aria-label="Close this dialog window"><span>Вернуться к покупкам</span></button>
+                    </div>
+                  </div>
+                </div>
+                <div class="modal-blocks__img-wrap">
+                  <img src="assets/img/content/discount.png" alt="alt" class="modal-blocks__img img-responsive">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="newsletter">
+    <div class="container">
+      <div class="newsletter__row row">
+        <div class="newsletter__content col-lg-8 col-md-7">
+          <img src="assets/img/icons/letter.svg" alt="alt" class="newsletter__icon">
+          <div class="newsletter__text-wrap">
+            <p>Получайте актуальную информацию о всех скидках, распродажах и новых, трендовых коллекциях</p>
+          </div>
+        </div>
+        <form class="newsletter__form form-newsletter col-lg-4 col-md-5" action="/main/subscription">
+          <div class="newsletter__control-field control-field control-field_js">
+            <input type="email" class="control-field__control control" id="footerEmail" name="email" required>
+            <label for="footerEmail" class="control-field__label control-label"><span>Введите ваш E-mail</span></label>
+          </div>
+          <button class="newsletter__btn btn btn-accent" type="submit">
+            <span>
+              <svg class="newsletter__arrow">
+                <use href="assets/img/svg-sprite/sprite.svg#arrow-right"></use>
+              </svg>
+            </span>
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+  <footer class="footer">
+    <div class="footer__container container">
+      <div class="footer__row row">
+        <div class="footer__col col-xl-3 col-md-4">
+          <h3 class="footer__title">Полезные ссылки</h3>
+          <nav class="footer__menu menu-footer">
+            <ul class="menu-footer__list">
+              <li class="menu-footer__item"><a href="#">Каталог</a></li>
+              <li class="menu-footer__item"><a href="blog.html">Блог</a></li>
+              <li class="menu-footer__item"><a href="about.html">О бренде</a></li>
+              <li class="menu-footer__item"><a href="#">Калькулятор</a></li>
+              <li class="menu-footer__item"><a href="sizing.html">Размеры</a></li>
+              <li class="menu-footer__item"><a href="delivery.html">Доставка и оплата<img src="assets/img/icons/delivery.svg" alt="alt" class="menu-footer__icon"></a></li>
+              <li class="menu-footer__item"><a href="contacts.html">Контакты</a></li>
+              <li class="menu-footer__item"><a href="certificate.html">Подарочные сертификаты<img src="assets/img/icons/gift-card.svg" alt="alt" class="menu-footer__icon"></a></li>
+              <li class="menu-footer__item sale"><a href="#">Распродажа до -40%</a></li>
+            </ul>
+          </nav>
+        </div>
+        <div class="footer__col footer__col_accordion col-xl-4 col-md-8">
+          <h3 class="footer__title">Категории товаров</h3>
+          <nav class="footer__menu menu-footer menu-footer_columns_2">
+            <ul class="menu-footer__list">
+              <li class="menu-footer__item"><a href="#">Новая коллекция 2021</a></li>
+              <li class="menu-footer__item"><a href="#">Распродажа купальников</a></li>
+              <li class="menu-footer__item"><a href="#">Купальники для серфинга</a></li>
+              <li class="menu-footer__item"><a href="#">Лайкра для серфинга</a></li>
+              <li class="menu-footer__item"><a href="#">Слитные купальники</a></li>
+              <li class="menu-footer__item"><a href="#">Раздельные купальники</a></li>
+              <li class="menu-footer__item"><a href="#">Купальники с рукавами</a></li>
+              <li class="menu-footer__item"><a href="#">Купальники без рукавов</a></li>
+              <li class="menu-footer__item"><a href="#">Купальники с чашечками</a></li>
+              <li class="menu-footer__item"><a href="#">Новая коллекция 2021</a></li>
+              <li class="menu-footer__item"><a href="#">Распродажа купальников</a></li>
+              <li class="menu-footer__item"><a href="#">Купальники для серфинга</a></li>
+              <li class="menu-footer__item"><a href="#">Лайкра для серфинга</a></li>
+              <li class="menu-footer__item"><a href="#">Слитные купальники</a></li>
+              <li class="menu-footer__item"><a href="#">Раздельные купальники</a></li>
+              <li class="menu-footer__item"><a href="#">Купальники с рукавами</a></li>
+              <li class="menu-footer__item"><a href="#">Купальники без рукавов</a></li>
+              <li class="menu-footer__item"><a href="#">Купальники с чашечками</a></li>
+            </ul>
+          </nav>
+        </div>
+        <div class="footer__col footer__col_accordion col-xl-3 col-lg-4 col-md-5">
+          <h3 class="footer__title">Часто ищут</h3>
+          <nav class="footer__menu menu-footer">
+            <ul class="menu-footer__list">
+              <li class="menu-footer__item"><a href="#">Черные купальники с рукавами</a></li>
+              <li class="menu-footer__item"><a href="#">Закрытые купальники с рукавами</a></li>
+              <li class="menu-footer__item"><a href="#">Купальники с сеткой</a></li>
+              <li class="menu-footer__item"><a href="#">Спортивные купальники для бассейна</a></li>
+              <li class="menu-footer__item"><a href="#">Купальники с принтом</a></li>
+              <li class="menu-footer__item"><a href="#">Купальники с закрытыми плечами</a></li>
+            </ul>
+          </nav>
+        </div>
+        <div class="footer__col footer__col_contacts col-xl-2 col-lg-8 col-md-6">
+          <h3 class="footer__title">Контактные данные</h3>
+          <div class="footer__contacts contacts-footer">
+            <div class="contacts-footer__item contacts-footer__item_email">
+              <a href="mailto:zakaz@waveharmony.com" class="contacts-footer__value">zakaz@waveharmony.com</a>
+            </div>
+            <div class="contacts-footer__item contacts-footer__item_phone">
+              <a href="tel:88005113639" class="contacts-footer__value color-gradient-accent">8 (800) 511-36-39</a>
+            </div>
+          </div>
+          <div class="footer__socials socials">
+            <div class="socials__items">
+              <a href="#" class="socials__item item-social item-social_vk">
+                <svg class="item-social__icon">
+                  <use href="assets/img/svg-sprite/sprite.svg#vk"></use>
+                </svg>
+              </a>
+              <a href="#" class="socials__item item-social item-social_what">
+                <svg class="item-social__icon">
+                  <use href="assets/img/svg-sprite/sprite.svg#what"></use>
+                </svg>
+              </a>
+              <a href="#" class="socials__item item-social item-social_fb">
+                <svg class="item-social__icon">
+                  <use href="assets/img/svg-sprite/sprite.svg#fb"></use>
+                </svg>
+              </a>
+              <a href="#" class="socials__item item-social item-social_inst">
+                <svg class="item-social__icon">
+                  <use href="assets/img/svg-sprite/sprite.svg#inst"></use>
+                </svg>
+              </a>
+            </div>
+          </div>
+          <div class="footer__info">
+            <p><a href="#">Информация для покупателей</a></p>
+            <p>Wave Harmony - женская одежда для серфинга и любых других, водных видов спорта.</p>
+            <p>Все права защищены. 2021</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <div class="cookie">
+    <img src="assets/img/icons/cookie.svg" alt="alt" class="cookie__icon">
+    <p class="cookie__text">Находясь на этом сайте, вы соглашаетесь с нашей — <a href="#">Политикой конфиденциальности</a></p>
+    <button class="cookie__btn btn btn-white" id="cookie-btn-yes"><span>Принять</span></button>
+  </div>
+  <div class="mm-modal" id="modal-subscribe-success" aria-hidden="true">
+    <div class="mm-modal__overlay" tabindex="-1" data-micromodal-close>
+      <div class="mm-modal__wrapper" role="dialog" aria-modal="true" aria-labelledby="modal-subscribe-success-title">
+        <div class="mm-modal__content modal modal-blocks modal-blocks_message">
+          <button class="modal-blocks__close modal__close close" type="button" aria-label="Close modal" data-micromodal-close>
+            <svg>
+              <use href="assets/img/svg-sprite/sprite.svg#close"></use>
+            </svg>
+          </button>
+          <div class="modal__body body-modal" id="modal-subscribe-success-content">
+            <div class="body-modal__container container">
+              <div class="modal-blocks__img-wrap">
+                <img src="assets/img/content/hand.png" alt="alt" class="modal-blocks__img img-responsive">
+              </div>
+              <div class="modal-blocks__content-wrap">
+                <div class="modal-blocks__content">
+                  <h2 class="modal-blocks__title" id="modal-subscribe-success-title">Благодарим вас за подписку</h2>
+                  <div class="modal-blocks__text-wrap">
+                    <p>все самое актуальное и интересное будет приходить вам на почту</p>
+                  </div>
+                  <div class="modal-blocks__btn-wrap">
+                    <button class="modal-blocks__btn modal__btn btn btn-accent" type="button" data-micromodal-close aria-label="Close this dialog window"><span>Вернуться к покупкам</span></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="mm-modal mm-modal_let-grow" id="modal-newsletter" aria-hidden="true">
+    <div class="mm-modal__overlay" tabindex="-1" data-micromodal-close>
+      <div class="mm-modal__wrapper" role="dialog" aria-modal="true" aria-labelledby="modal-newsletter-title">
+        <div class="mm-modal__content modal modal-blocks modal-blocks_subscribe scrollbar-accent">
+          <button class="modal-blocks__close modal__close close" type="button" aria-label="Close modal" data-micromodal-close>
+            <svg>
+              <use href="assets/img/svg-sprite/sprite.svg#close"></use>
+            </svg>
+          </button>
+          <div class="modal__body body-modal" id="modal-newsletter-content">
+            <div class="body-modal__container container">
+              <div class="modal-blocks__row">
+                <div class="modal-blocks__content-wrap">
+                  <div class="modal-blocks__content">
+                    <h2 class="modal-blocks__title" id="modal-newsletter-title">Для получения самой актуальной информации о всех скидках, распродажах и новых коллекциях</h2>
+                    <div class="modal-blocks__text-wrap">
+                      <p>просто укажите E-mail в форме ниже</p>
+                    </div>
+                    <form class="form-modal form-newsletter">
+                      <div class="form-modal__controls">
+                        <div class="form-modal__control-field control-field control-field_js">
+                          <input type="email" class="control-field__control control" id="email" name="email" required>
+                          <label for="email" class="control-field__label control-label"><span>Введите ваш E-mail</span></label>
+                        </div>
+                      </div>
+                      <div class="form-modal__btn-wrap form-newsletter__btn-wrap">
+                        <button class="form-modal__btn form-newsletter__btn modal__btn btn btn-accent"><span>Подписаться</span></button>
+                        <button class="form-modal__btn form-newsletter__btn_later modal__btn btn btn-gray" type="button"><span>Позже</span></button>
+                      </div>
+                      <div class="form-modal__radios">
+                        <label class="form-modal__radio radio">
+                          <input type="checkbox" class="radio__input" name="remember" checked>
+                          <span class="radio__content">
+                            <span class="radio__dot"></span>
+                            <span class="radio__label">Нажимая кнопку «Подписаться», вы даете согласие на <a href="#">обработку персональных данных</a></span>
+                          </span>
+                        </label>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+                <div class="modal-blocks__img-wrap">
+                  <img src="assets/img/content/bell.png" alt="alt" class="modal-blocks__img img-responsive">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="mm-modal mm-modal_let-grow" id="modal-login" aria-hidden="true">
+    <div class="mm-modal__overlay" tabindex="-1" data-micromodal-close>
+      <div class="mm-modal__wrapper" role="dialog" aria-modal="true" aria-labelledby="modal-login-title">
+        <div class="mm-modal__content modal modal-auth scrollbar-accent">
+          <header class="modal__header header-modal">
+            <div class="header-modal__container container">
+              <h2 class="header-modal__title modal__title d-lg-none d-xl-block" id="modal-login-title">Войдите в аккаунт</h2>
+              <button class="header-modal__close modal__close close" type="button" aria-label="Close modal" data-micromodal-close>
+                <svg>
+                  <use href="assets/img/svg-sprite/sprite.svg#close"></use>
+                </svg>
+              </button>
+            </div>
+          </header>
+          <div class="modal__body body-modal" id="modal-login-content">
+            <div class="body-modal__container container">
+              <form class="form-modal" action="/auth/login_pop" method="post" name="formLogin">
+                <div class="form-modal__header d-none d-lg-block d-xl-none">
+                  <h2 class="form-modal__title">Войти</h2>
+                  <p class="form-modal__text">или <span class="form-modal__link color-gradient-accent trigger-modal-register">создать аккаунт</span></p>
+                </div>
+                <div class="form-modal__controls">
+                  <div class="form-modal__control-field control-field control-field_js">
+                    <input type="tel" class="control-field__control control phone-mask" id="login_phone" name="phone" required>
+                    <label for="login_phone" class="control-field__label control-label"><span>Телефон<span class="color-danger">*</span></span></label>
+                  </div>
+                  <div class="form-modal__control-field control-field control-field_js">
+                    <input type="password" class="control-field__control control" id="login_password" name="password" required>
+                    <label for="login_password" class="control-field__label control-label"><span>Пароль<span class="color-danger">*</span></span></label>
+                  </div>
+                </div>
+                <div class="form-modal__actions">
+                  <label class="form-modal__radio radio">
+                    <input type="checkbox" class="radio__input" name="remember" checked>
+                    <span class="radio__content">
+                      <span class="radio__dot"></span>
+                      <span class="radio__label">Запомнить меня</span>
+                    </span>
+                  </label>
+                  <span class="form-modal__reset color-gradient-accent trigger-modal-reset" data-micromodal-trigger="modal-reset">Напомнить пароль</span>
+                </div>
+                <div class="form-modal__btn-wrap">
+                  <button class="form-modal__btn modal__btn btn btn-accent" type="submit"><span>Войти</span></button>
+                  <button class="form-modal__btn modal__btn btn btn-outline-accent d-lg-none d-xl-block trigger-modal-register" type="button"><span>У меня пока нет аккаунта</span></button>
+                </div>
+                <div class="form-modal__feedback color-danger"></div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="mm-modal mm-modal_let-grow" id="modal-register" aria-hidden="true">
+    <div class="mm-modal__overlay" tabindex="-1" data-micromodal-close>
+      <div class="mm-modal__wrapper" role="dialog" aria-modal="true" aria-labelledby="modal-register-title">
+        <div class="mm-modal__content modal modal-auth scrollbar-accent">
+          <header class="modal__header header-modal">
+            <div class="header-modal__container container">
+              <h2 class="header-modal__title modal__title d-lg-none d-xl-block" id="modal-register-title">Создайте аккаунт</h2>
+              <button class="header-modal__close modal__close close" type="button" aria-label="Close modal" data-micromodal-close>
+                <svg>
+                  <use href="assets/img/svg-sprite/sprite.svg#close"></use>
+                </svg>
+              </button>
+            </div>
+          </header>
+          <div class="modal__body body-modal" id="modal-register-content">
+            <div class="body-modal__container container">
+              <form class="form-modal" action="/auth/registration_pop" method="post" name="formRegister">
+                <div class="form-modal__header d-none d-lg-block d-xl-none">
+                  <h2 class="form-modal__title">Создать аккаунт</h2>
+                  <p class="form-modal__text">или <span class="form-modal__link color-gradient-accent trigger-modal-login">войти в существующий</span></p>
+                </div>
+                <div class="form-modal__controls">
+                  <div class="form-modal__control-field control-field control-field_js">
+                    <input type="text" class="control-field__control control" id="register_name" name="first_name" required>
+                    <label for="register_name" class="control-field__label control-label"><span>Имя<span class="color-danger">*</span></span></label>
+                  </div>
+                  <div class="form-modal__control-field control-field control-field_js">
+                    <input type="text" class="control-field__control control" id="register_last_name" name="last_name" required>
+                    <label for="register_last_name" class="control-field__label control-label"><span>Фамилия<span class="color-danger">*</span></span></label>
+                  </div>
+                  <div class="form-modal__control-field control-field control-field_js">
+                    <input type="email" class="control-field__control control" id="register_email" name="email" required>
+                    <label for="register_email" class="control-field__label control-label"><span>E-mail<span class="color-danger">*</span></span></label>
+                  </div>
+                  <div class="form-modal__control-field control-field control-field_js">
+                    <input type="tel" class="control-field__control control phone-mask" id="register_phone" name="phone" required>
+                    <label for="register_phone" class="control-field__label control-label"><span>Телефон<span class="color-danger">*</span></span></label>
+                  </div>
+                  <div class="form-modal__control-field control-field control-field_js">
+                    <input type="password" class="control-field__control control" id="register_password" name="password" required>
+                    <label for="register_password" class="control-field__label control-label"><span>Пароль<span class="color-danger">*</span></span></label>
+                  </div>
+                  <div class="form-modal__control-field control-field control-field_js">
+                    <input type="password" class="control-field__control control" id="register_repeat_password" name="repeat_password" required>
+                    <label for="register_repeat_password" class="control-field__label control-label"><span>Пароль ещё раз<span class="color-danger">*</span></span></label>
+                  </div>
+                </div>
+                <div class="form-modal__actions">
+                  <label class="form-modal__radio radio">
+                    <input type="checkbox" class="radio__input" name="subscribe" checked>
+                    <span class="radio__content">
+                      <span class="radio__dot"></span>
+                      <span class="radio__label">Подписаться на новинки и акции</span>
+                    </span>
+                  </label>
+                </div>
+                <div class="form-modal__btn-wrap">
+                  <button class="form-modal__btn modal__btn btn btn-accent" type="submit"><span>Создать аккаунт</span></button>
+                  <button class="form-modal__btn modal__btn btn btn-outline-accent d-lg-none d-xl-block trigger-modal-login" type="button"><span>У меня уже есть аккаунт</span></button>
+                </div>
+                <div class="form-modal__feedback color-danger"></div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="mm-modal" id="modal-reset" aria-hidden="true">
+    <div class="mm-modal__overlay" tabindex="-1" data-micromodal-close>
+      <div class="mm-modal__wrapper" role="dialog" aria-modal="true" aria-labelledby="modal-reset-title">
+        <div class="mm-modal__content modal modal-auth scrollbar-accent">
+          <header class="modal__header header-modal">
+            <div class="header-modal__container container">
+              <h2 class="header-modal__title modal__title d-lg-none d-xl-block" id="modal-reset-title">Восстановление пароля</h2>
+              <button class="header-modal__close modal__close close" type="button" aria-label="Close modal" data-micromodal-close>
+                <svg>
+                  <use href="assets/img/svg-sprite/sprite.svg#close"></use>
+                </svg>
+              </button>
+            </div>
+          </header>
+          <div class="modal__body body-modal" id="modal-reset-content">
+            <div class="body-modal__container container">
+              <form class="form-modal" action="/auth/forgot_password" method="post" name="formReset">
+                <div class="form-modal__header d-none d-lg-block d-xl-none">
+                  <h2 class="form-modal__title">Восстановление пароля</h2>
+                  <p class="form-modal__text">Пожалуйста введите ваш логин и мы сможем отправить вам письмо с новым паролем.</p>
+                </div>
+                <div class="form-modal__controls">
+                  <div class="form-modal__control-field control-field control-field_js">
+                    <input type="tel" class="control-field__control control phone-mask" id="reset_phone" name="phone" required>
+                    <label for="reset_phone" class="control-field__label control-label"><span>Телефон<span class="color-danger">*</span></span></label>
+                  </div>
+                </div>
+                <div class="form-modal__btn-wrap">
+                  <button class="form-modal__btn modal__btn btn btn-accent" type="submit"><span>Отправить</span></button>
+                </div>
+                <div class="form-modal__feedback color-danger"></div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+    var SessionValue = "1";
+  </script>
+  <script src="assets/js/main.js"></script>
+</body>
+
+</html>

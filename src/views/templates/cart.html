@@ -1,0 +1,422 @@
+{{> header title="Каталог"}}
+
+<div class="container container-md">
+    <ul class="breadcrumbs">
+        <li><a href="#">Главная</a></li>
+        <li>Каталог</li>
+    </ul>
+</div>
+
+<div class="cart">
+	<div class="container container-md">
+
+		<div class="cart__row row">
+
+			<div class="cart__col cart__content">
+				<form method="post" action="/cart/confirmcart_php" class="cart__form" id="formCart">
+					<div class="cart__sections">
+						<div class="cart__section">
+							<div class="cart__headline cart-headline">
+								<h2 class="cart-headline__title">Ваш заказ</h2>
+							</div>
+							<div class="cart__orders orders-cart">
+								<div class="orders-cart__item item-order" data-id="200_5">
+									<a href="#" class="item-order__img-wrap dummy-bg">
+										<img src="https://waveharmony.com/images/products/thumb3/chernyy-kupalnik-s-rukavami-beyonce_190319222933.jpg" alt="alt" class="item-order__img img-responsive">
+									</a>
+									<div class="item-order__content">
+										<h4 class="item-order__title color-gradient-accent"><a href="#">Moana Neon</a></h4>
+										<div class="item-order__info-wrap">
+											<span class="item-order__info">Размер: S - 42/44</span>
+										</div>
+										<div class="item-order__price-wrap">
+											<div class="item-order__price item-order__price_new">4 500 руб.</div>
+											<div class="item-order__old-price crossed">5 000 руб.</div>
+										</div>
+										<div class="item-order__actions">
+											<div class="item-order__quantity quantity">
+												<button class="quantity__btn quantity__btn_minus" type="button">
+													<span class="quantity__plus plus active"></span>
+												</button>
+												<div class="quantity__count">
+													<input type="number" class="quantity__control" min="1" value="1">
+													<span class="quantity__text">шт</span>
+												</div>
+												<button class="quantity__btn quantity__btn_plus" type="button">
+													<span class="quantity__plus plus"></span>
+												</button>
+											</div>
+											<button class="item-order__delete-btn delete-btn" type="button">
+												<svg class="delete-btn__icon">
+													<use href="assets/img/svg-sprite/sprite.svg#trash"></use>
+												</svg>
+											</button>
+										</div>
+									</div>
+								</div>
+								<div class="orders-cart__item item-order" data-id="69_3">
+									<a href="#" class="item-order__img-wrap dummy-bg">
+										<img src="assets/img/content/order.png" alt="alt" class="item-order__img img-responsive">
+									</a>
+									<div class="item-order__content">
+										<h4 class="item-order__title color-gradient-accent"><a href="#">Moana Neon</a></h4>
+										<div class="item-order__info-wrap">
+											<span class="item-order__info">Размер: S - 42/44</span>
+										</div>
+										<div class="item-order__price-wrap">
+											<div class="item-order__price">4 500 руб.</div>
+										</div>
+										<div class="item-order__actions">
+											<div class="item-order__quantity quantity">
+												<button class="quantity__btn quantity__btn_minus" type="button">
+													<span class="quantity__plus plus active"></span>
+												</button>
+												<div class="quantity__count">
+													<input type="number" class="quantity__control" min="1" value="1">
+													<span class="quantity__text">шт</span>
+												</div>
+												<button class="quantity__btn quantity__btn_plus" type="button">
+													<span class="quantity__plus plus"></span>
+												</button>
+											</div>
+											<button class="item-order__delete-btn delete-btn" type="button" data-id="198_4">
+												<svg class="delete-btn__icon">
+													<use href="assets/img/svg-sprite/sprite.svg#trash"></use>
+												</svg>
+											</button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="cart__section">
+							<div class="cart__headline cart-headline">
+								<h2 class="cart-headline__title">Контактные данные</h2>
+								<ul class="cart-headline__links">
+									<li>
+										<span class="cart-headline__link color-gradient-accent" data-micromodal-trigger="modal-login">Вход</span>
+									</li>
+									<li>
+										<span class="cart-headline__link color-gradient-accent" data-micromodal-trigger="modal-register">Регистрация</span>
+									</li>
+								</ul>
+							</div>
+							<div class="cart__controls row">
+								<div class="cart__group col-md-6">
+									<div class="cart__control-field control-field control-field_js">
+										<input type="text" class="control-field__control control" id="clientLastname" name="last_name" required>
+										<label for="clientLastname" class="control-field__label control-label"><span>Введите фамилию<span class="color-danger">*</span></span></label>
+									</div>
+								</div>
+								<div class="cart__group col-md-6">
+									<div class="cart__control-field control-field control-field_js">
+										<input type="text" class="control-field__control control" id="clientName" name="first_name" required>
+										<label for="clientName" class="control-field__label control-label"><span>Введите имя<span class="color-danger">*</span></span></label>
+									</div>
+								</div>
+								<div class="cart__group col-md-6">
+									<div class="cart__control-field control-field control-field_js">
+										<input type="email" class="control-field__control control" id="clientEmail" name="email" required>
+										<label for="clientEmail" class="control-field__label control-label"><span>Введите E-mail<span class="color-danger">*</span></span></label>
+									</div>
+								</div>
+								<div class="cart__group col-md-6">
+									<div class="cart__control-field control-field control-field_js">
+										<input type="tel" class="control-field__control control phone-mask" id="clientPhone" name="phone" required>
+										<label for="clientPhone" class="control-field__label control-label"><span>Введите номер телефона<span class="color-danger">*</span></span></label>
+										<p class="control-field__msg">Введите ваш мобильный номер начиная с кода</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="cart__section">
+							<div class="cart__headline cart-headline">
+								<h2 class="cart-headline__title">Способ доставки</h2>
+							</div>
+							<div class="cart__options">
+								<div class="cart__option option-cart option-cart_payment">
+									<label class="option-cart__radio radio">
+										<input type="radio" class="option-cart__input radio__input" name="delivery_id" value="1">
+										<span class="radio__content">
+											<span class="option-cart__dot radio__dot"></span>
+										</span>
+										<span class="option-cart__content">
+											<span class="option-cart__header">
+												<span class="option-cart__title">Москва в пределах МКАД + Примерка</span>
+												<span class="option-cart__date">до 3 дней</span>
+											</span>
+											<span class="option-cart__text-wrap">
+												<span class="option-cart__text">доставка нашим курьером</span>
+												<span class="option-cart__price color-success">≈ 300 руб</span>
+											</span>
+										</span>
+									</label>
+									<div class="option-cart__controls">
+										<div class="option-cart__control-field control-field control-field_js">
+											<input type="text" class="control-field__control control js-autocomplete-address" id="mskAddress" name="address" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+											<label for="mskAddress" class="control-field__label control-label"><span>Улица / дом / квартира / офис<span class="color-danger">*</span></span></label>
+										</div>
+									</div>
+								</div>
+								<div class="cart__option option-cart option-cart_payment">
+									<label class="option-cart__radio radio">
+										<input type="radio" class="option-cart__input radio__input" name="delivery_id" value="5">
+										<span class="radio__content">
+											<span class="option-cart__dot radio__dot"></span>
+										</span>
+										<span class="option-cart__content">
+											<span class="option-cart__header">
+												<span class="option-cart__title">За пределами МКАД + Примерка</span>
+												<span class="option-cart__date">до 3 дней</span>
+											</span>
+											<span class="option-cart__text-wrap">
+												<span class="option-cart__text">в пешей доступности от метро и МЦД (не более 10 мин. пешком)</span>
+												<span class="option-cart__price color-success">≈ 500 руб</span>
+											</span>
+										</span>
+									</label>
+									<div class="option-cart__controls">
+										<div class="option-cart__control-field control-field control-field_js">
+											<input type="text" class="control-field__control control js-autocomplete-city" id="outsideCity" name="city" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+											<label for="outsideCity" class="control-field__label control-label"><span>Введите адрес<span class="color-danger">*</span></span></label>
+										</div>
+										<div class="option-cart__control-field control-field control-field_js">
+											<input type="text" class="control-field__control control js-autocomplete-address" id="outsideAddress" name="address" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+											<label for="outsideAddress" class="control-field__label control-label"><span>Улица / дом / квартира / офис<span class="color-danger">*</span></span></label>
+										</div>
+									</div>
+								</div>
+								<div class="cart__option option-cart option-cart_payment">
+									<label class="option-cart__radio radio">
+										<input type="radio" class="option-cart__input radio__input" name="delivery_id" value="2">
+										<span class="radio__content">
+											<span class="option-cart__dot radio__dot"></span>
+										</span>
+										<span class="option-cart__content">
+											<span class="option-cart__header">
+												<span class="option-cart__title">Пункты выдачи по России</span>
+												<span class="option-cart__date">от 3 дней</span>
+											</span>
+											<span class="option-cart__text-wrap">
+												<span class="option-cart__text">пункт самовывоза в вашем городе</span>
+												<span class="option-cart__price color-success">Расчет по адресу</span>
+											</span>
+										</span>
+									</label>
+									<div class="option-cart__controls">
+										<div class="option-cart__control-field control-field">
+											<select class="new-select js-city-select" name="city" id="pickupCity" data-placeholder="Введите название города"></select>
+										</div>
+										<div class="option-cart__control-field control-field">
+											<select class="new-select" name="pointCode" id="postalDir" data-placeholder="Введите пункт выдачи"></select>
+										</div>
+									</div>
+								</div>
+								<div class="cart__option option-cart option-cart_payment">
+									<label class="option-cart__radio radio">
+										<input type="radio" class="option-cart__input radio__input" name="delivery_id" value="3">
+										<span class="radio__content">
+											<span class="option-cart__dot radio__dot"></span>
+										</span>
+										<span class="option-cart__content">
+											<span class="option-cart__header">
+												<span class="option-cart__title">Курьерская доставка по России</span>
+												<span class="option-cart__date">от 3 дней</span>
+											</span>
+											<span class="option-cart__text-wrap">
+												<span class="option-cart__text">курьерской службой лично в руки</span>
+												<span class="option-cart__price color-success">Расчет по адресу</span>
+											</span>
+										</span>
+									</label>
+									<div class="option-cart__controls">
+										<div class="option-cart__control-field control-field">
+											<select class="new-select js-city-select" name="city" id="courierCity" data-placeholder="Введите название города"></select>
+										</div>
+										<div class="option-cart__control-field control-field control-field_js">
+											<input type="text" class="control-field__control control js-autocomplete-address" id="courierAddress" name="address" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+											<label for="courierAddress" class="control-field__label control-label"><span>Улица / дом / квартира / офис<span class="color-danger">*</span></span></label>
+										</div>
+									</div>
+								</div>
+								<div class="cart__option option-cart option-cart_payment">
+									<label class="option-cart__radio radio">
+										<input type="radio" class="option-cart__input radio__input" name="delivery_id" value="4">
+										<span class="radio__content">
+											<span class="option-cart__dot radio__dot"></span>
+										</span>
+										<span class="option-cart__content">
+											<span class="option-cart__header">
+												<span class="option-cart__title">Доставка по Миру</span>
+												<span class="option-cart__date">от 3 дней</span>
+											</span>
+											<span class="option-cart__text-wrap">
+												<span class="option-cart__text">рассчет стоимости после оформления</span>
+												<span class="option-cart__price color-success">-</span>
+											</span>
+										</span>
+									</label>
+									<div class="option-cart__controls">
+										<div class="option-cart__control-field control-field control-field_js">
+											<input type="text" class="control-field__control control js-autocomplete-city" id="worldCity" name="city" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+											<label for="worldCity" class="control-field__label control-label"><span>Введите адрес<span class="color-danger">*</span></span></label>
+										</div>
+										<div class="option-cart__control-field control-field control-field_js">
+											<input type="text" class="control-field__control control js-autocomplete-address" id="worldAddress" name="address" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+											<label for="worldAddress" class="control-field__label control-label"><span>Улица / дом / квартира / офис<span class="color-danger">*</span></span></label>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- Вывод опций и информации доставки -->
+							<div class="cart__delivery-info delivery-info" id="deliveryInfo">
+								<div class="delivery-info__item">
+									<h3 class="delivery-info__title">Стоимость доставки</h3>
+									<div class="delivery-info__value">
+										<span id="costOfDelivery"></span>
+										Руб.
+									</div>
+								</div>
+								<div class="delivery-info__item">
+									<h3 class="delivery-info__title">Ожидаемый срок доставки</h3>
+									<div class="delivery-info__value">
+										<span id="deliveryPeriod"></span>
+										д.
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="cart__section">
+							<div class="cart__headline cart-headline">
+								<h2 class="cart-headline__title">Способ оплаты</h2>
+							</div>
+							<div class="cart__options">
+								<div class="cart__option option-cart">
+									<label class="option-cart__radio radio">
+										<input type="radio" class="option-cart__input radio__input" name="payment_id" value="2">
+										<span class="radio__content">
+											<span class="option-cart__dot radio__dot"></span>
+										</span>
+										<span class="option-cart__content">
+											<span class="option-cart__header">
+												<span class="option-cart__title">Оплатить при получении</span>
+											</span>
+										</span>
+									</label>
+								</div>
+								<div class="cart__option option-cart">
+									<label class="option-cart__radio radio">
+										<input type="radio" class="option-cart__input radio__input" name="payment_id" value="1">
+										<span class="radio__content">
+											<span class="option-cart__dot radio__dot"></span>
+										</span>
+										<span class="option-cart__content">
+											<span class="option-cart__header">
+												<span class="option-cart__title">Оплатить онлайн на сайте</span>
+												<span class="option-cart__payments">
+													<img src="assets/img/content/visa.svg" alt="alt" class="option-cart__payment img-responsive">
+													<img src="assets/img/content/master.svg" alt="alt" class="option-cart__payment img-responsive">
+													<img src="assets/img/content/gpay.svg" alt="alt" class="option-cart__payment img-responsive">
+													<img src="assets/img/content/applepay.svg" alt="alt" class="option-cart__payment img-responsive">
+												</span>
+											</span>
+										</span>
+									</label>
+								</div>
+							</div>
+						</div>
+						<div class="cart__section">
+							<div class="cart__headline cart-headline">
+								<h2 class="cart-headline__title">Комментарий к заказу</h2>
+							</div>
+							<div class="cart__controls row">
+								<div class="cart__group col-12">
+									<div class="cart__control-field control-field">
+										<textarea class="control-field__control control-field__textarea textarea" name="shopper_comments" placeholder="Ваш комментарий тут..."></textarea>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="cart__totals totals-cart">
+						<span class="totals-cart__title">Итого к оплате:</span>
+						<p class="totals-cart__value"><span class="js-full-price">26 400</span> руб.</p>
+					</div>
+					<!-- Отправка данных по доставке -->
+					<input id="cityId" type="hidden" name="cityId" value="">
+					<input id="cityCode" type="hidden" name="cityCode" value="">
+					<input id="cityNameRegion" type="hidden" name="cityNameRegion" value="Введите название города">
+					<input id="cityDaysMail" type="hidden" name="cityDaysMail" value="">
+					<input id="deliveryMethod" type="hidden" value="none">
+					<input id="deliveryPrice" type="hidden" name="delivery_price" value="">
+					<!-- Отправка данных -->
+					<input type="hidden" id="totalPrice" name="all_total" value="26400">
+					<input type="hidden" id="totalPriceWithPromocode" name="all_total_promo" value="">
+					<input type="hidden" id="promocodeHidden" name="promo_cod" value="">
+				</form>
+			</div>
+
+			<aside class="cart__col cart__aside aside-cart sticky-bar">
+				<div class="aside-cart__item">
+					<div class="aside-cart__proceed-to-checkout proceed-to-checkout box-cart">
+						<h2 class="proceed-to-checkout__title">Итого к оплате</h2>
+						<div class="proceed-to-checkout__totals totals-checkout">
+							<!-- После перезагрузки страницы если промокод введён добавлеем класс active -->
+							<!-- <div class="totals-checkout__item totals-checkout__item_discount active">
+								<h4 class="totals-checkout__title">Скидка по промокоду:</h4>
+								<input type="hidden" value="true" id="hasPromocode">
+								<div class="totals-checkout__value"><span class="js-format-number" id="priceWithDiscount">5610</span> руб.</div>
+							</div> -->
+							<div class="totals-checkout__item totals-checkout__item_discount">
+								<h4 class="totals-checkout__title">Скидка по промокоду:</h4>
+								<div class="totals-checkout__value"><span class="js-format-number" id="priceWithDiscount"></span> руб.</div>
+							</div>
+							<div class="totals-checkout__item totals-checkout__item_delivery">
+								<h4 class="totals-checkout__title">Доставка:</h4>
+								<div class="totals-checkout__value"><span class="js-format-number" id="pricePlusDelivery"></span> руб.</div>
+							</div>
+							<div class="totals-checkout__item">
+								<h4 class="totals-checkout__title">Товары на сумму</h4>
+								<div class="totals-checkout__value"><span class="js-format-number" id="fullPrice">26400</span> руб.</div>
+							</div>
+							<div class="totals-checkout__item totals-checkout__item_total">
+								<h4 class="totals-checkout__title">Итого к оплате:</h4>
+								<div class="totals-checkout__value"><span class="js-format-number js-full-price"></span> руб.</div>
+							</div>
+						</div>
+						<div class="proceed-to-checkout__footer">
+							<button class="proceed-to-checkout__btn btn btn-accent" type="submit" form="formCart"><span>Подтвердить заказ</span></button>
+							<div class="proceed-to-checkout__accept">
+								Нажимая кнопку «Подписаться», вы даете согласие на <a href="#">обработку персональных данных</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="aside-cart__item aside-cart__item_promo-code">
+					<div class="aside-cart__promo-code promo-code box-cart">
+						<input class="promo-code__checkbox" type="checkbox" id="promocode_control" name="promocode_control">
+						<label for="promocode_control" class="promo-code__label color-gradient-accent underline-gradient-accent">У меня есть промокод</label>
+						<form class="promo-code__form" name="formPromocode" action="/cart/promocode">
+							<div class="promo-code__groups">
+								<div class="promo-code__group">
+									<div class="promo-code__control-field control-field control-field_js">
+										<input type="text" class="control-field__control control" required id="promocode" name="promocode">
+										<input type="hidden" name="promo_total" value="26400" id="promoTotal">
+										<label for="promocode" class="control-field__label control-label"><span>Промокод</span></label>
+									</div>
+								</div>
+								<div class="promo-code__group">
+									<button class="promo-code__btn btn btn-success"><span>Применить</span></button>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</aside>
+
+		</div>
+
+	</div>
+</div>
+
+{{> footer }}
