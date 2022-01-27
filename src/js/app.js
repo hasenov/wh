@@ -19,16 +19,14 @@ document.addEventListener('DOMContentLoaded', function() {
 
 	if(!localStorage.getItem('notification-system')) {
 		document.querySelector('.header').insertAdjacentHTML('beforebegin', `
-			<div class="notifications">
-				<div class="notifications__item notification">
-					<div class="notification__container container">
-						<div class="notification__content">Уважаемые клиенты. С 1 по 10 января наш магазин не работает. Все заявки будут обработаны 11 января.</div>
-						<button class="notification__close close" type="button">
-							<svg>
-								<use href="assets/img/svg-sprite/sprite.svg#close"></use>
-							</svg>
-						</button>
-					</div>
+			<div class="notifications__item notification">
+				<div class="notification__container container">
+					<div class="notification__content">Уважаемые клиенты. С 1 по 10 января наш магазин не работает. Все заявки будут обработаны 11 января.</div>
+					<button class="notification__close close" type="button">
+						<svg>
+							<use href="assets/img/svg-sprite/sprite.svg#close"></use>
+						</svg>
+					</button>
 				</div>
 			</div>
 		`)
@@ -286,7 +284,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 		const deleteNotification = e.target.closest('.notification__close');
 		if(deleteNotification) {
-			const notif = deleteNotification.closest('.notifications')
+			const notif = deleteNotification.closest('.notification')
 			notif.remove()
 			localStorage.setItem('notification-system', 'closed');
 		}

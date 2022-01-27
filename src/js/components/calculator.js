@@ -45,7 +45,7 @@ if(document.querySelector('.ssc')) {
             return showNextStep();
 
         } else if (step == 4) {
-            const inputs = [...this.querySelectorAll('.form-calculator__control-field input')]
+            const inputs = [...this.querySelectorAll('.form-calculator__control-field input, .form-calculator__control-field textarea')]
 
             inputs.forEach(input => {
                 swimsuitConstructor.userInfo[input.name] = input.value;

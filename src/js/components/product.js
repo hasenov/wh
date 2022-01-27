@@ -41,11 +41,11 @@ const Product = function () {
             }
         }
     }
-
-    const indSizingPrice = calculateIndividualSizingPrice()
-
+    
     const sizingSelect = document.querySelector('.sizing-select');
     if(sizingSelect) {
+        const indSizingPrice = calculateIndividualSizingPrice()
+
         new CustomSelect('.sizing-select', {
             isSizingSelect: true,
             onSelected(select, option) {

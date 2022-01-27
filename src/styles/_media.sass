@@ -25,6 +25,10 @@
 	.form-search
 		width: 200px
 
+	.top-header
+		&__logo img
+			max-width: 100%
+
 	.header-wishlist
 		padding: 15px 0
 		&__title
@@ -137,14 +141,6 @@
 		&__text-wrap
 			font-size: 22px
 		&__btn
-			font-size: 18px
-
-	.message-certificate
-		svg
-			width: 80px
-			height: 80px
-			margin-bottom: 30px
-		&__text
 			font-size: 18px
 
 	.certificate
@@ -308,11 +304,26 @@
 			flex: 0 0 100%
 			max-width: none
 
+	.message
+		&__title
+			font-size: 35px
+
+	.message-certificate
+		&__icon
+			width: 80px
+			height: 80px
+			margin-bottom: 30px
+		&__text-wrap
+			font-size: 18px
+
 	.message-calculator
-		align-items: center
+		flex-direction: column
 		justify-content: center
-		margin: 0 auto
+		align-items: center
 		text-align: center
+		margin: 0 auto
+		&.active
+			display: flex
 		&__icon
 			order: 3
 		&__title
@@ -322,13 +333,12 @@
 			margin-bottom: 40px
 		&__btn
 			order: 4
+			max-width: none
+			min-width: 260px
 
 // ≥992px
 @media screen and (max-width: 992px)
-	.user
-		display: none
-
-	.notifications
+	.notification
 		height: 74px
 		~ .header
 			margin-top: 74px
@@ -356,12 +366,6 @@
 	.products-catalog
 		.card-product, &__banner
 			margin-bottom: 30px
-
-	.message-calculator
-		&__icon
-			margin-bottom: 40px
-		&__title
-			font-size: 34px
 
 	.header-wishlist
 		padding: 0
@@ -699,18 +703,21 @@
 		&__accordion
 			padding-top: 0
 			border-top: none
+			border-bottom: 1px solid #f0f0f0
 			.accordion-product__header
 				pointer-events: auto
 			.accordion-product__arrow
 				display: flex
+			.accordion-product__body
+				padding: 14px 0 30px
 		&__to-top
 			display: none
 
 	.accordion-product
-		&:first-child
-			border-top: 1px solid #f0f0f0
 		&__header
 			padding: 20px 0
+		&__body
+			padding: 14px 0 30px
 
 	.section-similar-products
 		padding: 0 0 80px
@@ -1004,9 +1011,19 @@
 	.ss-examples
 		padding: 15px 0
 
+	.message
+		&__title
+			font-size: 32px
+		&__text-wrap
+			font-size: 18px
+
+	.message-calculator
+		&__icon
+			margin-bottom: 40px
+
 // ≥768px
 @media screen and (max-width: 768px)
-	.notifications
+	.notification
 		~ .header
 			margin-top: 74px
 			.bottom-header
@@ -1063,26 +1080,31 @@
 				display: block
 				> li
 					display: block
-		.footer__socials
-			margin-bottom: 0
-		&__topline
-			display: block
-		&__container
-			padding: 27.5px 15px 42px
-		&__menu
+		.footer__contacts
 			position: relative
-			padding-bottom: 27.5px
-			margin-bottom: 35px
+			padding-top: 30px
+			margin-top: 30px
 			&::before
 				content: ''
 				display: block
 				position: absolute
 				left: 50%
 				transform: translateX(-50%)
-				bottom: 0
+				top: 0
 				width: 999px
 				height: 0.5px
 				background-color: #f0f0f0
+		.footer__socials
+			margin-bottom: 0
+		&__topline
+			display: block
+		&__auth-links
+			display: block
+		&__container
+			padding: 22.5px 15px 42px
+		&__menu
+			position: relative
+			padding-bottom: 22.5px
 		&__banners
 			display: block
 
@@ -1101,6 +1123,9 @@
 					background-image: url(../img/icons/plus-gradient.svg)
 
 	.mega-menu
+		display: none
+
+	.user
 		display: none
 
 	.header-wishlist
@@ -1486,10 +1511,15 @@
 	.accordion-product
 		&__body
 			padding: 5px 0 20px
+		&__row
+			margin-bottom: 0
 		&__content
 			margin-bottom: 0
 			ul:not(:last-child)
 				margin-bottom: 15px
+			li
+				&:last-child
+					margin-bottom: 10px
 		&__spec
 			margin-bottom: 20px
 
@@ -1652,11 +1682,20 @@
 		&__radio-wrap
 			margin-bottom: 10px
 
+	.message
+		&__title
+			font-size: 30px
+		&__text-wrap
+			font-size: 17px
+
+	.message-modal, .message-page
+		&__title
+			margin-bottom: 10px
+
 	.message-calculator
 		&__icon
 			margin-bottom: 35px
 		&__title
-			font-size: 30px
 			margin-bottom: 10px
 		&__text-wrap
 			margin-bottom: 30px
@@ -1672,7 +1711,7 @@
 	
 	.bottom-header
 		&__container
-			padding: 27.5px 35px 42px
+			padding: 22.5px 35px 42px
 
 	.actions-header
 		&__item
@@ -2125,14 +2164,14 @@
 			margin: 0 5px
 
 	.accordion-product
+		&__title
+			font-size: 18px
 		&__row
 			margin-left: -5px
 			margin-right: -5px
 		&__content
 			padding: 0 5px
 		&__arrow
-			width: 30px
-			height: 30px
 			svg
 				flex: 0 0 11px
 				width: 11px
@@ -2254,12 +2293,6 @@
 			margin-bottom: 15px
 		&__actions
 			margin-bottom: 15px
-
-	.message-auth
-		&__title
-			font-size: 20px
-		&__list
-			font-size: 18px
 
 	.modal
 		&__title
@@ -2412,12 +2445,21 @@
 			&:not(:last-child)
 				margin-bottom: 12px
 
-	.message-calculator
-		&__title
-			font-size: 28px
-
 	.slider-products
 		margin-right: -15px
+
+	.message
+		&__title
+			font-size: 25px
+			font-weight: 500
+		&__text-wrap
+			font-size: 16px
+
+	.message-auth
+		&__title
+			font-size: 20px
+		&__list
+			font-size: 18px
 
 @media screen and (max-width: 375px)
 	.info-product
@@ -2701,6 +2743,20 @@
 				display: none
 		.container
 			padding: 0
+
+	.accordion-product
+		&__arrow
+			display: flex
+			justify-content: center
+			align-items: center
+			background-color: rgba(#f0f0f0, 0.01)
+			width: 36px
+			height: 36px
+			border-radius: 50%
+			transition: background-color .3s ease
+		&.active
+			.accordion-product__arrow
+				background-color: #f0f0f0
 
 	.d-lg-none
 		display: none!important

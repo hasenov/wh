@@ -189,6 +189,12 @@
 	&_white
 		background: #fff
 		border: 1px solid #848484
+	&_lemon
+		background: $lemon
+	&_turquoise
+		background: #40e0d0
+	&_yellow
+		background: #f7d455
 	&_multicolored
 		background: linear-gradient(90deg, #FFD600 0%, #C97F0F 14.13%, #80BB1F 29.77%, #2E9B67 46.42%, #394CB1 63.57%, #C216C6 80.22%, #FF0D0D 96.88%)
 
@@ -892,6 +898,68 @@ blockquote
 		fill: transparent
 		transition: fill .3s ease
 
+.message
+	&__title
+		font-size: 38px
+		font-weight: normal
+	&__text-wrap
+		font-size: 19px
+		p:last-child
+			margin-bottom: 0
+	&__icon
+		stroke: $success
+		stroke-width: 2px
+		width: 80px
+		height: 80px
+	&__btn
+		display: block
+
+.message-modal, .message-page
+	text-align: center
+	&__title
+		margin-bottom: 15px
+	&__text-wrap
+		margin-bottom: 30px
+	&__icon
+		margin-bottom: 35px
+	&__btn
+		font-size: 18px
+		max-width: 320px
+		margin: 0 auto
+
+.message-page
+	max-width: 395px
+	padding: 55px 0 229px
+	margin: 0 auto
+
+.message-calculator
+	padding-top: 90px
+	max-width: 500px
+	display: none
+	&.active
+		display: block
+	&__icon
+		margin-bottom: 50px
+	&__title
+		margin-bottom: 15px
+	&__text-wrap
+		margin-bottom: 60px
+	&__btn
+		max-width: 240px
+
+.message-certificate
+	align-items: center
+	justify-content: center
+	flex-direction: column
+	text-align: center
+	&__icon
+		stroke: url(#accentGradient)
+		width: 109px
+		height: 109px
+		margin-bottom: 60px
+	&__text-wrap
+		font-size: 20px
+
 // Секция "Отзывы"
 .section-reviews
 	padding: 110px 0 120px
@@ -1231,32 +1299,6 @@ blockquote
 
 .section-certificate
 	padding: 0 0 120px
-
-.message-certificate
-	display: flex
-	align-items: center
-	justify-content: center
-	flex-direction: column
-	text-align: center
-	svg
-		width: 109px
-		height: 109px
-		margin-bottom: 60px
-		circle
-			opacity: 0
-			transform-origin: 50% 50%
-			animation: rotateIn 1s ease-out forwards
-		path
-			stroke-dasharray: 21
-			stroke-dashoffset: 21
-			animation: strokeLength 0.3s 0.6s ease-out forwards
-			opacity: 0
-			&:last-of-type
-				stroke-dasharray: 39
-				stroke-dashoffset: 39
-				animation-delay: 0.9s
-	&__text
-		font-size: 20px
 
 .certificate
 	&__col_img
@@ -2225,6 +2267,7 @@ blockquote
 	&__header
 		display: flex
 		align-items: center
+		justify-content: space-between
 		width: 100%
 		padding: 16px 0
 		cursor: pointer
@@ -2232,15 +2275,6 @@ blockquote
 		font-size: 20px
 		margin-bottom: 0
 	&__arrow
-		display: flex
-		justify-content: center
-		align-items: center
-		background-color: rgba(#f0f0f0, 0.01)
-		width: 36px
-		height: 36px
-		border-radius: 50%
-		margin-left: auto
-		transition: background-color .3s ease
 		svg
 			flex: 0 0 12px
 			width: 12px
@@ -2248,25 +2282,33 @@ blockquote
 			transition: transform .3s ease
 			fill: $text
 	&__body
-		padding: 14px 0 0
+		padding: 14px 0 35px
 		display: none
+	&__row
+		margin-bottom: -25px
 	&__content
 		margin-bottom: 25px
-		ul:not(:last-child)
-			margin-bottom: 25px
+		ul
+			&:not(:last-child)
+				margin-bottom: 25px
+			p
+				margin-bottom: 0
 		li
-			display: flex
-			align-items: flex-start
+			&:not(:last-child)
+				margin-bottom: 10px
 		p
+			display: flex
+			align-items: center
 			margin-bottom: 10px
+			&:last-child
+				margin-bottom: 0
 	&__icon
-		margin: 3px 15px 0 0
+		margin-right: 15px
 	&__spec
 		.spec-product__value
 			margin-bottom: 0
 	&.active
 		.accordion-product__arrow
-			background-color: #f0f0f0
 			svg
 				transform: rotate(-180deg)
 
@@ -2311,9 +2353,9 @@ blockquote
 		margin-right: -5.5px
 	&__action
 		margin: 0 5.5px 10px
+		flex: 1 1 auto
 	&__add-to-cart
 		padding: 16px
-		flex: 1 0 auto
 	&__promo-btn
 		flex: 0 1 auto
 	&__specs
@@ -2326,8 +2368,11 @@ blockquote
 			pointer-events: none
 		.accordion-product__arrow
 			display: none
+		.accordion-product__body
+			padding: 14px 0 0
 	&__to-top
-		margin-top: 25px
+		display: block
+		margin-top: 50px
 	&__rating
 		display: block
 		&:hover
@@ -2384,6 +2429,13 @@ blockquote
 	font-size: 20px
 	&_success
 		color: $success
+	&_danger
+		color: $danger
+	&_out-of-production
+		background-color: #f8f8f8
+		padding: 3px 21px 5px
+		border-radius: 10px
+		font-size: 16px
 
 .rating
 	display: flex
@@ -3174,10 +3226,10 @@ blockquote
 		min-width: 142px
 		height: 100%
 		font-size: 16px
-	&__message-form
+	&__feedback-form
 		margin-top: 7px
 
-.message-form
+.feedback-form
 	text-align: center
 	padding: 4px 15px
 	border-radius: 10px
@@ -3530,24 +3582,6 @@ blockquote
 	&__continue
 		font-weight: 500
 		line-height: 1
-
-.message-modal
-	text-align: center
-	&__title
-		font-size: 38px
-		font-weight: normal
-		margin-bottom: 15px
-	&__text-wrap
-		font-size: 19px
-		margin-bottom: 30px
-	&__icon
-		width: 80px
-		height: 80px
-		margin-bottom: 35px
-	&__btn
-		display: block
-		max-width: 320px
-		margin: 0 auto
 
 .message-auth
 	max-width: 435px
@@ -4062,11 +4096,6 @@ blockquote
 		display: none
 		&.active
 			display: block
-	&__message
-		padding-top: 90px
-		display: none
-		&.active
-			display: flex
 
 .step-ssc
 	border-top: 1px solid #f0f0f0
@@ -4235,29 +4264,6 @@ blockquote
 		&:not(:last-child)
 			margin-bottom: 15px
 
-.message-calculator
-	align-items: flex-start
-	flex-direction: column
-	max-width: 500px
-	&__icon
-		display: block
-		width: 80px
-		height: 80px
-		margin-bottom: 50px
-	&__title
-		font-size: 38px
-		font-weight: normal
-		margin-bottom: 15px
-	&__text-wrap
-		font-size: 19px
-		margin-bottom: 60px
-		p:last-child
-			margin-bottom: 0
-	&__btn
-		font-size: 18px
-		padding-left: 50px
-		padding-right: 50px
-
 .model-swimsuit
 	opacity: 0
 	pointer-events: none
@@ -4406,8 +4412,12 @@ blockquote
 		color: $text
 		margin-top: 5px
 
-// Notifications
-.notifications
+// Notification
+.notification
+	background-color: #f8f8f8
+	overflow: hidden
+	padding: 16px 0
+	height: 100%
 	position: fixed
 	top: 0
 	left: 0
@@ -4418,13 +4428,6 @@ blockquote
 		margin-top: 53px
 		.bottom-header
 			top: 53px
-
-.notification
-	background-color: #f8f8f8
-	overflow: hidden
-	padding: 16px 0
-	height: 100%
-	// height: 54px
 	&__container
 		position: relative
 	&__content

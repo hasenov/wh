@@ -66,6 +66,8 @@
 	top: 0
 	&__topline
 		display: none
+	&__auth-links
+		display: none
 	&__banners
 		display: none
 	&__banner
@@ -99,7 +101,9 @@
 
 .action-header
 	&__btn
-		display: block
+		display: flex
+		justify-content: center
+		align-items: center
 		background: none
 		padding: 0
 		border: none
@@ -331,7 +335,7 @@
 		font-size: 18px
 		margin: 0 20px
 		> a
-			display: flex
+			display: inline-flex
 			align-items: center
 			padding: 5px 0 7px
 			line-height: 1.3
@@ -345,9 +349,6 @@
 				opacity: 1
 				visibility: visible
 				transform: translateY(0)
-		&_active
-			> a
-				color: $accent
 	&__icon
 		width: 16px
 		margin-left: 5px
@@ -453,3 +454,25 @@
 .sale
 	> a
 		color: $danger
+
+.auth-link
+	width: 100%
+	border: none
+	display: inline-flex
+	justify-content: center
+	align-items: center
+	background: #69B8AC26
+	border-radius: 10px
+	padding: 10px 10px 11px
+	font-size: 16px
+	color: $text
+	&:hover
+		color: $text
+		text-decoration: none
+	&__icon
+		flex: 0 0 18px
+		width: 18px
+		height: 18px
+		margin-left: 10px
+		stroke: $text
+		

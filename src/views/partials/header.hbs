@@ -56,6 +56,17 @@
 <input type="hidden" id="lang" value="rus">
 <input type="hidden" id="currency" value="Руб.">
 
+{{!-- <div class="notification">
+	<div class="notification__container container">
+		<div class="notification__content">Уважаемые клиенты. С 1 по 10 января наш магазин не работает. Все заявки будут обработаны 11 января.</div>
+		<button class="notification__close close" type="button">
+			<svg>
+				<use href="assets/img/svg-sprite/sprite.svg#close"></use>
+			</svg>
+		</button>
+	</div>
+</div> --}}
+
 <header class="header">
 	<div class="header__top top-header">
 		<div class="top-header__container container">
@@ -272,6 +283,14 @@
 					<li class="menu__item menu__item_real-reviews"><a data-micromodal-trigger="modal-reviews">Реальные отзывы</a></li>
 				</ul>
 			</nav>
+			<div class="bottom-header__auth-links auth-links">
+				<button type="button" class="auth-links__item auth-link" data-micromodal-trigger="modal-login">
+					Личный кабинет
+					<svg class="auth-link__icon">
+						<use href="{{assets}}/img/svg-sprite/sprite.svg#user-circle"></use>
+					</svg>
+				</button>
+			</div>
 			<div class="bottom-header__actions-wrap"></div>
 		</div>
 		<div class="bottom-header__banners">

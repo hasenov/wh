@@ -68,7 +68,7 @@ function showInputError(el, msg) {
 }
 
 function removeInputError(el) {
-    const err = formPromocode.querySelector('.promo-code__message-form');
+    const err = formPromocode.querySelector('.promo-code__feedback-form');
     if (!err) return;
 
     el.classList.remove('is-invalid');
@@ -77,7 +77,7 @@ function removeInputError(el) {
 
 function inputErrorTemplate(msg) {
     return `
-        <div class="promo-code__message-form message-form message-form_danger">${msg}</div>
+        <div class="promo-code__feedback-form feedback-form feedback-form_danger">${msg}</div>
     `;
 }
 
