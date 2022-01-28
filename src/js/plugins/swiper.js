@@ -252,7 +252,7 @@ export default function initSwiper() {
 	const swiperProductGallery = new Swiper('.slider-product', {
 		slidesPerView: 1,
 		spaceBetween: 13,
-		loop: true,
+		loop: false,
 		navigation: {
 			prevEl: '.slider-product__nav_prev',
 			nextEl: '.slider-product__nav_next',

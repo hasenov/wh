@@ -50,6 +50,16 @@
   </svg>
   <input type="hidden" id="lang" value="rus">
   <input type="hidden" id="currency" value="Руб.">
+  <div class="notification" id="notify-1">
+    <div class="notification__container container">
+      <div class="notification__content">Уважаемые клиенты. С 1 по 10 января наш магазин не работает. Все заявки будут обработаны 11 января.</div>
+      <button class="notification__close close" type="button">
+        <svg>
+          <use href="assets/img/svg-sprite/sprite.svg#close"></use>
+        </svg>
+      </button>
+    </div>
+  </div>
   <header class="header">
     <div class="header__top top-header">
       <div class="top-header__container container">
@@ -997,91 +1007,149 @@
           <a href="#" class="headline__btn btn btn-outline-accent"><span>Подписаться на инстаграм</span></a>
         </div>
       </div>
+      <!-- <div class="grid">
+			<div class="grid__item">
+				<a href="assets/img/content/inst_1.jpg" class="grid__link" data-gallery="gallery">
+					<img src="assets/img/content/inst_1.jpg" alt="alt" class="grid__img img-responsive">
+					<span class="grid__text">Увеличить +</span>
+				</a>
+			</div>
+			<div class="grid__item">
+				<a href="assets/img/content/inst_2.jpg" class="grid__link" data-gallery="gallery">
+					<img src="assets/img/content/inst_2.jpg" alt="alt" class="grid__img img-responsive">
+					<span class="grid__text">Увеличить +</span>
+				</a>
+			</div>
+			<div class="grid__item">
+				<a href="assets/img/content/inst_12.jpg" class="grid__link" data-gallery="gallery">
+					<img src="assets/img/content/inst_12.jpg" alt="alt" class="grid__img img-responsive">
+					<span class="grid__text">Увеличить +</span>
+				</a>
+			</div>
+			<div class="grid__item">
+				<a href="assets/img/content/inst_4.jpg" class="grid__link" data-gallery="gallery">
+					<img src="assets/img/content/inst_4.jpg" alt="alt" class="grid__img img-responsive">
+					<span class="grid__text">Увеличить +</span>
+				</a>
+			</div>
+			<div class="grid__item">
+				<a href="assets/img/content/inst_5.jpg" class="grid__link" data-gallery="gallery">
+					<img src="assets/img/content/inst_5.jpg" alt="alt" class="grid__img img-responsive">
+					<span class="grid__text">Увеличить +</span>
+				</a>
+			</div>
+			<div class="grid__item">
+				<a href="assets/img/content/inst_6.jpg" class="grid__link" data-gallery="gallery">
+					<img src="assets/img/content/inst_6.jpg" alt="alt" class="grid__img img-responsive">
+					<span class="grid__text">Увеличить +</span>
+				</a>
+			</div>
+			<div class="grid__item">
+				<a href="assets/img/content/inst_7.jpg" class="grid__link" data-gallery="gallery">
+					<img src="assets/img/content/inst_7.jpg" alt="alt" class="grid__img img-responsive">
+					<span class="grid__text">Увеличить +</span>
+				</a>
+			</div>
+			<div class="grid__item">
+				<a href="assets/img/content/inst_12.jpg" class="grid__link" data-gallery="gallery">
+					<img src="assets/img/content/inst_12.jpg" alt="alt" class="grid__img img-responsive">
+					<span class="grid__text">Увеличить +</span>
+				</a>
+			</div>
+			<div class="grid__item">
+				<a href="assets/img/content/inst_8.jpg" class="grid__link" data-gallery="gallery">
+					<img src="assets/img/content/inst_8.jpg" alt="alt" class="grid__img img-responsive">
+					<span class="grid__text">Увеличить +</span>
+				</a>
+			</div>
+			<div class="grid__item">
+				<a href="assets/img/content/inst_9.jpg" class="grid__link" data-gallery="gallery">
+					<img src="assets/img/content/inst_9.jpg" alt="alt" class="grid__img img-responsive">
+					<span class="grid__text">Увеличить +</span>
+				</a>
+			</div>
+			<div class="grid__item">
+				<a href="assets/img/content/inst_10.jpg" class="grid__link" data-gallery="gallery">
+					<img src="assets/img/content/inst_10.jpg" alt="alt" class="grid__img img-responsive">
+					<span class="grid__text">Увеличить +</span>
+				</a>
+			</div>
+			<div class="grid__item">
+				<a href="assets/img/content/inst_11.jpg" class="grid__link" data-gallery="gallery">
+					<img src="assets/img/content/inst_11.jpg" alt="alt" class="grid__img img-responsive">
+					<span class="grid__text">Увеличить +</span>
+				</a>
+			</div>
+			<div class="grid__item">
+				<a href="assets/img/content/inst_12.jpg" class="grid__link" data-gallery="gallery">
+					<img src="assets/img/content/inst_12.jpg" alt="alt" class="grid__img img-responsive">
+					<span class="grid__text">Увеличить +</span>
+				</a>
+			</div>
+			<div class="grid__item">
+				<a href="assets/img/content/inst_8.jpg" class="grid__link" data-gallery="gallery">
+					<img src="assets/img/content/inst_8.jpg" alt="alt" class="grid__img img-responsive">
+					<span class="grid__text">Увеличить +</span>
+				</a>
+			</div>
+		</div> -->
       <div class="grid">
-        <div class="grid__item">
-          <a href="assets/img/content/inst_1.jpg" class="grid__link" data-gallery="gallery">
-            <img src="assets/img/content/inst_1.jpg" alt="alt" class="grid__img img-responsive">
-            <span class="grid__text">Увеличить +</span>
-          </a>
-        </div>
-        <div class="grid__item">
-          <a href="assets/img/content/inst_2.jpg" class="grid__link" data-gallery="gallery">
-            <img src="assets/img/content/inst_2.jpg" alt="alt" class="grid__img img-responsive">
-            <span class="grid__text">Увеличить +</span>
-          </a>
-        </div>
-        <div class="grid__item">
-          <a href="assets/img/content/inst_12.jpg" class="grid__link" data-gallery="gallery">
-            <img src="assets/img/content/inst_12.jpg" alt="alt" class="grid__img img-responsive">
-            <span class="grid__text">Увеличить +</span>
-          </a>
-        </div>
-        <div class="grid__item">
-          <a href="assets/img/content/inst_4.jpg" class="grid__link" data-gallery="gallery">
-            <img src="assets/img/content/inst_4.jpg" alt="alt" class="grid__img img-responsive">
-            <span class="grid__text">Увеличить +</span>
-          </a>
-        </div>
-        <div class="grid__item">
-          <a href="assets/img/content/inst_5.jpg" class="grid__link" data-gallery="gallery">
-            <img src="assets/img/content/inst_5.jpg" alt="alt" class="grid__img img-responsive">
-            <span class="grid__text">Увеличить +</span>
-          </a>
-        </div>
-        <div class="grid__item">
-          <a href="assets/img/content/inst_6.jpg" class="grid__link" data-gallery="gallery">
-            <img src="assets/img/content/inst_6.jpg" alt="alt" class="grid__img img-responsive">
-            <span class="grid__text">Увеличить +</span>
-          </a>
-        </div>
-        <div class="grid__item">
-          <a href="assets/img/content/inst_7.jpg" class="grid__link" data-gallery="gallery">
-            <img src="assets/img/content/inst_7.jpg" alt="alt" class="grid__img img-responsive">
-            <span class="grid__text">Увеличить +</span>
-          </a>
-        </div>
-        <div class="grid__item">
-          <a href="assets/img/content/inst_12.jpg" class="grid__link" data-gallery="gallery">
-            <img src="assets/img/content/inst_12.jpg" alt="alt" class="grid__img img-responsive">
-            <span class="grid__text">Увеличить +</span>
-          </a>
-        </div>
-        <div class="grid__item">
-          <a href="assets/img/content/inst_8.jpg" class="grid__link" data-gallery="gallery">
-            <img src="assets/img/content/inst_8.jpg" alt="alt" class="grid__img img-responsive">
-            <span class="grid__text">Увеличить +</span>
-          </a>
-        </div>
-        <div class="grid__item">
-          <a href="assets/img/content/inst_9.jpg" class="grid__link" data-gallery="gallery">
-            <img src="assets/img/content/inst_9.jpg" alt="alt" class="grid__img img-responsive">
-            <span class="grid__text">Увеличить +</span>
-          </a>
-        </div>
-        <div class="grid__item">
-          <a href="assets/img/content/inst_10.jpg" class="grid__link" data-gallery="gallery">
-            <img src="assets/img/content/inst_10.jpg" alt="alt" class="grid__img img-responsive">
-            <span class="grid__text">Увеличить +</span>
-          </a>
-        </div>
-        <div class="grid__item">
-          <a href="assets/img/content/inst_11.jpg" class="grid__link" data-gallery="gallery">
-            <img src="assets/img/content/inst_11.jpg" alt="alt" class="grid__img img-responsive">
-            <span class="grid__text">Увеличить +</span>
-          </a>
-        </div>
-        <div class="grid__item">
-          <a href="assets/img/content/inst_12.jpg" class="grid__link" data-gallery="gallery">
-            <img src="assets/img/content/inst_12.jpg" alt="alt" class="grid__img img-responsive">
-            <span class="grid__text">Увеличить +</span>
-          </a>
-        </div>
-        <div class="grid__item">
-          <a href="assets/img/content/inst_8.jpg" class="grid__link" data-gallery="gallery">
-            <img src="assets/img/content/inst_8.jpg" alt="alt" class="grid__img img-responsive">
-            <span class="grid__text">Увеличить +</span>
-          </a>
-        </div>
+        <a href="assets/img/content/inst_1.jpg" class="grid__item" data-gallery="gallery">
+          <img src="assets/img/content/inst_1.jpg" alt="alt" class="grid__img img-responsive">
+          <span class="grid__text">Увеличить +</span>
+        </a>
+        <a href="assets/img/content/inst_2.jpg" class="grid__item" data-gallery="gallery">
+          <img src="assets/img/content/inst_2.jpg" alt="alt" class="grid__img img-responsive">
+          <span class="grid__text">Увеличить +</span>
+        </a>
+        <a href="assets/img/content/inst_12.jpg" class="grid__item" data-gallery="gallery">
+          <img src="assets/img/content/inst_12.jpg" alt="alt" class="grid__img img-responsive">
+          <span class="grid__text">Увеличить +</span>
+        </a>
+        <a href="assets/img/content/inst_4.jpg" class="grid__item" data-gallery="gallery">
+          <img src="assets/img/content/inst_4.jpg" alt="alt" class="grid__img img-responsive">
+          <span class="grid__text">Увеличить +</span>
+        </a>
+        <a href="assets/img/content/inst_5.jpg" class="grid__item" data-gallery="gallery">
+          <img src="assets/img/content/inst_5.jpg" alt="alt" class="grid__img img-responsive">
+          <span class="grid__text">Увеличить +</span>
+        </a>
+        <a href="assets/img/content/inst_6.jpg" class="grid__item" data-gallery="gallery">
+          <img src="assets/img/content/inst_6.jpg" alt="alt" class="grid__img img-responsive">
+          <span class="grid__text">Увеличить +</span>
+        </a>
+        <a href="assets/img/content/inst_7.jpg" class="grid__item" data-gallery="gallery">
+          <img src="assets/img/content/inst_7.jpg" alt="alt" class="grid__img img-responsive">
+          <span class="grid__text">Увеличить +</span>
+        </a>
+        <a href="assets/img/content/inst_12.jpg" class="grid__item" data-gallery="gallery">
+          <img src="assets/img/content/inst_12.jpg" alt="alt" class="grid__img img-responsive">
+          <span class="grid__text">Увеличить +</span>
+        </a>
+        <a href="assets/img/content/inst_8.jpg" class="grid__item" data-gallery="gallery">
+          <img src="assets/img/content/inst_8.jpg" alt="alt" class="grid__img img-responsive">
+          <span class="grid__text">Увеличить +</span>
+        </a>
+        <a href="assets/img/content/inst_9.jpg" class="grid__item" data-gallery="gallery">
+          <img src="assets/img/content/inst_9.jpg" alt="alt" class="grid__img img-responsive">
+          <span class="grid__text">Увеличить +</span>
+        </a>
+        <a href="assets/img/content/inst_10.jpg" class="grid__item" data-gallery="gallery">
+          <img src="assets/img/content/inst_10.jpg" alt="alt" class="grid__img img-responsive">
+          <span class="grid__text">Увеличить +</span>
+        </a>
+        <a href="assets/img/content/inst_11.jpg" class="grid__item" data-gallery="gallery">
+          <img src="assets/img/content/inst_11.jpg" alt="alt" class="grid__img img-responsive">
+          <span class="grid__text">Увеличить +</span>
+        </a>
+        <a href="assets/img/content/inst_12.jpg" class="grid__item" data-gallery="gallery">
+          <img src="assets/img/content/inst_12.jpg" alt="alt" class="grid__img img-responsive">
+          <span class="grid__text">Увеличить +</span>
+        </a>
+        <a href="assets/img/content/inst_8.jpg" class="grid__item" data-gallery="gallery">
+          <img src="assets/img/content/inst_8.jpg" alt="alt" class="grid__img img-responsive">
+          <span class="grid__text">Увеличить +</span>
+        </a>
       </div>
     </div>
   </section>

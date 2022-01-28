@@ -50,6 +50,16 @@
   </svg>
   <input type="hidden" id="lang" value="rus">
   <input type="hidden" id="currency" value="Руб.">
+  <div class="notification" id="notify-1">
+    <div class="notification__container container">
+      <div class="notification__content">Уважаемые клиенты. С 1 по 10 января наш магазин не работает. Все заявки будут обработаны 11 января.</div>
+      <button class="notification__close close" type="button">
+        <svg>
+          <use href="assets/img/svg-sprite/sprite.svg#close"></use>
+        </svg>
+      </button>
+    </div>
+  </div>
   <header class="header">
     <div class="header__top top-header">
       <div class="top-header__container container">
@@ -391,26 +401,20 @@
           <div class="product__col product__content content-product">
             <div class="content-product__slider slider-product swiper slider">
               <div class="slider-product__items swiper-wrapper">
-                <div class="slider-product__item item-slider-product swiper-slide">
-                  <a href="assets/img/content/product_slider_1.jpg" class="item-slider-product__link item-slider-product__img-wrap dummy-bg">
-                    <img src="assets/img/content/product_slider_1.jpg" alt="alt" class="item-slider-product__img img-responsive">
-                  </a>
-                </div>
-                <div class="slider-product__item item-slider-product swiper-slide">
-                  <a href="assets/img/content/product_slider_2.jpg" class="item-slider-product__link item-slider-product__img-wrap dummy-bg">
-                    <img src="assets/img/content/product_slider_2.jpg" alt="alt" class="item-slider-product__img img-responsive">
-                  </a>
-                </div>
-                <div class="slider-product__item item-slider-product swiper-slide">
-                  <a href="https://www.youtube.com/embed/3xazxNNYTBE?autoplay=true" class="item-slider-product__link item-slider-product__video-wrap dummy-bg">
-                    <div class="item-slider-product__play play">
-                      <svg class="play__icon">
-                        <use href="assets/img/svg-sprite/sprite.svg#play"></use>
-                      </svg>
-                      <span class="play__text">Смотреть видео</span>
-                    </div>
-                  </a>
-                </div>
+                <a href="assets/img/content/kombinezon-whale-shark_220126215903.jpg" class="slider-product__item item-slider-product dummy-bg swiper-slide">
+                  <img src="assets/img/content/product_slider_1.jpg" alt="alt" class="item-slider-product__img img-responsive">
+                </a>
+                <a href="assets/img/content/kombinezon-whale-shark_220126220005.jpg" class="slider-product__item item-slider-product dummy-bg swiper-slide">
+                  <img src="assets/img/content/product_slider_2.jpg" alt="alt" class="item-slider-product__img img-responsive">
+                </a>
+                <a data-src="https://www.youtube.com/watch?v=3xazxNNYTBE" class="slider-product__item item-slider-product dummy-bg swiper-slide">
+                  <button class="item-slider-product__play play" type="button">
+                    <svg class="play__icon">
+                      <use href="assets/img/svg-sprite/sprite.svg#play"></use>
+                    </svg>
+                    <span class="play__text">Смотреть видео</span>
+                  </button>
+                </a>
               </div>
               <div class="slider-product__arrows">
                 <button class="slider-product__nav slider-product__nav_prev" type="button">

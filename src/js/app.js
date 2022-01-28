@@ -17,19 +17,13 @@ document.addEventListener('DOMContentLoaded', function() {
 	initPlugins();
 	initComponents();
 
-	if(!localStorage.getItem('notification-system')) {
-		document.querySelector('.header').insertAdjacentHTML('beforebegin', `
-			<div class="notifications__item notification">
-				<div class="notification__container container">
-					<div class="notification__content">Уважаемые клиенты. С 1 по 10 января наш магазин не работает. Все заявки будут обработаны 11 января.</div>
-					<button class="notification__close close" type="button">
-						<svg>
-							<use href="assets/img/svg-sprite/sprite.svg#close"></use>
-						</svg>
-					</button>
-				</div>
-			</div>
-		`)
+	// Система уведомлений
+	const currentNotifys = [...document.querySelectorAll('.notification')];
+	const currentNotify = currentNotifys.find((el) => {
+		return !localStorage.getItem(el.id)
+	});
+	if(currentNotify) {
+		currentNotify.classList.add('active');
 	}
 
 	const microModalOptions = {
@@ -134,7 +128,7 @@ document.addEventListener('DOMContentLoaded', function() {
 	updateQuantityInputs();
 	// Click events
 	document.documentElement.addEventListener('click', (e) => {
-		const newsletterLater = e.target.closest('.form-modal__btn_later');
+		const newsletterLater = e.target.closest('.form-newsletter__btn_later');
 		if(newsletterLater) {
 			MicroModal.close('modal-newsletter');
 			sendNewsletterLater();
@@ -285,8 +279,8 @@ document.addEventListener('DOMContentLoaded', function() {
 		const deleteNotification = e.target.closest('.notification__close');
 		if(deleteNotification) {
 			const notif = deleteNotification.closest('.notification')
+			localStorage.setItem(notif.id, 'closed');
 			notif.remove()
-			localStorage.setItem('notification-system', 'closed');
 		}
 
 	});

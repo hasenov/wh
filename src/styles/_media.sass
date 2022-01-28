@@ -340,7 +340,7 @@
 @media screen and (max-width: 992px)
 	.notification
 		height: 74px
-		~ .header
+		&.active ~ .header
 			margin-top: 74px
 			.bottom-header
 				top: 74px
@@ -1024,7 +1024,7 @@
 // ≥768px
 @media screen and (max-width: 768px)
 	.notification
-		~ .header
+		&.active ~ .header
 			margin-top: 74px
 			.bottom-header
 				top: 0
@@ -1116,11 +1116,23 @@
 	.menu
 		&__item
 			> a
+				width: 100%
 				padding: 7.5px 0
-				background: url(../img/icons/arrow-right.svg) right center / auto 9px no-repeat
+				position: relative
+				&::after
+					content: ''
+					display: block
+					width: 9px
+					height: 9px
+					background: url(../img/icons/arrow-right.svg) center / contain no-repeat
+					position: absolute
+					top: 50%
+					transform: translateY(-50%)
+					right: 0
 			&_real-reviews
 				> a
-					background-image: url(../img/icons/plus-gradient.svg)
+					&::after
+						background-image: url(../img/icons/plus-gradient.svg)
 
 	.mega-menu
 		display: none
@@ -2514,7 +2526,7 @@
 		max-width: 1230px
 	
 	.grid
-		&__link
+		&__item
 			&:hover
 				.grid__img
 					filter: blur(70px)
@@ -2540,6 +2552,12 @@
 		display: block!important
 
 @media screen and (min-width: 992px)
+	.menu
+		&__item
+			> a
+				&:hover
+					color: $accent
+
 	.wishlist-label
 		&:hover
 			.wishlist-label__icon

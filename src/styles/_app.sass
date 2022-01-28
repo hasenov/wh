@@ -1102,13 +1102,6 @@ blockquote
 		position: absolute
 		z-index: -1
 	&__item
-		&:nth-child(1)
-			grid-row: 1 / span 2
-			grid-column: 1 / span 2
-		&:nth-child(8)
-			grid-row: 4 / span 2
-			grid-column: 3 / span 2
-	&__link
 		display: block
 		color: #fff
 		position: relative
@@ -1116,6 +1109,12 @@ blockquote
 		&:hover
 			color: #fff
 			text-decoration: none
+		&:nth-child(1)
+			grid-row: 1 / span 2
+			grid-column: 1 / span 2
+		&:nth-child(8)
+			grid-row: 4 / span 2
+			grid-column: 3 / span 2
 	&__text
 		display: none
 		justify-content: center
@@ -1644,8 +1643,7 @@ blockquote
 		font-weight: 500
 
 .item-slider-partner
-	&__link
-		display: block
+	display: block
 	&__img
 		width: 100%
 
@@ -2200,6 +2198,7 @@ blockquote
 	&:hover
 		.slider-product__nav
 			opacity: 1
+			visibility: visible
 	&__item
 		height: auto
 	&__nav
@@ -2216,7 +2215,8 @@ blockquote
 		transform: translateY(-50%)
 		z-index: 2
 		opacity: 0
-		transition: opacity .3s ease, background .3s ease
+		visibility: hidden
+		transition: opacity .3s ease, background .3s ease, visibility .3s ease
 		&:hover
 			background: rgba(#e3e3e3, .95)
 		&_prev
@@ -2225,6 +2225,9 @@ blockquote
 		&_next
 			border-radius: 15px 0 0 15px
 			right: 0
+		&.swiper-button-disabled
+			opacity: 0!important
+			visibility: hidden!important
 	&__arrow
 		fill: #fff
 		width: 17px
@@ -2245,22 +2248,20 @@ blockquote
 		z-index: 2
 
 .item-slider-product
-	&__img-wrap, &__video-wrap
-		width: 100%
-		height: 100%
-		display: flex
-		flex-direction: column
+	width: 100%
+	display: flex
+	flex-direction: column
+	justify-content: center
+	align-items: center
+	color: $text
+	cursor: pointer
+	&:hover
 		color: $text
-		&:hover
-			color: $text
-			text-decoration: none
+		text-decoration: none
 	&__img
 		width: 100%
 		height: 100%
 		object-fit: cover
-	&__video-wrap
-		justify-content: center
-		align-items: center
 
 .accordion-product
 	border-bottom: 1px solid #f0f0f0
@@ -2739,6 +2740,9 @@ blockquote
 		margin-bottom: 35px
 
 .play
+	border: none
+	background: none
+	padding: 0
 	text-align: center
 	&__icon
 		width: 50px
@@ -4424,10 +4428,13 @@ blockquote
 	width: 100%
 	z-index: 5
 	height: 53px
-	~ .header
-		margin-top: 53px
-		.bottom-header
-			top: 53px
+	display: none
+	&.active
+		display: block
+		~ .header
+			margin-top: 53px
+			.bottom-header
+				top: 53px
 	&__container
 		position: relative
 	&__content
