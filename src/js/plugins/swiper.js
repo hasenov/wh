@@ -97,6 +97,8 @@ export default function initSwiper() {
 				watchSlidesProgress: true,
 				spaceBetween: 15,
 				slideToClickedSlide: true,
+				preloadImages: false,
+				lazy: true,
 				scrollbar: {
 					el: '.thumbs-reviews__scrollbar',
 					draggable: true,
@@ -114,6 +116,8 @@ export default function initSwiper() {
 			return new Swiper('.main-reviews', {
 				allowTouchMove: false,
 				effect: 'fade',
+				preloadImages: false,
+				lazy: true,
 				fadeEffect: {
 					crossFade: true
 				},
@@ -253,6 +257,8 @@ export default function initSwiper() {
 		slidesPerView: 1,
 		spaceBetween: 13,
 		loop: false,
+		preloadImages: false,
+		lazy: true,
 		navigation: {
 			prevEl: '.slider-product__nav_prev',
 			nextEl: '.slider-product__nav_next',

@@ -2,7 +2,6 @@ import enquire from "enquire.js";
 
 // Адаптивность, изменение положения элементов в зависимости от ширины экрана.
 export default function initEnquire() {
-
     // Шапка
     const topHeaderColContacts = document.querySelector('.top-header__col_contacts');
     const topHeaderColActions = document.querySelector('.top-header__actions');

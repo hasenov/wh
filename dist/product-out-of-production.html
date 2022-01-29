@@ -401,11 +401,13 @@
           <div class="product__col product__content content-product">
             <div class="content-product__slider slider-product swiper slider">
               <div class="slider-product__items swiper-wrapper">
-                <a href="assets/img/content/kombinezon-whale-shark_220126215903.jpg" class="slider-product__item item-slider-product dummy-bg swiper-slide">
-                  <img src="assets/img/content/product_slider_1.jpg" alt="alt" class="item-slider-product__img img-responsive">
-                </a>
                 <a href="assets/img/content/kombinezon-whale-shark_220126220005.jpg" class="slider-product__item item-slider-product dummy-bg swiper-slide">
-                  <img src="assets/img/content/product_slider_2.jpg" alt="alt" class="item-slider-product__img img-responsive">
+                  <img data-src="assets/img/content/product_slider_1.jpg" alt="alt" class="item-slider-product__img img-responsive swiper-lazy">
+                  <div class="swiper-lazy-preloader"></div>
+                </a>
+                <a href="assets/img/content/kombinezon-whale-shark_220126215903.jpg" class="slider-product__item item-slider-product dummy-bg swiper-slide">
+                  <img data-src="assets/img/content/product_slider_2.jpg" alt="alt" class="item-slider-product__img img-responsive swiper-lazy">
+                  <div class="swiper-lazy-preloader"></div>
                 </a>
                 <a data-src="https://www.youtube.com/watch?v=3xazxNNYTBE" class="slider-product__item item-slider-product dummy-bg swiper-slide">
                   <button class="item-slider-product__play play" type="button">

@@ -72,7 +72,6 @@ document.addEventListener('DOMContentLoaded', function() {
 	resizeQuantityInputs();
 
 	// Заказы личного кабинета
-
 	const ordersCabinet = document.querySelector('.orders-cabinet');
 	if(ordersCabinet) {
 		ordersCabinet.addEventListener('click', function(e) {

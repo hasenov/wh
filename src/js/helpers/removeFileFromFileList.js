@@ -10,6 +10,4 @@ export function removeFileFromFileList(index, inputSelector) {
     }
     
     input.files = dt.files // Assign the updates list
-
-    console.log(input.files)
 }

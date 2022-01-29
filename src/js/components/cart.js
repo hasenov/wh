@@ -1,6 +1,5 @@
 import { sendForm } from "../services/api.service";
 import { formatNumber } from "../helpers/formatNumber";
-// import { parsePrice } from '../helpers/parsePrice';
 import { ac } from './autocomplete';
 import SlimSelect from 'slim-select';
 import { show, hide } from 'slidetoggle'
@@ -46,8 +45,7 @@ function onFormPromocodeSubmit() {
                 })
                 document.getElementById('totalPriceWithPromocode').value = result['all_total_promo'];
                 document.getElementById('promocodeHidden').value = result['promo_cod'];
-                const delivery = document.getElementById('deliveryPrice');
-                if (delivery.value != 0) {
+                if (deliveryPrice.value != 0) {
                     pricePlusDelivery.textContent = formatNumber(delivery.value);
                     priceDeliveryWrapper.style.display = 'flex';
 
@@ -124,8 +122,7 @@ document.addEventListener('click', (e) => {
                 document.getElementById('totalPriceWithPromocode').value = result['all_total_promo'];
                 priceWithDiscount.textContent = formatNumber(result.total - result['all_total_promo']);
 
-                const delivery = document.getElementById('deliveryPrice');
-                if (delivery.value != 0) {
+                if (deliveryPrice.value != 0) {
                     pricePlusDelivery.textContent = formatNumber(delivery.value);
                     priceDeliveryWrapper.style.display = 'flex';
 
@@ -277,7 +274,7 @@ const devCosts = function() {
         let total = parseInt(res.total, 10);
         let days = parseInt(res.days, 10);
         let daysTotal = days + 2;
-        document.getElementById('deliveryPrice').value = res.cost;
+        deliveryPrice.value = res.cost;
         document.getElementById("costOfDelivery").textContent = res.cost;
         document.getElementById("deliveryPeriod").textContent = daysTotal;
         // document.getElementById('deliveryInfo').style.display = 'block';
@@ -314,7 +311,7 @@ const addPoints = function (container, value) {
         container.slim.container.closest('.control-field').removeChild(preloader)
         container.slim.container.classList.remove('hidden')
 
-        document.getElementById('deliveryPrice').value = '';
+        deliveryPrice.value = '';
         // document.getElementById('deliveryInfo').style.display = 'none';
         document.getElementById("costOfDelivery").textContent = '';
         document.getElementById("deliveryPeriod").textContent = '';

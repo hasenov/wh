@@ -3,7 +3,6 @@ import productCard from '../helpers/productCard';
 import enquire from 'enquire.js';
 import MicroModal from 'micromodal';
 import noUiSlider from 'nouislider';
-import { formatNumber } from '../helpers/formatNumber';
 
 const isIdenticalArrays = (arr1, arr2) =>
     !arr1.filter(i => !arr2.includes(i)).concat(arr2.filter( i => !arr1.includes(i))).length

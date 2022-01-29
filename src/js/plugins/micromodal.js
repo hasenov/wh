@@ -1,6 +1,5 @@
 import MicroModal from 'micromodal';
 import { show } from 'slidetoggle';
-import floatLabel from '../components/floatLabel';
 
 export default function initMicroModal() {
     MicroModal.init({
