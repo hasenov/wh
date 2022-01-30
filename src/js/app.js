@@ -352,7 +352,7 @@ document.addEventListener('DOMContentLoaded', function() {
 					feedback.style.display = 'none';
 
 					if(redirect) {
-						window.location.href = redirect;
+						window.location.href = redirect.value;
 					} else {
 						window.location.href = '/cabinet';
 					}
