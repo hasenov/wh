@@ -220,7 +220,7 @@ const pickupCity = new SlimSelect({
     ajax: function (search, callback) {
         handleSelectAjax(search, callback);
     },
-    onChange: (info) => {
+    onChange: (info, ss, s) => {
         const selected = pickupCityInfo.find((item) => {
             return item.id === info.value;
         })
@@ -229,6 +229,7 @@ const pickupCity = new SlimSelect({
         document.getElementById('cityNameRegion').value = selected.text;
         document.getElementById('deliveryMethod').value = 'none';
         addPoints(postalDir, info.value);
+        document.getElementById('pickupCity').closest('.option-cart__control-field').classList.remove('is-invalid');
     }
 })
 
@@ -249,6 +250,7 @@ const courierCity = new SlimSelect({
         document.getElementById('cityNameRegion').value = selected.text;
         document.getElementById('deliveryMethod').value = 'none';
         addPoints(postalDir, info.value);
+        document.getElementById('courierCity').closest('.option-cart__control-field').classList.remove('is-invalid');
     }
 })
 
@@ -257,6 +259,9 @@ const postalDir = new SlimSelect({
     searchPlaceholder: 'Поиск',
     searchText: 'Не найдено',
     placeholder: document.getElementById('postalDir').dataset.placeholder || 'Выберите пункт выдачи',
+    onChange: () => {
+        document.getElementById('postalDir').closest('.option-cart__control-field').classList.remove('is-invalid');
+    }
 })
 
 const devCosts = function() {
@@ -275,9 +280,6 @@ const devCosts = function() {
         let days = parseInt(res.days, 10);
         let daysTotal = days + 2;
         deliveryPrice.value = res.cost;
-        document.getElementById("costOfDelivery").textContent = res.cost;
-        document.getElementById("deliveryPeriod").textContent = daysTotal;
-        // document.getElementById('deliveryInfo').style.display = 'block';
         document.getElementById("cityDaysMail").value = daysTotal;
         document.querySelector('.totals-checkout__item_delivery').style.display = 'flex';
         document.getElementById("pricePlusDelivery").textContent = formatNumber(cost);
@@ -312,9 +314,6 @@ const addPoints = function (container, value) {
         container.slim.container.classList.remove('hidden')
 
         deliveryPrice.value = '';
-        // document.getElementById('deliveryInfo').style.display = 'none';
-        document.getElementById("costOfDelivery").textContent = '';
-        document.getElementById("deliveryPeriod").textContent = '';
         document.getElementById("cityDaysMail").value = '';
         document.getElementById("pricePlusDelivery").textContent = '';
         document.getElementById("pricePlusDelivery").closest('.totals-checkout__item').style.display = 'none';
@@ -345,6 +344,10 @@ optionCartInputs.forEach((el) => {
                     },
                 })
                 floatLabel.init()
+                const activeControls = active.querySelectorAll('.option-cart__control-field .control, .option-cart__control-field select')
+                activeControls.forEach((control) => {
+                    control.required = false;
+                })
             }
             const parent = el.closest('.option-cart');
             const content = parent.querySelector('.option-cart__controls');
@@ -354,6 +357,12 @@ optionCartInputs.forEach((el) => {
                     parent.classList.add('active');
                 },
             })
+
+            const controls = parent.querySelectorAll('.option-cart__control-field .control, .option-cart__control-field select')
+
+            controls.forEach((control) => {
+                control.required = true;
+            })
         }
     
         const idx = el.value;
@@ -361,10 +370,7 @@ optionCartInputs.forEach((el) => {
         const deliveryMethods = [undefined, 'none', 'home'];
     
         document.getElementById('deliveryMethod').value = deliveryMethods[idx - 1] ? deliveryMethods[idx - 1] : '';
-    
-        // document.getElementById('deliveryInfo').style.display = 'none';
-        document.getElementById("costOfDelivery").textContent = '';
-        document.getElementById("deliveryPeriod").textContent = '';
+
         document.getElementById("cityDaysMail").value = '';
         document.getElementById("pricePlusDelivery").textContent = '';
         document.getElementById("pricePlusDelivery").closest('.totals-checkout__item').style.display = 'none';
@@ -380,20 +386,16 @@ const clientPhoneParent = clientPhone.closest('.control-field')
 const clientPhoneMsg = clientPhoneParent.querySelector('.control-field__msg')
 clientPhone.addEventListener('keyup', function(e) {
     if(clientPhone.value[3] != 9 && clientPhone.value[3] != null) {
-        // console.log('1', clientPhone.value)
         clientPhoneMsg.classList.add("active");
         clientPhoneParent.classList.remove("is-valid");
         clientPhoneParent.classList.add("is-invalid");
     } else {
-        // console.log('1 else', clientPhone.value)
         clientPhoneMsg.classList.remove("active");
     }
     if(clientPhone.value.length == 16 && clientPhone.value[3] == 9){
-        // console.log('2', clientPhone.value)
         clientPhoneParent.classList.remove("is-invalid");
         clientPhoneParent.classList.add("is-valid");
     } else {
-        // console.log('2 else', clientPhone.value)
         clientPhoneParent.classList.remove("is-valid");
         clientPhoneParent.classList.add("is-invalid");
     }

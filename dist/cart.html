@@ -521,7 +521,7 @@
                 <div class="cart__options">
                   <div class="cart__option option-cart option-cart_payment">
                     <label class="option-cart__radio radio">
-                      <input type="radio" class="option-cart__input radio__input" name="delivery_id" value="1">
+                      <input type="radio" class="option-cart__input radio__input" name="delivery_id" value="1" required>
                       <span class="radio__content">
                         <span class="option-cart__dot radio__dot"></span>
                       </span>
@@ -545,7 +545,7 @@
                   </div>
                   <div class="cart__option option-cart option-cart_payment">
                     <label class="option-cart__radio radio">
-                      <input type="radio" class="option-cart__input radio__input" name="delivery_id" value="5">
+                      <input type="radio" class="option-cart__input radio__input" name="delivery_id" value="5" required>
                       <span class="radio__content">
                         <span class="option-cart__dot radio__dot"></span>
                       </span>
@@ -573,7 +573,7 @@
                   </div>
                   <div class="cart__option option-cart option-cart_payment">
                     <label class="option-cart__radio radio">
-                      <input type="radio" class="option-cart__input radio__input" name="delivery_id" value="2">
+                      <input type="radio" class="option-cart__input radio__input" name="delivery_id" value="2" required>
                       <span class="radio__content">
                         <span class="option-cart__dot radio__dot"></span>
                       </span>
@@ -590,16 +590,16 @@
                     </label>
                     <div class="option-cart__controls">
                       <div class="option-cart__control-field control-field">
-                        <select class="new-select js-city-select" name="city" id="pickupCity" data-placeholder="Введите название города"></select>
+                        <select class="new-select js-city-select" name="city" id="pickupCity" data-placeholder="Введите название города" oninvalid="this.parentElement.classList.add('is-invalid')"></select>
                       </div>
                       <div class="option-cart__control-field control-field">
-                        <select class="new-select" name="pointCode" id="postalDir" data-placeholder="Введите пункт выдачи"></select>
+                        <select class="new-select" name="pointCode" id="postalDir" data-placeholder="Введите пункт выдачи" oninvalid="this.parentElement.classList.add('is-invalid')"></select>
                       </div>
                     </div>
                   </div>
                   <div class="cart__option option-cart option-cart_payment">
                     <label class="option-cart__radio radio">
-                      <input type="radio" class="option-cart__input radio__input" name="delivery_id" value="3">
+                      <input type="radio" class="option-cart__input radio__input" name="delivery_id" value="3" required>
                       <span class="radio__content">
                         <span class="option-cart__dot radio__dot"></span>
                       </span>
@@ -616,7 +616,7 @@
                     </label>
                     <div class="option-cart__controls">
                       <div class="option-cart__control-field control-field">
-                        <select class="new-select js-city-select" name="city" id="courierCity" data-placeholder="Введите название города"></select>
+                        <select class="new-select js-city-select" name="city" id="courierCity" data-placeholder="Введите название города" oninvalid="this.parentElement.classList.add('is-invalid')"></select>
                       </div>
                       <div class="option-cart__control-field control-field control-field_js">
                         <input type="text" class="control-field__control control js-autocomplete-address" id="courierAddress" name="address" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
@@ -626,7 +626,7 @@
                   </div>
                   <div class="cart__option option-cart option-cart_payment">
                     <label class="option-cart__radio radio">
-                      <input type="radio" class="option-cart__input radio__input" name="delivery_id" value="4">
+                      <input type="radio" class="option-cart__input radio__input" name="delivery_id" value="4" required>
                       <span class="radio__content">
                         <span class="option-cart__dot radio__dot"></span>
                       </span>
@@ -653,21 +653,6 @@
                     </div>
                   </div>
                 </div>
-                <!-- Вывод опций и информации доставки -->
-                <div class="cart__delivery-info delivery-info" id="deliveryInfo">
-                  <div class="delivery-info__item">
-                    <h3 class="delivery-info__title">Стоимость доставки</h3>
-                    <div class="delivery-info__value">
-                      <span id="costOfDelivery"></span> Руб.
-                    </div>
-                  </div>
-                  <div class="delivery-info__item">
-                    <h3 class="delivery-info__title">Ожидаемый срок доставки</h3>
-                    <div class="delivery-info__value">
-                      <span id="deliveryPeriod"></span> д.
-                    </div>
-                  </div>
-                </div>
               </div>
               <div class="cart__section">
                 <div class="cart__headline cart-headline">
@@ -676,7 +661,7 @@
                 <div class="cart__options">
                   <div class="cart__option option-cart">
                     <label class="option-cart__radio radio">
-                      <input type="radio" class="option-cart__input radio__input" name="payment_id" value="2">
+                      <input type="radio" class="option-cart__input radio__input" name="payment_id" value="2" required>
                       <span class="radio__content">
                         <span class="option-cart__dot radio__dot"></span>
                       </span>
@@ -689,7 +674,7 @@
                   </div>
                   <div class="cart__option option-cart">
                     <label class="option-cart__radio radio">
-                      <input type="radio" class="option-cart__input radio__input" name="payment_id" value="1">
+                      <input type="radio" class="option-cart__input radio__input" name="payment_id" value="1" required>
                       <span class="radio__content">
                         <span class="option-cart__dot radio__dot"></span>
                       </span>

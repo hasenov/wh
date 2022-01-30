@@ -438,7 +438,7 @@
 		.control-field__control
 			padding-right: 36px
 	&.is-invalid
-		.control-field__control
+		.control-field__control, .ss-single-selected
 			border-color: $danger!important
 
 .toggle-pas
@@ -3104,8 +3104,6 @@ blockquote
 	&__aside
 		flex: 0 0 39%
 		max-width: 39%
-	&__delivery-info
-		display: none
 
 .orders-cart
 	&__item
@@ -3142,12 +3140,6 @@ blockquote
 				content: '/'
 				margin-right: 2px
 				color: $accent
-
-.delivery-info
-	&__item
-		display: flex
-		align-items: center
-		justify-content: space-between
 
 .aside-cart
 	&__item

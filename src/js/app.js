@@ -329,7 +329,6 @@ document.addEventListener('DOMContentLoaded', function() {
 			initInstances()
 		},
 	});
-
 	
 	// Auth
 	const authForms = [document.forms['formLogin'], document.forms['formRegister'], document.forms['formReset']]
@@ -341,6 +340,7 @@ document.addEventListener('DOMContentLoaded', function() {
 			sendForm('POST', form.getAttribute('action'), formData)
 				.then((res) => {
 					const feedback = form.querySelector('.form-modal__feedback');
+					const redirect = document.getElementById('redirect');
 					
 					if(res.success == '0') {
 						feedback.style.display = 'block';
@@ -351,7 +351,11 @@ document.addEventListener('DOMContentLoaded', function() {
 
 					feedback.style.display = 'none';
 
-					window.location.href = '/cabinet';
+					if(redirect) {
+						window.location.href = redirect;
+					} else {
+						window.location.href = '/cabinet';
+					}
 				})
 				.catch((err) => {
 				})
