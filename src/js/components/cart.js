@@ -145,10 +145,18 @@ document.querySelectorAll('.js-format-number').forEach((el) => {
     el.innerText = formatNumber(+el.innerText.trim());
 })
 
+var suggestionsUrl = "https://suggestions.dadata.ru/suggestions/api/4_1/rs/suggest/address";
+var suggestionsToken = "b99f4658fa2ae31624302592c90df0daeaaec6d4";
+
 document.querySelectorAll('.js-autocomplete-address').forEach((el) => {
     ac.attach({
         target: el,
-        data: 'https://suggestions.dadata.ru/suggestions/api/4_1/rs/suggest/address',
+        data: suggestionsUrl,
+        headers: {
+            "Content-Type": "application/json",
+            "Accept": "application/json",
+            "Authorization": "Token " + suggestionsToken
+        },
         post: {
             count: 5,
             restrict_value: false,
@@ -159,26 +167,7 @@ document.querySelectorAll('.js-autocomplete-address').forEach((el) => {
             ]
         },
     })
-})
-
-document.querySelectorAll('.js-autocomplete-city').forEach((el) => {
-    ac.attach({
-        target: el,
-        data: 'https://suggestions.dadata.ru/suggestions/api/4_1/rs/suggest/address',
-        post: {
-            count: 5,
-            restrict_value: false,
-            from_bound: {
-                value: 'city'
-            },
-            locations: [
-                {
-                    country: "*"
-                }
-            ]
-        },
-    })
-})
+});
 
 let pickupCityInfo = [];
 

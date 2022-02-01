@@ -15,6 +15,7 @@ export var ac = {
         ac.instances.push({
             target: options.target,
             data: options.data,
+            headers: options.headers ? options.headers : null,
             post: options.post ? options.post : null,
             delay: options.delay ? options.delay : 500,
             min: options.min ? options.min : 2,
@@ -86,13 +87,15 @@ export var ac = {
         // (D1) INSTANCE & FORM DATA
         let instance = ac.instances[id]
         let data = instance.post
+        let headers = instance.headers
         data.query = instance.target.value;
 
         // (D2) FETCH
         fetch(instance.data, {
             method: "POST",
             headers: {
-                'Content-Type': 'application/json'
+                'Content-Type': 'application/json',
+                ...headers
             },
             body: JSON.stringify(data)
         })
