@@ -40,8 +40,8 @@ export default function productCard(product, lang, currency, wishlist_item = fal
 
 			const title = product['title_' + lang]
 
-			const wl_label_heart = '<svg class="wishlist-label__icon"><use href="assets/img/svg-sprite/sprite.svg#heart"></use></svg>'
-			const wl_label_delete = '<span class="wishlist-label__delete-btn delete-btn"><svg class="delete-btn__icon"><use href="assets/img/svg-sprite/sprite.svg#trash"></use></svg></span>'
+			const wl_label_heart = '<svg class="wishlist-label__icon"><use href="/assets/img/svg-sprite/sprite.svg#heart"></use></svg>'
+			const wl_label_delete = '<span class="wishlist-label__delete-btn delete-btn"><svg class="delete-btn__icon"><use href="/assets/img/svg-sprite/sprite.svg#trash"></use></svg></span>'
 
 			const wl_label_content = wishlist_item ? wl_label_delete : wl_label_heart 
 

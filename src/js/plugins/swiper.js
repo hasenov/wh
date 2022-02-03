@@ -10,7 +10,6 @@ export default function initSwiper() {
 		loop: true,
 		allowTouchMove: true,
 		speed: 500,
-		autoHeight: true,
 		pagination: {
 			el: '.hero-slider__pagination',
 			type: 'bullets',
@@ -19,7 +18,6 @@ export default function initSwiper() {
 		breakpoints: {
 			1200: {
 				allowTouchMove: false,
-				autoHeight: true,
 			}
 		},
 	});

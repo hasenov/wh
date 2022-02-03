@@ -78,7 +78,7 @@ function template(product, lang, currency) {
                     </div>
                     <button class="item-order__delete-btn delete-btn" type="button">
                         <svg class="delete-btn__icon">
-                            <use href="assets/img/svg-sprite/sprite.svg#trash"></use>
+                            <use href="/assets/img/svg-sprite/sprite.svg#trash"></use>
                         </svg>
                     </button>
                 </div>

@@ -475,7 +475,7 @@ const Filter = function() {
             <li class="selected-params__item tag-btn" data-id="${param.id}">
                 ${title}
                 <svg class="tag-btn__icon">
-                    <use href="assets/img/svg-sprite/sprite.svg#close"></use>
+                    <use href="/assets/img/svg-sprite/sprite.svg#close"></use>
                 </svg>
             </li>
         `

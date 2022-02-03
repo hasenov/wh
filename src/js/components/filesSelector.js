@@ -18,7 +18,7 @@ export default function initFilesSelector() {
                                 <img src="${picFile.result}" alt="${picFile.name}" class="item-file__img img-responsive">
                                 <button class="item-file__delete" type="button">
                                     <svg class="item-file__delete-icon">
-                                        <use href="assets/img/svg-sprite/sprite.svg#close"></use>
+                                        <use href="/assets/img/svg-sprite/sprite.svg#close"></use>
                                     </svg>
                                 </button>
                             </div>
