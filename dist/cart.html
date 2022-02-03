@@ -520,7 +520,7 @@
                 <div class="cart__options">
                   <div class="cart__option option-cart option-cart_payment">
                     <label class="option-cart__radio radio">
-                      <input type="radio" class="option-cart__input radio__input" name="delivery_id" value="1" required>
+                      <input type="radio" class="option-cart__input radio__input" name="delivery_id" value="1">
                       <span class="radio__content">
                         <span class="option-cart__dot radio__dot"></span>
                       </span>
@@ -544,7 +544,7 @@
                   </div>
                   <div class="cart__option option-cart option-cart_payment">
                     <label class="option-cart__radio radio">
-                      <input type="radio" class="option-cart__input radio__input" name="delivery_id" value="5" required>
+                      <input type="radio" class="option-cart__input radio__input" name="delivery_id" value="5">
                       <span class="radio__content">
                         <span class="option-cart__dot radio__dot"></span>
                       </span>
@@ -568,7 +568,7 @@
                   </div>
                   <div class="cart__option option-cart option-cart_payment">
                     <label class="option-cart__radio radio">
-                      <input type="radio" class="option-cart__input radio__input" name="delivery_id" value="2" required>
+                      <input type="radio" class="option-cart__input radio__input" name="delivery_id" value="2">
                       <span class="radio__content">
                         <span class="option-cart__dot radio__dot"></span>
                       </span>
@@ -594,7 +594,7 @@
                   </div>
                   <div class="cart__option option-cart option-cart_payment">
                     <label class="option-cart__radio radio">
-                      <input type="radio" class="option-cart__input radio__input" name="delivery_id" value="3" required>
+                      <input type="radio" class="option-cart__input radio__input" name="delivery_id" value="3">
                       <span class="radio__content">
                         <span class="option-cart__dot radio__dot"></span>
                       </span>
@@ -621,7 +621,7 @@
                   </div>
                   <div class="cart__option option-cart option-cart_payment">
                     <label class="option-cart__radio radio">
-                      <input type="radio" class="option-cart__input radio__input" name="delivery_id" value="4" required>
+                      <input type="radio" class="option-cart__input radio__input" name="delivery_id" value="4">
                       <span class="radio__content">
                         <span class="option-cart__dot radio__dot"></span>
                       </span>
@@ -652,7 +652,7 @@
                 <div class="cart__options">
                   <div class="cart__option option-cart">
                     <label class="option-cart__radio radio">
-                      <input type="radio" class="option-cart__input radio__input" name="payment_id" value="2" required>
+                      <input type="radio" class="option-cart__input radio__input" name="payment_id" value="2">
                       <span class="radio__content">
                         <span class="option-cart__dot radio__dot"></span>
                       </span>
@@ -665,7 +665,7 @@
                   </div>
                   <div class="cart__option option-cart">
                     <label class="option-cart__radio radio">
-                      <input type="radio" class="option-cart__input radio__input" name="payment_id" value="1" required>
+                      <input type="radio" class="option-cart__input radio__input" name="payment_id" value="1">
                       <span class="radio__content">
                         <span class="option-cart__dot radio__dot"></span>
                       </span>
@@ -772,6 +772,34 @@
             </div>
           </div>
         </aside>
+      </div>
+    </div>
+  </div>
+  <div class="mm-modal" id="modal-cart-error" aria-hidden="true">
+    <div class="mm-modal__overlay" tabindex="-1" data-micromodal-close>
+      <div class="mm-modal__wrapper" role="dialog" aria-modal="true" aria-labelledby="modal-cart-error-title">
+        <div class="mm-modal__content modal modal-auth-message scrollbar-accent">
+          <header class="modal__header header-modal">
+            <div class="header-modal__container container">
+              <button class="header-modal__close modal__close close" type="button" aria-label="Close modal" data-micromodal-close>
+                <svg>
+                  <use href="assets/img/svg-sprite/sprite.svg#close"></use>
+                </svg>
+              </button>
+            </div>
+          </header>
+          <div class="modal__body body-modal" id="modal-cart-error-content">
+            <div class="body-modal__container container">
+              <div class="message-auth">
+                <h2 class="message-auth__title">Вы не выбрали способ оплаты</h2>
+                <div class="message-auth__text-wrap">Вернитесь в корзину и выберите удобный для вас способ</div>
+                <div class="message-auth__btn-wrap">
+                  <button class="message-auth__btn modal__btn btn btn-accent" type="button" data-micromodal-close aria-label="Close this dialog window"><span>Закрыть окно</span></button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>

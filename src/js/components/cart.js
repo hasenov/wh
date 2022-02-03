@@ -5,6 +5,7 @@ import SlimSelect from 'slim-select';
 import { show, hide } from 'slidetoggle'
 import floatLabel from "./floatLabel";
 import { initFormValidation, isFormValid, showInputError, removeInputError } from '../helpers/validate';
+import MicroModal from "micromodal";
 
 export default function initCart() {
     
@@ -91,26 +92,57 @@ if(formPromocode) {
 
 initFormValidation(cartForm, true);
 
-function checkCartFormValidation() {
-    const submitBtn = document.querySelector('.proceed-to-checkout__btn');
+// function checkCartFormValidation() {
+//     const submitBtn = document.querySelector('.proceed-to-checkout__btn');
 
-    if(!isFormValid(cartForm, false) || cartForm.checkValidity() === false) {
-        submitBtn.disabled = true;
-    } else {
-        submitBtn.disabled = false;
-    }
-}
+//     if(!isFormValid(cartForm, false) || cartForm.checkValidity() === false) {
+//         submitBtn.disabled = true;
+//     } else {
+//         submitBtn.disabled = false;
+//     }
+// }
 
-checkCartFormValidation();
+// checkCartFormValidation();
 
-cartForm.addEventListener('change', function() {
-    checkCartFormValidation();
-});
+// cartForm.addEventListener('change', function() {
+//     checkCartFormValidation();
+// });
 
 cartForm.addEventListener('submit', (e) => {
     e.preventDefault();
 
-    if(!isFormValid(cartForm)) return;
+    const modalCartError = document.getElementById('modal-cart-error');
+    const modalCartErrorTitle = modalCartError.querySelector('.message-auth__title');
+    const modalCartErrorText = modalCartError.querySelector('.message-auth__text-wrap');
+    const deliveryChecked = document.querySelector('input[name="delivery_id"]:checked');
+    const paymentChecked = document.querySelector('input[name="payment_id"]:checked');
+
+    if(!deliveryChecked) {
+        MicroModal.show('modal-cart-error', {
+            awaitCloseAnimation: true,
+        });
+        modalCartErrorTitle.textContent = 'Вы не выбрали способ доставки';
+        modalCartErrorText.textContent = 'Вернитесь в корзину и выберите удобный для вас способ';
+        return;
+    }
+
+    if(!paymentChecked) {
+        MicroModal.show('modal-cart-error', {
+            awaitCloseAnimation: true,
+        });
+        modalCartErrorTitle.textContent = 'Вы не выбрали способ оплаты';
+        modalCartErrorText.textContent = 'Вернитесь в корзину и выберите удобный для вас способ';
+        return;
+    }
+
+    if(!isFormValid(cartForm)) {
+        const element = cartForm.querySelector('.control-field.is-invalid');
+        const elementRect = element.getBoundingClientRect();
+        const absoluteElementTop = elementRect.top + window.pageYOffset;
+        const middle = absoluteElementTop - (window.innerHeight / 2);
+        window.scrollTo(0, middle);
+        return;
+    };
 
     cartForm.submit();
 })
