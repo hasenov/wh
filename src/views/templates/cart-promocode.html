@@ -116,15 +116,14 @@
 								</div>
 								<div class="cart__group col-md-6">
 									<div class="cart__control-field control-field control-field_js">
-										<input type="email" class="control-field__control control" id="clientEmail" name="email" required>
+										<input type="text" class="control-field__control control" id="clientEmail" name="email" required data-required="email" data-invalid-message="Некорректный email">
 										<label for="clientEmail" class="control-field__label control-label"><span>Введите E-mail<span class="color-danger">*</span></span></label>
 									</div>
 								</div>
 								<div class="cart__group col-md-6">
 									<div class="cart__control-field control-field control-field_js">
-										<input type="tel" class="control-field__control control phone-mask" id="clientPhone" name="phone" required>
+										<input type="tel" class="control-field__control control phone-mask" id="clientPhone" name="phone" required data-required="phone" data-invalid-message="Введите ваш мобильный номер начиная с кода">
 										<label for="clientPhone" class="control-field__label control-label"><span>Введите номер телефона<span class="color-danger">*</span></span></label>
-										<p class="control-field__msg">Введите ваш мобильный номер начиная с кода</p>
 									</div>
 								</div>
 							</div>

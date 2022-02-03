@@ -1,9 +1,12 @@
 import { sendForm } from '../services/api.service';
+import { initFormValidation, isFormValid } from '../helpers/validate';
 
 export default function initCabinet() {
     const form = document.querySelector('.form-cabinet');
 
     if(form) {
+        initFormValidation(form, true);
+
         let state = 'readonly';
 
         const submit = form.querySelector('.form-cabinet__submit');
@@ -42,6 +45,8 @@ export default function initCabinet() {
         });
 
         function onSubmit() {
+            if(!isFormValid(form)) return;
+
             const formData = new FormData(form);
 
             sendForm('POST', '/cabinet/personal_data_save', formData);

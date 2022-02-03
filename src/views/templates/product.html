@@ -896,7 +896,7 @@
 											<input type="hidden" name="type" value="product">
 											<input class="hidden" type="radio" name="size[]" value="401" checked>
 											<div class="form-modal__control-field control-field control-field_js">
-												<input type="email" class="control-field__control control" id="email_input_sizes" name="email" required>
+												<input type="text" class="control-field__control control" id="email_input_sizes" name="email" required data-required="email" data-invalid-message="Некорректный email">
 												<label for="email_input_sizes" class="control-field__label control-label"><span>Введите ваш E-mail</span></label>
 											</div>
 										</div>
@@ -1001,7 +1001,7 @@
 									<label for="comment_name" class="control-field__label control-label"><span>Имя<span class="color-danger">*</span></span></label>
 								</div>
 								<div class="form-review__control-field control-field control-field_js">
-									<input type="email" class="control-field__control control" id="comment_mail" name="comment_mail">
+									<input type="text" class="control-field__control control" id="comment_mail" name="comment_mail" data-required="email" data-invalid-message="Некорректный email">
 									<label for="comment_mail" class="control-field__label control-label"><span>E-mail</span></label>
 								</div>
 								<div class="form-review__control-field control-field control-field_js">
@@ -1186,7 +1186,7 @@
 									<form class="form-modal" name="formDiscount">
 										<div class="form-modal__controls">
 											<div class="form-modal__control-field control-field control-field_js">
-												<input type="email" class="control-field__control control" id="email" name="email" required>
+												<input type="text" class="control-field__control control" id="email" name="email" required data-required="email" data-invalid-message="Некорректный email">
 												<label for="email" class="control-field__label control-label"><span>Введите ваш E-mail</span></label>
 											</div>
 										</div>

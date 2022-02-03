@@ -4,6 +4,7 @@ import updateMiniCart from "./miniCart";
 import { sendForm } from "../services/api.service";
 import { parsePrice } from '../helpers/parsePrice';
 import { formatNumber } from "../helpers/formatNumber";
+import { initFormValidation, isFormValid } from '../helpers/validate';
 
 const Product = function () {
     const currentPriceEl = document.getElementById('productPrice')
@@ -98,10 +99,14 @@ const Product = function () {
                 e.preventDefault();
                 onFormSizeSubmit(form);
             });
+
+            initFormValidation(form);
         }
     })
 
     function onFormSizeSubmit(form) {
+        if(!isFormValid(form)) return;
+
         const formData = new FormData(form);
         const modalId = form.closest('.mm-modal').id;
         sendForm('POST', '/main/subscriptionSize', formData).then((res) => {
@@ -115,7 +120,7 @@ const Product = function () {
     formProduct.addEventListener('submit', function(e) {
         e.preventDefault();
         onFormProductSubmit();
-    })
+    });
 
     function onFormProductSubmit() {
         const size = formProduct.querySelector('input[name="size"]').value
@@ -148,19 +153,25 @@ const Product = function () {
 
     const formReview = document.forms['formReview'];
     formReview.addEventListener('submit', function(e) {
-        e.preventDefault()
+        e.preventDefault();
+
+        if(!isFormValid(formReview)) return;
+
         const formData = new FormData(formReview)
         sendForm('POST', this.getAttribute('action'), formData).then(rsp => {
             formReview.reset()
             MicroModal.close('modal-review')
             MicroModal.show('modal-review-success', microModalOptions)
         })
-    })
+    });
+    initFormValidation(formReview);
 
     const formDiscount = document.forms['formDiscount'];
     if(formDiscount) {
         formDiscount.addEventListener('submit', (e) => {
             e.preventDefault();
+
+            if(!isFormValid(formDiscount)) return;
         
             const formData = new FormData(formDiscount);
             const modalId = formDiscount.closest('.mm-modal').id;
@@ -170,6 +181,7 @@ const Product = function () {
                 this.reset();
             });
         })
+        initFormValidation(formDiscount);
     }
 }
 

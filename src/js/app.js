@@ -9,6 +9,7 @@ import enquire from 'enquire.js';
 import { changeProductQuantity } from './components/productQuantity'
 import { formatNumber } from './helpers/formatNumber';
 import OverlayScrollbars from 'overlayscrollbars';
+import { initFormValidation, isFormValid } from './helpers/validate';
 
 import { removeFileFromFileList } from './helpers/removeFileFromFileList';
 import updateMiniCart from './components/miniCart';
@@ -39,11 +40,15 @@ document.addEventListener('DOMContentLoaded', function() {
 			e.preventDefault();
 			onNewsletterFormsSubmit(form);
 		});
+
+		initFormValidation(form);
 	})
 
 	function onNewsletterFormsSubmit(form) {
+		if(!isFormValid(form)) return;
+		
 		const email = new FormData(form);
-			
+
 		sendForm('POST', '/main/subscription', email)
 			.then((res) => {
 				MicroModal.close('modal-newsletter');
@@ -333,34 +338,50 @@ document.addEventListener('DOMContentLoaded', function() {
 	// Auth
 	const authForms = [document.forms['formLogin'], document.forms['formRegister'], document.forms['formReset']]
 	authForms.forEach((form) => {
-		form?.addEventListener('submit', (e) => {
-			e.preventDefault();
-			const formData = new FormData(form);
-			
-			sendForm('POST', form.getAttribute('action'), formData)
-				.then((res) => {
-					const feedback = form.querySelector('.form-modal__feedback');
-					const redirect = document.getElementById('redirect');
-					
-					if(res.success == '0') {
-						feedback.style.display = 'block';
-						feedback.innerHTML = '';
-						feedback.insertAdjacentHTML('afterbegin', res.messages);
-						return;
-					}
+		if(form) {
+			form.addEventListener('submit', (e) => {
+				e.preventDefault();
 
-					feedback.style.display = 'none';
+				if(!isFormValid(form)) return;
 
-					if(redirect) {
-						window.location.href = redirect.value;
-					} else {
-						window.location.href = '/cabinet';
-					}
-				})
-				.catch((err) => {
-				})
-		});
-	})
+				const formData = new FormData(form);
+
+				sendForm('POST', form.getAttribute('action'), formData)
+					.then((res) => {
+						const feedback = form.querySelector('.form-modal__feedback');
+						const redirect = document.getElementById('redirect');
+						
+						if(res.success == '0') {
+							feedback.style.display = 'block';
+							feedback.innerHTML = '';
+							feedback.insertAdjacentHTML('afterbegin', res.messages);
+							return;
+						}
+	
+						feedback.style.display = 'none';
+	
+						form.reset();
+	
+						if(form.name === 'formRegister') {
+							MicroModal.close('modal-register');
+							MicroModal.show('modal-auth-success', microModalOptions);
+							return;
+						}
+	
+						if(redirect) {
+							window.location.href = redirect.value;
+						} else {
+							window.location.href = '/cabinet';
+						}
+					})
+					.catch((err) => {
+					})
+			});
+
+			initFormValidation(form);
+		}
+
+	});
 
 });
 

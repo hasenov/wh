@@ -4,6 +4,7 @@ import { ac } from './autocomplete';
 import SlimSelect from 'slim-select';
 import { show, hide } from 'slidetoggle'
 import floatLabel from "./floatLabel";
+import { initFormValidation, isFormValid, showInputError, removeInputError } from '../helpers/validate';
 
 export default function initCart() {
     
@@ -87,6 +88,32 @@ if(formPromocode) {
 
     promocodeInput.addEventListener('focus', () => removeInputError(promocodeInput));
 }
+
+initFormValidation(cartForm, true);
+
+function checkCartFormValidation() {
+    const submitBtn = document.querySelector('.proceed-to-checkout__btn');
+
+    if(!isFormValid(cartForm, false) || cartForm.checkValidity() === false) {
+        submitBtn.disabled = true;
+    } else {
+        submitBtn.disabled = false;
+    }
+}
+
+checkCartFormValidation();
+
+cartForm.addEventListener('change', function() {
+    checkCartFormValidation();
+});
+
+cartForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+
+    if(!isFormValid(cartForm)) return;
+
+    cartForm.submit();
+})
 
 document.addEventListener('click', (e) => {
     const deleteBtn = e.target.closest('.orders-cart__item .item-order__delete-btn')
@@ -368,31 +395,6 @@ optionCartInputs.forEach((el) => {
             devCosts();
         }
     })
-});
-
-const clientPhone = document.getElementById("clientPhone")
-const clientPhoneParent = clientPhone.closest('.control-field')
-const clientPhoneMsg = clientPhoneParent.querySelector('.control-field__msg')
-clientPhone.addEventListener('keyup', function(e) {
-    if(clientPhone.value[3] != 9 && clientPhone.value[3] != null) {
-        clientPhoneMsg.classList.add("active");
-        clientPhoneParent.classList.remove("is-valid");
-        clientPhoneParent.classList.add("is-invalid");
-    } else {
-        clientPhoneMsg.classList.remove("active");
-    }
-    if(clientPhone.value.length == 16 && clientPhone.value[3] == 9){
-        clientPhoneParent.classList.remove("is-invalid");
-        clientPhoneParent.classList.add("is-valid");
-    } else {
-        clientPhoneParent.classList.remove("is-valid");
-        clientPhoneParent.classList.add("is-invalid");
-    }
-    if(clientPhoneParent.classList.contains('is-invalid')) {
-        document.querySelector(".proceed-to-checkout__btn").disabled = true;
-    } else {
-        document.querySelector(".proceed-to-checkout__btn").disabled = false;
-    }
 });
 
 (function () {

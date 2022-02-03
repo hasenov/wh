@@ -422,7 +422,7 @@
         </div>
         <form class="newsletter__form form-newsletter col-lg-4 col-md-5" action="/main/subscription">
           <div class="newsletter__control-field control-field control-field_js">
-            <input type="email" class="control-field__control control" id="footerEmail" name="email" required>
+            <input type="text" class="control-field__control control" id="footerEmail" name="email" required data-required="email" data-invalid-message="Некорректный email">
             <label for="footerEmail" class="control-field__label control-label"><span>Введите ваш E-mail</span></label>
           </div>
           <button class="newsletter__btn btn btn-accent" type="submit">
@@ -593,7 +593,7 @@
                     <form class="form-modal form-newsletter">
                       <div class="form-modal__controls">
                         <div class="form-modal__control-field control-field control-field_js">
-                          <input type="email" class="control-field__control control" id="email" name="email" required>
+                          <input type="text" class="control-field__control control" id="email" name="email" required data-required="email" data-invalid-message="Некорректный email">
                           <label for="email" class="control-field__label control-label"><span>Введите ваш E-mail</span></label>
                         </div>
                       </div>
@@ -707,7 +707,7 @@
                     <label for="register_last_name" class="control-field__label control-label"><span>Фамилия<span class="color-danger">*</span></span></label>
                   </div>
                   <div class="form-modal__control-field control-field control-field_js">
-                    <input type="email" class="control-field__control control" id="register_email" name="email" required>
+                    <input type="text" class="control-field__control control" id="register_email" name="email" required data-required="email" data-invalid-message="Некорректный email">
                     <label for="register_email" class="control-field__label control-label"><span>E-mail<span class="color-danger">*</span></span></label>
                   </div>
                   <div class="form-modal__control-field control-field control-field_js">
@@ -738,6 +738,42 @@
                 </div>
                 <div class="form-modal__feedback color-danger"></div>
               </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="mm-modal" id="modal-auth-success" aria-hidden="true">
+    <div class="mm-modal__overlay" tabindex="-1" data-micromodal-close>
+      <div class="mm-modal__wrapper" role="dialog" aria-modal="true" aria-labelledby="modal-auth-success-title">
+        <div class="mm-modal__content modal modal-auth-message scrollbar-accent">
+          <header class="modal__header header-modal">
+            <div class="header-modal__container container">
+              <button class="header-modal__close modal__close close" type="button" aria-label="Close modal" data-micromodal-close>
+                <svg>
+                  <use href="assets/img/svg-sprite/sprite.svg#close"></use>
+                </svg>
+              </button>
+            </div>
+          </header>
+          <div class="modal__body body-modal" id="modal-auth-success-content">
+            <div class="body-modal__container container">
+              <div class="message-auth">
+                <svg class="message-auth__icon">
+                  <use href="assets/img/svg-sprite/sprite.svg#complete"></use>
+                </svg>
+                <h2 class="message-auth__title">Вы успешно зарегистрировались, теперь вам доступно:</h2>
+                <ol class="message-auth__list">
+                  <li>Отслеживание доставки</li>
+                  <li>Ускоренное оформление заказа</li>
+                  <li>История заказов</li>
+                  <li>Управление подписками</li>
+                </ol>
+                <div class="message-auth__btn-wrap">
+                  <button class="message-auth__btn modal__btn btn btn-accent" type="button" data-micromodal-close aria-label="Close this dialog window"><span>Закрыть окно</span></button>
+                </div>
+              </div>
             </div>
           </div>
         </div>
