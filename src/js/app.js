@@ -41,7 +41,7 @@ document.addEventListener('DOMContentLoaded', function() {
 			onNewsletterFormsSubmit(form);
 		});
 
-		initFormValidation(form);
+		initFormValidation(form, true);
 	})
 
 	function onNewsletterFormsSubmit(form) {
@@ -336,6 +336,20 @@ document.addEventListener('DOMContentLoaded', function() {
 	});
 	
 	// Auth
+	const feedbackTemplate = function(msg, type) {
+		const classname = function() {
+			if(type === 'error') {
+				return 'color-danger';
+			} else if(type === 'success') {
+				return 'color-success';
+			} else {
+				return '';
+			}
+		}
+		return `
+			<div class="form-modal__feedback ${classname()}">${msg}</div>
+		`
+	}
 	const authForms = [document.forms['formLogin'], document.forms['formRegister'], document.forms['formReset']]
 	authForms.forEach((form) => {
 		if(form) {
@@ -348,23 +362,32 @@ document.addEventListener('DOMContentLoaded', function() {
 
 				sendForm('POST', form.getAttribute('action'), formData)
 					.then((res) => {
-						const feedback = form.querySelector('.form-modal__feedback');
 						const redirect = document.getElementById('redirect');
+						const feedback = form.querySelector('.form-modal__feedback');
 						
 						if(res.success == '0') {
-							feedback.style.display = 'block';
-							feedback.innerHTML = '';
-							feedback.insertAdjacentHTML('afterbegin', res.messages);
+							if(feedback) {
+								form.removeChild(feedback);
+							}
+							form.insertAdjacentHTML('beforeend', feedbackTemplate(res.messages, 'error'));
 							return;
 						}
 	
-						feedback.style.display = 'none';
+						if(feedback) {
+							form.removeChild(feedback);
+						}
 	
 						form.reset();
 	
 						if(form.name === 'formRegister') {
 							MicroModal.close('modal-register');
 							MicroModal.show('modal-auth-success', microModalOptions);
+							return;
+						}
+
+						if(form.name === 'formReset') {
+							MicroModal.close('modal-reset');
+							MicroModal.show('modal-reset-success', microModalOptions);
 							return;
 						}
 	
@@ -378,10 +401,12 @@ document.addEventListener('DOMContentLoaded', function() {
 					})
 			});
 
-			initFormValidation(form);
+			initFormValidation(form, true);
 		}
 
 	});
+
+	
 
 });
 

@@ -100,7 +100,7 @@ const Product = function () {
                 onFormSizeSubmit(form);
             });
 
-            initFormValidation(form);
+            initFormValidation(form, true);
         }
     })
 
@@ -164,7 +164,7 @@ const Product = function () {
             MicroModal.show('modal-review-success', microModalOptions)
         })
     });
-    initFormValidation(formReview);
+    initFormValidation(formReview, true);
 
     const formDiscount = document.forms['formDiscount'];
     if(formDiscount) {
@@ -181,7 +181,7 @@ const Product = function () {
                 this.reset();
             });
         })
-        initFormValidation(formDiscount);
+        initFormValidation(formDiscount, true);
     }
 }
 

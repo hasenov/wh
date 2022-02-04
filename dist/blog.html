@@ -887,7 +887,6 @@
                   <button class="form-modal__btn modal__btn btn btn-accent" type="submit"><span>Войти</span></button>
                   <button class="form-modal__btn modal__btn btn btn-outline-accent d-lg-none d-xl-block trigger-modal-register" type="button"><span>У меня пока нет аккаунта</span></button>
                 </div>
-                <div class="form-modal__feedback color-danger"></div>
               </form>
             </div>
           </div>
@@ -955,7 +954,43 @@
                   <button class="form-modal__btn modal__btn btn btn-accent" type="submit"><span>Создать аккаунт</span></button>
                   <button class="form-modal__btn modal__btn btn btn-outline-accent d-lg-none d-xl-block trigger-modal-login" type="button"><span>У меня уже есть аккаунт</span></button>
                 </div>
-                <div class="form-modal__feedback color-danger"></div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="mm-modal" id="modal-reset" aria-hidden="true">
+    <div class="mm-modal__overlay" tabindex="-1" data-micromodal-close>
+      <div class="mm-modal__wrapper" role="dialog" aria-modal="true" aria-labelledby="modal-reset-title">
+        <div class="mm-modal__content modal modal-auth scrollbar-accent">
+          <header class="modal__header header-modal">
+            <div class="header-modal__container container">
+              <h2 class="header-modal__title modal__title d-lg-none d-xl-block" id="modal-reset-title">Восстановление пароля</h2>
+              <button class="header-modal__close modal__close close" type="button" aria-label="Close modal" data-micromodal-close>
+                <svg>
+                  <use href="/assets/img/svg-sprite/sprite.svg#close"></use>
+                </svg>
+              </button>
+            </div>
+          </header>
+          <div class="modal__body body-modal" id="modal-reset-content">
+            <div class="body-modal__container container">
+              <form class="form-modal" action="/auth/forgot_password_pop" method="post" name="formReset">
+                <div class="form-modal__header d-none d-lg-block d-xl-none">
+                  <h2 class="form-modal__title">Восстановление пароля</h2>
+                  <p class="form-modal__text">Пожалуйста введите ваш логин и мы сможем отправить вам письмо с новым паролем.</p>
+                </div>
+                <div class="form-modal__controls">
+                  <div class="form-modal__control-field control-field control-field_js">
+                    <input type="tel" class="control-field__control control phone-mask" id="reset_phone" name="phone" required>
+                    <label for="reset_phone" class="control-field__label control-label"><span>Телефон<span class="color-danger">*</span></span></label>
+                  </div>
+                </div>
+                <div class="form-modal__btn-wrap">
+                  <button class="form-modal__btn modal__btn btn btn-accent" type="submit"><span>Отправить</span></button>
+                </div>
               </form>
             </div>
           </div>
@@ -999,13 +1034,12 @@
       </div>
     </div>
   </div>
-  <div class="mm-modal" id="modal-reset" aria-hidden="true">
+  <div class="mm-modal" id="modal-reset-success" aria-hidden="true">
     <div class="mm-modal__overlay" tabindex="-1" data-micromodal-close>
-      <div class="mm-modal__wrapper" role="dialog" aria-modal="true" aria-labelledby="modal-reset-title">
-        <div class="mm-modal__content modal modal-auth scrollbar-accent">
+      <div class="mm-modal__wrapper" role="dialog" aria-modal="true" aria-labelledby="modal-reset-success-title">
+        <div class="mm-modal__content modal modal-auth-message scrollbar-accent">
           <header class="modal__header header-modal">
             <div class="header-modal__container container">
-              <h2 class="header-modal__title modal__title d-lg-none d-xl-block" id="modal-reset-title">Восстановление пароля</h2>
               <button class="header-modal__close modal__close close" type="button" aria-label="Close modal" data-micromodal-close>
                 <svg>
                   <use href="/assets/img/svg-sprite/sprite.svg#close"></use>
@@ -1013,24 +1047,17 @@
               </button>
             </div>
           </header>
-          <div class="modal__body body-modal" id="modal-reset-content">
+          <div class="modal__body body-modal" id="modal-reset-success-content">
             <div class="body-modal__container container">
-              <form class="form-modal" action="/auth/forgot_password" method="post" name="formReset">
-                <div class="form-modal__header d-none d-lg-block d-xl-none">
-                  <h2 class="form-modal__title">Восстановление пароля</h2>
-                  <p class="form-modal__text">Пожалуйста введите ваш логин и мы сможем отправить вам письмо с новым паролем.</p>
+              <div class="message-auth">
+                <svg class="message-auth__icon">
+                  <use href="/assets/img/svg-sprite/sprite.svg#complete"></use>
+                </svg>
+                <h2 class="message-auth__title">Спасибо ваш пароль сброшен и ссылка отправлена по почту</h2>
+                <div class="message-auth__btn-wrap">
+                  <button class="message-auth__btn modal__btn btn btn-accent" type="button" data-micromodal-close aria-label="Close this dialog window"><span>Закрыть окно</span></button>
                 </div>
-                <div class="form-modal__controls">
-                  <div class="form-modal__control-field control-field control-field_js">
-                    <input type="tel" class="control-field__control control phone-mask" id="reset_phone" name="phone" required>
-                    <label for="reset_phone" class="control-field__label control-label"><span>Телефон<span class="color-danger">*</span></span></label>
-                  </div>
-                </div>
-                <div class="form-modal__btn-wrap">
-                  <button class="form-modal__btn modal__btn btn btn-accent" type="submit"><span>Отправить</span></button>
-                </div>
-                <div class="form-modal__feedback color-danger"></div>
-              </form>
+              </div>
             </div>
           </div>
         </div>

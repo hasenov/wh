@@ -5,7 +5,7 @@ export default function initCertificate() {
     const certForm = document.forms['formCertificate'];
 
     if(certForm) {
-        initFormValidation(certForm);
+        initFormValidation(certForm, true);
 
         certForm.addEventListener('submit', function(e) {
             e.preventDefault();
