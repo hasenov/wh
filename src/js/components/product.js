@@ -144,8 +144,10 @@ const Product = function () {
                 MicroModal.close('modal-preloader');
                 MicroModal.show('modal-added-to-cart', microModalOptions);
                 updateMiniCart();
-
-                if (sendCartToTrackers && isFunction(sendCartToTrackers)) sendCartToTrackers()
+                
+                if (typeof sendCartToTrackers !== 'undefined' && typeof sendCartToTrackers === 'function') {
+                    sendCartToTrackers()
+                }
             })
             .catch((err) => {
                 MicroModal.close('modal-preloader');
