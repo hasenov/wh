@@ -419,6 +419,19 @@ document.addEventListener('DOMContentLoaded', function() {
 
 window.addEventListener('load', initCookies)
 
+// Lazysizes Safari bug fix
+window.addEventListener('pageshow', e => {
+	if (e.persisted) {
+		requestAnimationFrame(() => {
+			document.querySelectorAll('.' + lazySizes.cfg.loadingClass).forEach( img => {
+				if (img.complete) {
+					lazySizes.loader.unveil(img);
+				}
+			});
+		});
+	}
+});
+
 export function updateQuantityInputs() {
 	const quantityControls = document.querySelectorAll('.quantity__control');
 	quantityControls.forEach((control) => {

@@ -66,7 +66,10 @@ export default function productCard(product, lang, currency, wishlist_item = fal
 							${wl_label_content}
 						</label>
 						<a href="/catalog/${product.url}" class="card-product__img-wrap dummy-bg">
-							<img src="/images/products/thumb/${product.img}" alt="${title}" class="card-product__img img-responsive" loading="lazy">
+							<span class="lazyload-wrap">
+								<img data-src="/images/products/thumb/${product.img}" alt="${title}" class="card-product__img img-responsive lazyload">
+								<span class="swiper-lazy-preloader"></span>
+							</span>
 						</a>
 						<div class="card-product__body">
 							<div class="card-product__content">
