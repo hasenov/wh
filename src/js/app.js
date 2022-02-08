@@ -10,6 +10,7 @@ import { changeProductQuantity } from './components/productQuantity'
 import { formatNumber } from './helpers/formatNumber';
 import OverlayScrollbars from 'overlayscrollbars';
 import { initFormValidation, isFormValid } from './helpers/validate';
+import 'lazysizes';
 
 import { removeFileFromFileList } from './helpers/removeFileFromFileList';
 import updateMiniCart from './components/miniCart';
@@ -406,7 +407,13 @@ document.addEventListener('DOMContentLoaded', function() {
 
 	});
 
-	
+	function removeOverflow() {
+		if(document.querySelector('.sticky-bar')) {
+			document.querySelector('html').style.overflowX = 'visible';
+		}
+	}
+
+	removeOverflow();
 
 });
 

@@ -85,18 +85,21 @@ export default function initSwiper() {
 	const swiperReviewsMainElement = document.querySelector('.main-reviews');
 	
 	if(swiperReviewsThumbsElement && swiperReviewsMainElement) {
-		let swiperReviewsThumbs = initSwiperReviewsThumbs();
+		let swiperReviewsThumbs = initSwiperReviewsThumbs({
+			slidesPerView: 3,
+		});
 		let swiperReviewsMain = initSwiperReviewsMain();
 	
 		function initSwiperReviewsThumbs(options) {
 			return new Swiper('.thumbs-reviews', {
 				direction: 'vertical',
-				slidesPerView: 3,
 				watchSlidesProgress: true,
 				spaceBetween: 15,
 				slideToClickedSlide: true,
 				preloadImages: false,
-				lazy: true,
+				lazy: {
+					checkInView: true
+				},
 				scrollbar: {
 					el: '.thumbs-reviews__scrollbar',
 					draggable: true,
@@ -115,7 +118,9 @@ export default function initSwiper() {
 				allowTouchMove: false,
 				effect: 'fade',
 				preloadImages: false,
-				lazy: true,
+				lazy: {
+					checkInView: true,
+				},
 				fadeEffect: {
 					crossFade: true
 				},
@@ -140,8 +145,13 @@ export default function initSwiper() {
 	
 		enquire.register("screen and (max-width:992px)", {
 			match: function() {
+				swiperReviewsThumbs.detachEvents();
+				swiperReviewsMain.detachEvents();
 				swiperReviewsThumbs.destroy();
 				swiperReviewsMain.destroy();
+
+				swiperReviewsThumbs = undefined;
+				swiperReviewsMain = undefined;
 		
 				swiperReviewsThumbs = initSwiperReviewsThumbs({
 					direction: 'horizontal',
@@ -149,9 +159,10 @@ export default function initSwiper() {
 					slidesPerView: 'auto',
 					spaceBetween: 10,
 				});
-				swiperReviewsMain = initSwiperReviewsMain({ allowTouchMove: true, });
-		
-				combineReviewsSwipers(swiperReviewsThumbs, swiperReviewsMain);
+
+				swiperReviewsMain = initSwiperReviewsMain({
+					allowTouchMove: true,
+				});
 			},
 			unmatch: function() {
 				swiperReviewsThumbs.destroy();
@@ -159,7 +170,7 @@ export default function initSwiper() {
 		
 				swiperReviewsThumbs = initSwiperReviewsThumbs();
 				swiperReviewsMain = initSwiperReviewsMain();
-		
+
 				combineReviewsSwipers(swiperReviewsThumbs, swiperReviewsMain);
 			},
 		});
@@ -173,6 +184,10 @@ export default function initSwiper() {
 			spaceBetween: 7,
 			nested: true,
 			loop: true,
+			preloadImages: false,
+			lazy: {
+				checkInView: true,
+			},
 			navigation: {
 				nextEl: '.slider-partner__nav_next',
 			},

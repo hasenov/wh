@@ -3,6 +3,9 @@
 	background-color: $accent
 	color: #fff
 
+html, body
+	overflow-x: hidden
+
 html
 	scroll-behavior: smooth
 
@@ -15,7 +18,6 @@ body
 	font-size: 18px
 	line-height: 1.4
 	color: $text
-	overflow-x: hidden
 	&.header-sticky
 		margin-top: 99px
 
@@ -345,3 +347,17 @@ h1, h2, h3, h4, h5, h6
 
 .lg-backdrop
 	background: rgba(#444, .7)
+
+.lazyload-wrap
+	display: flex
+	position: relative
+
+.swiper-lazy-preloader
+	display: block
+
+img.lazyload:not([src])
+	visibility: hidden
+
+.lazyloaded
+	& ~ .swiper-lazy-preloader
+		display: none

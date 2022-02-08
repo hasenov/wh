@@ -18,14 +18,14 @@ export default function initLightbox() {
     });
 
     lightGallery(document.querySelector('.slider-product__items'), {
-        plugins: [lgZoom, lgVideo],
         ...opts,
+        plugins: [lgZoom, lgVideo],
     });
 
     document.querySelectorAll('.slider-partner__items').forEach((el) => {
         lightGallery(el, {
+            ...opts,
             counter: false,
-            ...opts
         });
     })
 
