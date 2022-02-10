@@ -3,6 +3,7 @@ import productCard from '../helpers/productCard';
 import enquire from 'enquire.js';
 import MicroModal from 'micromodal';
 import noUiSlider from 'nouislider';
+import { show } from 'slidetoggle';
 
 const isIdenticalArrays = (arr1, arr2) =>
     !arr1.filter(i => !arr2.includes(i)).concat(arr2.filter( i => !arr1.includes(i))).length
@@ -635,5 +636,21 @@ const Filter = function() {
 }
 
 const filter = Filter().init()
+
+enquire.register("screen and (min-width:992px)", {
+    match: function() {
+        const activeCategory = document.querySelector('.categories__item.active');
+        if(activeCategory) {
+            const parent = activeCategory.closest('.categories__section');
+            const content = activeCategory.closest('.categories__list');
+            show(content, {
+                transitionFunction: 'ease',
+                onAnimationStart: () => {
+                    parent.classList.add('active');
+                },
+            });
+        }
+    },
+});
 
 }

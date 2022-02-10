@@ -114,18 +114,6 @@ document.addEventListener('DOMContentLoaded', function() {
 		});
 	});
 
-	enquire.register("screen and (min-width:992px)", {
-		match: function() {
-			const activeAsideCategory = document.querySelector('.categories__section.active');
-			if(activeAsideCategory) {
-				const content = activeAsideCategory.querySelector('.categories__list');
-				show(content, {
-					transitionFunction: 'ease',
-				});
-			}
-		},
-	});
-
 	// Wishlist init
 	initWishlist();
 	updateMiniCart();

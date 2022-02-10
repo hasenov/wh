@@ -7,11 +7,15 @@ export default function initMicroModal() {
         disableFocus: true,
         onShow: (modal) => {
             if(modal.id === 'modal-categories') {
-                const activeAsideCategory = document.querySelector('.categories__section.active');
-                if(activeAsideCategory) {
-                    const content = activeAsideCategory.querySelector('.categories__list');
+                const activeCategory = document.querySelector('.categories__item.active');
+                if(activeCategory) {
+                    const parent = activeCategory.closest('.categories__section');
+                    const content = activeCategory.closest('.categories__list');
                     show(content, {
                         transitionFunction: 'ease',
+                        onAnimationStart: () => {
+                            parent.classList.add('active');
+                        },
                     });
                 }
             }
