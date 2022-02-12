@@ -96,10 +96,6 @@ export default function initSwiper() {
 				watchSlidesProgress: true,
 				spaceBetween: 15,
 				slideToClickedSlide: true,
-				preloadImages: false,
-				lazy: {
-					checkInView: true
-				},
 				scrollbar: {
 					el: '.thumbs-reviews__scrollbar',
 					draggable: true,

@@ -58,25 +58,26 @@ export default function initEnquire() {
     const sliderReviews = document.querySelector('.reviews-slider');
     if(sliderReviews) {
         const sectionReviewsHeadline = document.querySelector('.section-reviews .headline');
-        const sectionReviewsBtnWrap = sectionReviewsHeadline.querySelector('.headline__btn-wrap');
         
-        if(sectionReviewsHeadline && sectionReviewsBtnWrap) {
-            const sectionReviewsBtn = sectionReviewsBtnWrap.querySelector('.headline__btn');
-            
-            enquire.register("screen and (max-width:992px)", {
-                match: function() {
-                    sliderReviews.after(sectionReviewsBtnWrap);
-
-                    sectionReviewsBtn.classList.remove('btn-outline-accent');
-                    sectionReviewsBtn.classList.add('btn-accent');
-                },
-                unmatch: function() {
-                    sectionReviewsHeadline.appendChild(sectionReviewsBtnWrap);
-
-                    sectionReviewsBtn.classList.remove('btn-accent');
-                    sectionReviewsBtn.classList.add('btn-outline-accent');
-                },
-            })
+        if(sectionReviewsHeadline) {
+            const sectionReviewsBtnWrap = sectionReviewsHeadline.querySelector('.headline__btn-wrap');
+            if(sectionReviewsBtnWrap) {
+                const sectionReviewsBtn = sectionReviewsBtnWrap.querySelector('.headline__btn');
+                enquire.register("screen and (max-width:992px)", {
+                    match: function() {
+                        sliderReviews.after(sectionReviewsBtnWrap);
+    
+                        sectionReviewsBtn.classList.remove('btn-outline-accent');
+                        sectionReviewsBtn.classList.add('btn-accent');
+                    },
+                    unmatch: function() {
+                        sectionReviewsHeadline.appendChild(sectionReviewsBtnWrap);
+    
+                        sectionReviewsBtn.classList.remove('btn-accent');
+                        sectionReviewsBtn.classList.add('btn-outline-accent');
+                    },
+                })
+            }
         }
     }
     
