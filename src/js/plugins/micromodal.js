@@ -5,6 +5,7 @@ export default function initMicroModal() {
     MicroModal.init({
         awaitCloseAnimation: true,
         disableFocus: true,
+        disableScroll: true,
         onShow: (modal) => {
             if(modal.id === 'modal-categories') {
                 const activeCategory = document.querySelector('.categories__item.active');
@@ -18,6 +19,9 @@ export default function initMicroModal() {
                         },
                     });
                 }
+            }
+            if(modal.classList.contains('mm-modal_sizes')) {
+                MicroModal.close('modal-size-select')
             }
         },
         onClose: (modal) => {

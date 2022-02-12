@@ -5,6 +5,7 @@ import { sendForm } from "../services/api.service";
 import { parsePrice } from '../helpers/parsePrice';
 import { formatNumber } from "../helpers/formatNumber";
 import { initFormValidation, isFormValid } from '../helpers/validate';
+import enquire from 'enquire.js';
 
 const Product = function () {
     const currentPriceEl = document.getElementById('productPrice')
@@ -21,6 +22,8 @@ const Product = function () {
     const message = `<span>Цена увеличена на ${formatNumber(individulaSizingPrice)}р., за индивидуальный пошив</span>`
     const message2 = `<span class="sizing-select__status">Последний!</span>`
     let optionCheked = false
+
+    let md = false;
 
     const calculateIndividualSizingPrice = function() {
         messageEl.innerHTML = message
@@ -47,16 +50,13 @@ const Product = function () {
     if(sizingSelect) {
         const indSizingPrice = calculateIndividualSizingPrice()
 
-        new CustomSelect('.sizing-select', {
+        const select = new CustomSelect('.sizing-select', {
             isSizingSelect: true,
             onSelected(select, option) {
                 const checked = individualSizeControl && select.value === document.getElementById('sizeIndividual').dataset['value']
                 indSizingPrice.updatePagePrices(checked)[checked ? 'showMessage' : 'hideMessage']()
-                
 
                 const values = [...option.querySelectorAll('.sizing-select__value')].map((value) => value.textContent);
-
-                console.log(values);
 
                 const addedToCartSizes = document.getElementById('addedToCartSizes');
 
@@ -66,15 +66,43 @@ const Product = function () {
                     addedToCartSizes.innerHTML += `<li>${value}</li>`
                 })
 
-
-                console.log(`Выбранное значение: ${select.value}`);
-                // индекс выбранной опции
-                console.log(`Индекс выбранной опции: ${select.selectedIndex}`);
-                // выбранный текст опции
-                const text = option ? option.innerHTML : '';
-                console.log(`Выбранный текст опции: ${text}`);
+                if(md) {
+                    MicroModal.close('modal-size-select')
+                }
             }
-        });
+        }, true);
+
+        const showSizeModal = function() {
+            select.show()
+            MicroModal.show('modal-size-select', {
+                awaitCloseAnimation: true,
+                disableFocus: true,
+                disableScroll: true,
+            })
+
+        }
+
+        const sizeDropdown = document.querySelector('.sizing-select .custom-select__dropdown');
+        const modalBody = document.getElementById('modal-size-select').querySelector('.body-modal__container');
+        const sizeSelect = document.querySelector('.sizing-select');
+        if(sizeDropdown && modalBody && sizeSelect) {
+            enquire.register("screen and (max-width:992px)", {
+                match: function() {
+                    md = true;
+
+                    sizeSelect.addEventListener('click', showSizeModal);
+
+                    modalBody.appendChild(sizeDropdown);
+                },
+                unmatch: function() {
+                    md = false;
+
+                    sizeSelect.removeEventListener('click', showSizeModal);
+                    
+                    sizeSelect.appendChild(sizeDropdown);
+                },
+            })
+        }
     }
 
     document.querySelectorAll('.custom-select__option[data-balance="1"]').forEach((el) => {
@@ -84,6 +112,7 @@ const Product = function () {
     const microModalOptions = {
         awaitCloseAnimation: true,
         disableFocus: true,
+        disableScroll: true,
     }
 
     const formSizesXS = document.forms['formSizesXS'];

@@ -15,8 +15,7 @@ export default function initDatepicker() {
         const picker = datepicker(datepickerElement, {
             customDays: ['Вс','Пн','Вт','Ср','Чт','Пт','Сб'],
             customMonths: ['Январь','Февраль','Март','Апрель','Май','Июнь','Июль','Август','Сентябрь','Октябрь','Ноябрь','Декабрь'],
-            overlayButton: 'Применить',
-            overlayPlaceholder: '4-значный год',
+            disableYearOverlay: true,
             alwaysShow: true,
             formatter: (input, date, instance) => {
                 const value = date.toLocaleDateString();

@@ -209,8 +209,15 @@ export default function initSwiper() {
 	
 		function initSwiperPartners(options) {
 			return new Swiper(swiperPartnersElement, {
-				slidesPerView: 1,
+				slidesPerView: 1.11,
+				spaceBetween: 10,
 				loop: false,
+				breakpoints: {
+					576: {
+						spaceBetween: 26,
+						slidesPerView: 1.125,
+					}
+				},
 				...options,
 			});
 		}

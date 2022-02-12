@@ -31,6 +31,7 @@ document.addEventListener('DOMContentLoaded', function() {
 	const microModalOptions = {
 		awaitCloseAnimation: true,
 		disableFocus: true,
+		disableScroll: true,
 	}
 
 	// Модалка подписка на рассылку

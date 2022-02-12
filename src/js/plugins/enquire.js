@@ -32,15 +32,49 @@ export default function initEnquire() {
     const sectionPopularContainer = document.querySelector('.section-popular .container');
     if(sectionPopularContainer) {
         const sectionPopularHeadline = sectionPopularContainer.querySelector('.headline');
-        const sectionPopularBtn = sectionPopularHeadline.querySelector('.headline__btn-wrap');
+        const sectionPopularBtnWrap = sectionPopularHeadline.querySelector('.headline__btn-wrap');
     
-        if(sectionPopularHeadline && sectionPopularBtn) {
+        if(sectionPopularHeadline && sectionPopularBtnWrap) {
+            const sectionPopularBtn = sectionPopularBtnWrap.querySelector('.headline__btn');
+
             enquire.register("screen and (max-width:992px)", {
                 match: function() {
-                    sectionPopularContainer.appendChild(sectionPopularBtn);
+                    sectionPopularContainer.appendChild(sectionPopularBtnWrap);
+
+                    sectionPopularBtn.classList.remove('btn-outline-accent');
+                    sectionPopularBtn.classList.add('btn-accent');
                 },
                 unmatch: function() {
-                    sectionPopularHeadline.appendChild(sectionPopularBtn);
+                    sectionPopularHeadline.appendChild(sectionPopularBtnWrap);
+
+                    sectionPopularBtn.classList.remove('btn-accent');
+                    sectionPopularBtn.classList.add('btn-outline-accent');
+                },
+            })
+        }
+    }
+
+    // Секция отзывы
+    const sliderReviews = document.querySelector('.reviews-slider');
+    if(sliderReviews) {
+        const sectionReviewsHeadline = document.querySelector('.section-reviews .headline');
+        const sectionReviewsBtnWrap = sectionReviewsHeadline.querySelector('.headline__btn-wrap');
+        
+        if(sectionReviewsHeadline && sectionReviewsBtnWrap) {
+            const sectionReviewsBtn = sectionReviewsBtnWrap.querySelector('.headline__btn');
+            
+            enquire.register("screen and (max-width:992px)", {
+                match: function() {
+                    sliderReviews.after(sectionReviewsBtnWrap);
+
+                    sectionReviewsBtn.classList.remove('btn-outline-accent');
+                    sectionReviewsBtn.classList.add('btn-accent');
+                },
+                unmatch: function() {
+                    sectionReviewsHeadline.appendChild(sectionReviewsBtnWrap);
+
+                    sectionReviewsBtn.classList.remove('btn-accent');
+                    sectionReviewsBtn.classList.add('btn-outline-accent');
                 },
             })
         }
@@ -84,6 +118,9 @@ export default function initEnquire() {
                 tabsBlocks.forEach(function(tabsBlock, i) {
                     tabsBlocksContainer.appendChild(tabsBlock);
                 });
+
+                faqContainer.querySelector('.tab-faq').classList.add('active');
+                faqContainer.querySelector('.content-faq__block').classList.add('active');
             },
         });
     }
@@ -210,6 +247,20 @@ export default function initEnquire() {
             },
             unmatch: function() {
                 cabinetRow.before(cabinetHeadline);
+            },
+        });
+    }
+    
+    const cabinetMsg = document.querySelector('.form-cabinet__feedback');
+    const cabinetForm = document.querySelector('.form-cabinet');
+    const cabinetFooter = document.querySelector('.form-cabinet__footer');
+    if(cabinetMsg && cabinetForm && cabinetFooter) {
+        enquire.register("screen and (max-width:1200px)", {
+            match: function() {
+                cabinetForm.prepend(cabinetMsg);
+            },
+            unmatch: function() {
+                cabinetFooter.appendChild(cabinetMsg);
             },
         });
     }

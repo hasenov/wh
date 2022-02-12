@@ -297,9 +297,7 @@
 	.form-cabinet
 		padding: 30px
 		&__feedback
-			display: none
-		&__message
-			display: block
+			margin-bottom: 25px
 
 	.ssc
 		&__model
@@ -441,6 +439,11 @@
 			&::before
 				top: 20px
 				left: 20px
+
+	.section-reviews
+		.headline__btn-wrap
+			text-align: center
+			margin-top: 30px
 
 	.reviews-slider
 		display: block
@@ -741,6 +744,19 @@
 		&__arrows
 			display: none
 
+	.modal-size-select
+		.custom-select
+			&__dropdown
+				display: block
+				position: static
+				max-height: none
+				overflow: visible
+				border: none
+				padding: 0
+			&__option
+				&:not(:last-child)
+					border-bottom: 1px solid #f0f0f0
+
 	.cabinet
 		.page-headline
 			margin-left: 0
@@ -754,10 +770,6 @@
 			width: 100%
 		&__aside
 			margin-bottom: 30px
-
-	.order-cabinet
-		&__body-info-wrap
-			display: none
 
 	.item-order
 		&__title
@@ -1436,11 +1448,8 @@
 		&__similar
 			padding: 50px 0 70px
 			.blog__item
-				height: auto
 				&:not(.swiper-slide-visible)
 					opacity: 0
-				.card-blog__inner
-					height: 100%
 
 	.similar-content
 		&__slider
@@ -1564,6 +1573,8 @@
 			flex-wrap: wrap
 		&__body
 			padding: 0 20px 20px
+		&__body-info-wrap
+			display: none
 		&__title
 			order: 1
 		&__info-wrap
@@ -1659,13 +1670,14 @@
 			margin-left: 10px
 		&__title
 			font-size: 18px
-		&__header
-			display: block
 		&__payments
 			margin-top: 10px
 			justify-content: flex-start
 		&__payment
 			max-width: 41px
+		&_payment
+			.option-cart__header
+				display: block
 
 	.sizing-instructions
 		flex-direction: column-reverse
@@ -1783,6 +1795,10 @@
 				width: 20px
 				height: 20px
 
+	.banner-header
+		&__container
+			padding: 0 35px
+
 	.newsletter
 		&__content
 			margin-bottom: 15px
@@ -1840,6 +1856,8 @@
 			display: none
 		.headline__description
 			display: none
+		.headline__btn
+			width: 100%
 
 	.card-product
 		&__price, &__title
@@ -1879,7 +1897,17 @@
 		.wave
 			margin-bottom: 45px
 		blockquote
+			background-color: #fff
 			padding: 58px 15px 32px
+			&::after
+				content: ''
+				display: block
+				position: absolute
+				left: 15px
+				right: 15px
+				bottom: 0
+				height: 1px
+				background-color: #f0f0f0
 
 	.benefits
 		&__item
@@ -1888,10 +1916,6 @@
 	.item-benefit
 		&__title
 			font-size: 18px
-
-	.section-reviews
-		.headline__btn-wrap
-			display: none
 
 	.item-review
 		&__content-wrap
@@ -1951,6 +1975,10 @@
 	.section-about
 		border: none
 		padding: 0
+
+	.section-reviews
+		.headline__btn
+			width: 100%
 
 	.about-cards
 		&__card
@@ -2250,6 +2278,10 @@
 		&__title
 			font-size: 16px
 
+	.modal-size-select
+		.body-modal__container
+			padding: 0
+
 	.order-cabinet
 		&__item
 			&:not(:last-child)
@@ -2340,6 +2372,12 @@
 			font-size: 16px
 		&__btn
 			font-size: 16px
+		&__group
+			margin-bottom: 20px
+			&_spacing-lg
+				margin-bottom: 35px
+			&_spacing-md
+				margin-bottom: 30px
 		.sizing-blocks
 			&__block
 				&:nth-child(even)
@@ -2476,6 +2514,9 @@
 			font-size: 16px
 		&__total
 			display: block
+		&__radio
+			.radio__dot
+				margin-top: 4px
 
 	.form-calculator
 		&__control-field
@@ -2498,15 +2539,14 @@
 		&__list
 			font-size: 18px
 
+	.radio
+		&__dot
+			margin-top: 2px
+
 @media screen and (max-width: 375px)
 	.info-product
 		&__promo-btn
 			padding: 10px
-
-	.bottom-header
-		&__banner
-			img
-				width: 100%
 
 	.modal-filter
 		&__actions
@@ -2823,6 +2863,12 @@
 					color: #fff
 			&_real-reviews
 				display: none!important
+
+	.order-cabinet
+		&__button
+			&.active
+				.order-cabinet__info-wrap
+					opacity: 0
 
 // Адаптивность карточек блога, с использованием Salvattore.js
 @media screen and (max-width: 576px)

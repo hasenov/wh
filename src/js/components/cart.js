@@ -120,6 +120,7 @@ cartForm.addEventListener('submit', (e) => {
     if(!deliveryChecked) {
         MicroModal.show('modal-cart-error', {
             awaitCloseAnimation: true,
+            disableScroll: true,
         });
         modalCartErrorTitle.textContent = 'Вы не выбрали способ доставки';
         modalCartErrorText.textContent = 'Вернитесь в корзину и выберите удобный для вас способ';
@@ -129,6 +130,7 @@ cartForm.addEventListener('submit', (e) => {
     if(!paymentChecked) {
         MicroModal.show('modal-cart-error', {
             awaitCloseAnimation: true,
+            disableScroll: true,
         });
         modalCartErrorTitle.textContent = 'Вы не выбрали способ оплаты';
         modalCartErrorText.textContent = 'Вернитесь в корзину и выберите удобный для вас способ';
@@ -375,11 +377,11 @@ const addPoints = function (container, value) {
     return;
 }
 
-const optionCartInputs = document.querySelectorAll('.option-cart_payment .option-cart__input');
+const optionCartInputs = document.querySelectorAll('.option-cart_delivery .option-cart__input');
 optionCartInputs.forEach((el) => {
     el.addEventListener('change', (event) => {
         if (event.currentTarget.checked) {
-            let active = document.querySelector('.option-cart_payment.active');
+            let active = document.querySelector('.option-cart_delivery.active');
             if(active) {
                 let activeContent = active.querySelector('.option-cart__controls')
                 activeContent.querySelectorAll('.control-field__control').forEach((item) => {
