@@ -50,6 +50,7 @@ export default function initFixedHeader() {
     function unfix() {
         if(breakpointMd) {
             header.style.paddingTop = '';
+            headerTop.style.marginBottom = ''
         } else {
             headerTop.style.marginBottom = ''
         }
