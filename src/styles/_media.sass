@@ -349,13 +349,6 @@
 	.item-slider-product
 		height: 507px
 
-	.notification
-		height: 74px
-		&.active ~ .header
-			margin-top: 74px
-			.bottom-header
-				top: 74px
-
 	.form-search
 		backdrop-filter: blur(10px)
 		position: fixed
@@ -1053,29 +1046,26 @@
 	.item-slider-product
 		height: 373px
 
-	.notification
-		&.active ~ .header
-			margin-top: 74px
-			.bottom-header
-				top: 0
-			.top-header
-				top: 74px
-
 	.header
-		padding-top: 78px
 		&__hamburger
 			display: block
+		&.sticky
+			.top-header
+				position: fixed
+				top: 0
+				left: 0
+				width: 100%
 
 	.top-header
 		background-color: #fff
 		border-bottom: 1px solid #f0f0f0
 		padding: 20px 0
-		position: fixed
+		// position: fixed
 		top: 0
 		left: 0
 		width: 100%
 		z-index: 5
-		height: 78px
+		// height: 78px
 		&__contacts
 			display: none
 		&__col
@@ -1748,9 +1738,6 @@
 @media screen and (max-width: 576px)
 	.item-slider-product
 		height: auto
-
-	.header
-		padding-top: 70px
 
 	.top-header
 		padding: 16px 0
@@ -2454,7 +2441,6 @@
 		padding: 20px 0
 		&__content
 			font-size: 13px
-			margin-right: 15px
 		&__close
 			right: 5px
 			padding: 10px

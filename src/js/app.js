@@ -19,15 +19,6 @@ document.addEventListener('DOMContentLoaded', function() {
 	initPlugins();
 	initComponents();
 
-	// Система уведомлений
-	const currentNotifys = [...document.querySelectorAll('.notification')];
-	const currentNotify = currentNotifys.find((el) => {
-		return !localStorage.getItem(el.id)
-	});
-	if(currentNotify) {
-		currentNotify.classList.add('active');
-	}
-
 	const microModalOptions = {
 		awaitCloseAnimation: true,
 		disableFocus: true,
@@ -268,13 +259,6 @@ document.addEventListener('DOMContentLoaded', function() {
 			removeFileFromFileList(index, '#commentPhotos');
 
 			item.remove();
-		}
-
-		const deleteNotification = e.target.closest('.notification__close');
-		if(deleteNotification) {
-			const notif = deleteNotification.closest('.notification')
-			localStorage.setItem(notif.id, 'closed');
-			notif.remove()
 		}
 
 	});

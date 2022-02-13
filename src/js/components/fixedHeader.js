@@ -3,37 +3,57 @@ import enquire from "enquire.js";
 export default function initFixedHeader() {
     const header = document.querySelector('.header')
     const headerTop = document.querySelector('.top-header')
+    const headerBottom = document.querySelector('.bottom-header');
     const headerWidgetsContainer = document.querySelector('.top-header__actions-wrap')
     const navPanelWidgetsContainer = document.querySelector('.bottom-header__actions-wrap')
     const headerWidgets = document.querySelector('.actions-header')
     const fixedClass = 'sticky'
 
+    let offset = headerBottom.getBoundingClientRect().height + 'px';
     let breakpointMd = false;
+    let notification = document.querySelector('.notification.active');
+    console.log(notification)
     enquire.register("screen and (max-width:768px)", {
         match: function() {
+            offset = headerTop.getBoundingClientRect().height + 'px';
             breakpointMd = true;
             fixHeader();
         },
         unmatch: function() {
             breakpointMd = false;
+            offset = headerBottom.getBoundingClientRect().height + 'px';
             fixHeader();
         },
     })
 
     function fixHeader() {
-        const shouldBeFixed = !breakpointMd && (pageYOffset > headerTop.getBoundingClientRect().height)
+        let shouldBeFixed = breakpointMd && !notification ? pageYOffset > 0 : pageYOffset > headerTop.getBoundingClientRect().height
+        if(breakpointMd && notification) {
+            shouldBeFixed = pageYOffset > notification.getBoundingClientRect().height
+        }
         if (shouldBeFixed) fix()
         else unfix()
     }
 
     function fix() {
+        if(breakpointMd) {
+            header.style.paddingTop = offset;
+        } else {
+            headerTop.style.marginBottom = offset;
+        }
         header.classList.add(fixedClass)
-        if (headerWidgets.parentElement !== navPanelWidgetsContainer) {
+        if (headerWidgets.parentElement !== navPanelWidgetsContainer && !breakpointMd) {
             navPanelWidgetsContainer.appendChild(headerWidgets)
         }
     }
 
     function unfix() {
+        if(breakpointMd) {
+            header.style.paddingTop = '';
+        } else {
+            headerTop.style.marginBottom = ''
+        }
+        
         header.classList.remove(fixedClass)
         if (headerWidgets.parentElement !== headerWidgetsContainer) {
             headerWidgetsContainer.appendChild(headerWidgets)
@@ -42,6 +62,25 @@ export default function initFixedHeader() {
 
     fixHeader()
     document.addEventListener('scroll', fixHeader, {passive: true})
+
+    // Система уведомлений
+    document.addEventListener('click', function(e) {
+        const deleteNotification = e.target.closest('.notification__close');
+		if(deleteNotification) {
+			const notif = deleteNotification.closest('.notification')
+			localStorage.setItem(notif.id, 'closed');
+			notif.remove()
+            notification = null;
+		}
+    })
+	const currentNotifys = [...document.querySelectorAll('.notification')];
+	const currentNotify = currentNotifys.find((el) => {
+		return !localStorage.getItem(el.id)
+	});
+	if(currentNotify) {
+		currentNotify.classList.add('active');
+        notification = currentNotify;
+	}
 }
 
 // export default function initFixedHeader() {
